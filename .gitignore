@@ -31,3 +31,6 @@ yarn-error.log*
 # Vercel
 .vercel
 
+# Reference folder (original website clone)
+www.ukblackbusinessweek.com/
+
