@@ -130,8 +130,7 @@ button:focus:not(:focus-visible) {
 /* Header */
 .header {
     background: var(--header-bg);
-    position: sticky;
-    top: 0;
+    position: relative;
     z-index: 100;
     width: 100%;
 }
