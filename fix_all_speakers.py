@@ -42,6 +42,10 @@ def normalize_linkedin_url(url):
     if 'linkedin.com' not in url.lower() and not url.startswith('www.') and not url.startswith('http'):
         return ""
     
+    # Fix double protocol (e.g., https://Https://)
+    url = re.sub(r'^https?://[Hh]ttps?://', 'https://', url)
+    url = re.sub(r'^[Hh]ttps?://', 'https://', url)
+    
     # Add protocol if missing
     if not url.startswith('http'):
         url = 'https://' + url.lstrip('/')
