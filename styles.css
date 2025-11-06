@@ -1060,7 +1060,8 @@ button:focus:not(:focus-visible) {
 
 .team-member-image {
     width: 100%;
-    padding-top: 67%; /* 3:2 aspect ratio (600x403) */
+    height: 350px;
+    min-height: 350px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1068,6 +1069,7 @@ button:focus:not(:focus-visible) {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: #f0f0f0;
     overflow: hidden;
+    border-radius: 16px;
 }
 
 .team-member-image img {
@@ -1078,6 +1080,7 @@ button:focus:not(:focus-visible) {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 16px;
 }
 
 .team-member-image.image-error {
@@ -2442,8 +2445,13 @@ img[loading="lazy"].loaded {
     }
     
     .team-member-image {
-        height: 200px;
-        min-height: 200px;
+        height: 280px;
+        min-height: 280px;
+        border-radius: 12px;
+    }
+    
+    .team-member-image img {
+        border-radius: 12px;
     }
     
     .team-meta {
