@@ -2918,8 +2918,13 @@ img[loading="lazy"].loaded {
     }
     
     .team-member-image {
-        height: 250px;
-        min-height: 250px;
+        height: 320px;
+        min-height: 320px;
+        border-radius: 14px;
+    }
+    
+    .team-member-image img {
+        border-radius: 14px;
     }
 }
 
