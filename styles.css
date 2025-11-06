@@ -1066,6 +1066,34 @@ button:focus:not(:focus-visible) {
     background-repeat: no-repeat;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.team-member-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-member-image.image-error {
+    background-image: none !important;
+    background: linear-gradient(135deg, rgba(32, 178, 170, 0.1) 0%, rgba(255, 203, 164, 0.1) 100%);
+}
+
+.team-member-image.image-error::after {
+    content: '👤';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    opacity: 0.3;
+    z-index: 1;
 }
 
 .team-member:hover .team-member-image {

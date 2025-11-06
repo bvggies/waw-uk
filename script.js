@@ -292,3 +292,53 @@ document.querySelectorAll('img[loading="lazy"]').forEach(img => {
         });
     }
 });
+
+// Handle Google Drive image loading errors for speaker images
+document.addEventListener('DOMContentLoaded', () => {
+    const speakerImages = document.querySelectorAll('.team-member-image');
+    
+    speakerImages.forEach(imgDiv => {
+        const bgImage = imgDiv.style.backgroundImage;
+        if (bgImage && bgImage.includes('drive.google.com')) {
+            // Extract URL from background-image style
+            const urlMatch = bgImage.match(/url\(['"]?([^'"]+)['"]?\)/);
+            if (urlMatch) {
+                const imageUrl = urlMatch[1];
+                
+                // Create a test image to check if it loads
+                const testImg = new Image();
+                testImg.crossOrigin = 'anonymous';
+                testImg.onload = () => {
+                    // Image loaded successfully - ensure it's set
+                    if (!imgDiv.style.backgroundImage.includes(imageUrl)) {
+                        imgDiv.style.backgroundImage = `url('${imageUrl}')`;
+                    }
+                };
+                testImg.onerror = () => {
+                    // Image failed to load - try alternative format
+                    const fileIdMatch = imageUrl.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+                    if (fileIdMatch) {
+                        const fileId = fileIdMatch[1];
+                        // Try alternative URL format
+                        const altUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
+                        const altTestImg = new Image();
+                        altTestImg.crossOrigin = 'anonymous';
+                        altTestImg.onload = () => {
+                            imgDiv.style.backgroundImage = `url('${altUrl}')`;
+                        };
+                        altTestImg.onerror = () => {
+                            // Both formats failed - add error class for styling
+                            imgDiv.classList.add('image-error');
+                            console.warn(`Failed to load speaker image: ${imageUrl}`);
+                        };
+                        altTestImg.src = altUrl;
+                    } else {
+                        // No file ID found - add error class
+                        imgDiv.classList.add('image-error');
+                    }
+                };
+                testImg.src = imageUrl;
+            }
+        }
+    });
+});
