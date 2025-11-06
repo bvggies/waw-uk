@@ -2844,8 +2844,13 @@ img[loading="lazy"].loaded {
     }
     
     .team-member-image {
-        height: 180px;
-        min-height: 180px;
+        height: 250px;
+        min-height: 250px;
+        border-radius: 12px;
+    }
+    
+    .team-member-image img {
+        border-radius: 12px;
     }
     
     .team-meta h3 {
