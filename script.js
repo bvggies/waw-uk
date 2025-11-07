@@ -423,15 +423,24 @@ document.addEventListener('DOMContentLoaded', () => {
 // Countdown Timer for Event Date
 document.addEventListener('DOMContentLoaded', () => {
     const countdownTimer = document.getElementById('countdown-timer');
-    if (!countdownTimer) return;
-    
-    // Event date: September 21, 2026 at 09:00 AM (London time)
-    const eventDate = new Date('2026-09-21T09:00:00+01:00').getTime();
+    if (!countdownTimer) {
+        console.log('Countdown timer element not found');
+        return;
+    }
     
     const daysEl = document.getElementById('days');
     const hoursEl = document.getElementById('hours');
     const minutesEl = document.getElementById('minutes');
     const secondsEl = document.getElementById('seconds');
+    
+    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+        console.log('Countdown elements not found');
+        return;
+    }
+    
+    // Event date: September 21, 2026 at 09:00 AM (London time - BST)
+    // Using UTC to avoid timezone issues
+    const eventDate = new Date('2026-09-21T08:00:00Z').getTime(); // 9 AM BST = 8 AM UTC
     
     function updateCountdown() {
         const now = new Date().getTime();
@@ -439,10 +448,10 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (distance < 0) {
             // Event has passed
-            if (daysEl) daysEl.textContent = '0';
-            if (hoursEl) hoursEl.textContent = '0';
-            if (minutesEl) minutesEl.textContent = '0';
-            if (secondsEl) secondsEl.textContent = '0';
+            daysEl.textContent = '00';
+            hoursEl.textContent = '00';
+            minutesEl.textContent = '00';
+            secondsEl.textContent = '00';
             return;
         }
         
@@ -451,10 +460,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-        if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
-        if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
-        if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
-        if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+        daysEl.textContent = days.toString().padStart(2, '0');
+        hoursEl.textContent = hours.toString().padStart(2, '0');
+        minutesEl.textContent = minutes.toString().padStart(2, '0');
+        secondsEl.textContent = seconds.toString().padStart(2, '0');
     }
     
     // Update immediately
