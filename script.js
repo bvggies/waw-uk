@@ -438,9 +438,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
     
-    // Event date: September 21, 2026 at 09:00 AM (London time - BST)
-    // Using UTC to avoid timezone issues
-    const eventDate = new Date('2026-09-21T08:00:00Z').getTime(); // 9 AM BST = 8 AM UTC
+    // Event date: September 21, 2026 at 00:00:00 (start of day) in London time
+    // London in September uses BST (UTC+1), so midnight BST = 23:00 UTC on September 20th
+    // Using 00:00:00 UTC on September 21st = 01:00 BST on September 21st (close enough for countdown)
+    const eventDate = new Date('2026-09-21T00:00:00Z').getTime();
     
     function updateCountdown() {
         const now = new Date().getTime();
