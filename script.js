@@ -420,6 +420,94 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Homepage Speakers Search Functionality
+(function() {
+    'use strict';
+    
+    function initHomepageSpeakersSearch() {
+        const searchInput = document.getElementById('homepageSpeakersSearch');
+        const clearButton = document.getElementById('homepageSpeakersClear');
+        const speakersGrid = document.getElementById('homepageSpeakersGrid');
+        const noResults = document.getElementById('homepageSpeakersNoResults');
+        
+        if (!searchInput || !speakersGrid) return;
+        
+        const speakerCards = Array.from(speakersGrid.querySelectorAll('.speaker-card'));
+        
+        function filterSpeakers() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+            
+            speakerCards.forEach(card => {
+                const name = card.querySelector('.speaker-name')?.textContent.toLowerCase() || '';
+                const role = card.querySelector('.speaker-role')?.textContent.toLowerCase() || '';
+                const excerpt = card.querySelector('.speaker-excerpt')?.textContent.toLowerCase() || '';
+                
+                const matches = !searchTerm || 
+                    name.includes(searchTerm) || 
+                    role.includes(searchTerm) || 
+                    excerpt.includes(searchTerm);
+                
+                if (matches) {
+                    card.style.display = '';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show/hide no results message
+            if (noResults) {
+                if (visibleCount === 0 && searchTerm) {
+                    noResults.style.display = 'block';
+                    speakersGrid.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    speakersGrid.style.display = 'grid';
+                }
+            }
+        }
+        
+        // Search input event
+        searchInput.addEventListener('input', filterSpeakers);
+        
+        // Clear button event
+        if (clearButton) {
+            clearButton.addEventListener('click', () => {
+                searchInput.value = '';
+                filterSpeakers();
+                searchInput.focus();
+            });
+        }
+        
+        // Show clear button when there's text
+        searchInput.addEventListener('input', () => {
+            if (clearButton) {
+                if (searchInput.value.trim()) {
+                    clearButton.style.display = 'block';
+                    clearButton.classList.add('active');
+                } else {
+                    clearButton.style.display = 'none';
+                    clearButton.classList.remove('active');
+                }
+            }
+        });
+        
+        // Initialize clear button state
+        if (clearButton && searchInput.value.trim()) {
+            clearButton.style.display = 'block';
+            clearButton.classList.add('active');
+        }
+    }
+    
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initHomepageSpeakersSearch);
+    } else {
+        initHomepageSpeakersSearch();
+    }
+})();
+
 // Countdown Timer for Event Date
 (function() {
     'use strict';
