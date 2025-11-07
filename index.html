@@ -689,6 +689,23 @@
                 padding: 60px 20px;
             }
             
+            .stream-grid {
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 20px !important;
+            }
+            
+            .stream-card {
+                padding: 25px 20px !important;
+            }
+            
+            .stream-card h5 {
+                font-size: 16px !important;
+            }
+            
+            .stream-card p {
+                font-size: 13px !important;
+            }
+            
             .speakers-section-home {
                 padding: 60px 20px;
             }
@@ -707,6 +724,33 @@
         @media (max-width: 480px) {
             .speakers-grid-home {
                 grid-template-columns: 1fr;
+            }
+            
+            .stream-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+                padding: 0 10px;
+            }
+            
+            .stream-card {
+                padding: 20px 15px !important;
+            }
+            
+            .stream-icon {
+                margin-bottom: 15px !important;
+            }
+            
+            .stream-icon svg {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            
+            .stream-card h5 {
+                font-size: 15px !important;
+            }
+            
+            .stream-card p {
+                font-size: 12px !important;
             }
         }
     </style>
@@ -1033,7 +1077,7 @@
                                 <div class="nectar-split-heading" data-align="default" data-m-align="inherit" data-text-effect="default" data-animation-type="line-reveal-by-space" data-animation-delay="0" data-animation-offset="" data-m-rm-animation="" data-stagger="" data-custom-font-size="false">
                                     <h4 style="color: #ffffff;">Programme & Streams</h4>
                                 </div>
-                                <div class="stream-grid" style="grid-template-columns: repeat(4, 1fr);">
+                                <div class="stream-grid">
                                     <div class="stream-card">
                                         <div class="stream-icon">
                                             <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
