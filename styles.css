@@ -1225,21 +1225,79 @@ button:focus:not(:focus-visible) {
 .speakers-page .speaker-card,
 .speakers-grid .speaker-card {
   background: #fff !important;
-  padding: 18px !important;
-  border-radius: 10px !important;
+  padding: 24px 18px !important;
+  border-radius: 16px !important;
   box-shadow: 0 4px 8px rgba(10,30,60,0.04) !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   text-align: center !important;
-  transition: transform 240ms ease, box-shadow 240ms ease !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
   overflow: hidden !important;
   height: auto !important;
+  position: relative !important;
 }
-.speakers-page .speaker-card:hover,
-.speakers-grid .speaker-card:hover {
-  transform: translateY(-6px) scale(1.02) !important;
-  box-shadow: 0 12px 28px rgba(10,30,60,0.12) !important;
+
+/* Different hover animations for each card */
+.speakers-page .speaker-card:nth-child(1):hover,
+.speakers-grid .speaker-card:nth-child(1):hover {
+  transform: translateY(-8px) rotate(1deg) scale(1.03) !important;
+  box-shadow: 0 12px 32px rgba(10,30,60,0.15) !important;
+}
+
+.speakers-page .speaker-card:nth-child(2):hover,
+.speakers-grid .speaker-card:nth-child(2):hover {
+  transform: translateY(-8px) rotate(-1deg) scale(1.03) !important;
+  box-shadow: 0 12px 32px rgba(10,30,60,0.15) !important;
+}
+
+.speakers-page .speaker-card:nth-child(3):hover,
+.speakers-grid .speaker-card:nth-child(3):hover {
+  transform: translateY(-10px) scale(1.04) !important;
+  box-shadow: 0 16px 40px rgba(10,30,60,0.18) !important;
+}
+
+.speakers-page .speaker-card:nth-child(4):hover,
+.speakers-grid .speaker-card:nth-child(4):hover {
+  transform: translateY(-8px) rotate(0.5deg) scale(1.02) !important;
+  box-shadow: 0 14px 36px rgba(10,30,60,0.16) !important;
+}
+
+.speakers-page .speaker-card:nth-child(5):hover,
+.speakers-grid .speaker-card:nth-child(5):hover {
+  transform: translateY(-8px) rotate(-0.5deg) scale(1.02) !important;
+  box-shadow: 0 14px 36px rgba(10,30,60,0.16) !important;
+}
+
+.speakers-page .speaker-card:nth-child(6):hover,
+.speakers-grid .speaker-card:nth-child(6):hover {
+  transform: translateY(-10px) rotate(1.5deg) scale(1.05) !important;
+  box-shadow: 0 18px 44px rgba(10,30,60,0.2) !important;
+}
+
+.speakers-page .speaker-card:nth-child(7):hover,
+.speakers-grid .speaker-card:nth-child(7):hover {
+  transform: translateY(-8px) rotate(-1.5deg) scale(1.03) !important;
+  box-shadow: 0 12px 32px rgba(10,30,60,0.15) !important;
+}
+
+.speakers-page .speaker-card:nth-child(8):hover,
+.speakers-grid .speaker-card:nth-child(8):hover {
+  transform: translateY(-9px) scale(1.04) !important;
+  box-shadow: 0 15px 38px rgba(10,30,60,0.17) !important;
+}
+
+/* Pattern repeats for remaining cards */
+.speakers-page .speaker-card:nth-child(odd):hover,
+.speakers-grid .speaker-card:nth-child(odd):hover {
+  transform: translateY(-8px) rotate(0.5deg) scale(1.03) !important;
+  box-shadow: 0 12px 32px rgba(10,30,60,0.15) !important;
+}
+
+.speakers-page .speaker-card:nth-child(even):hover,
+.speakers-grid .speaker-card:nth-child(even):hover {
+  transform: translateY(-8px) rotate(-0.5deg) scale(1.03) !important;
+  box-shadow: 0 12px 32px rgba(10,30,60,0.15) !important;
 }
 
 /* Circle photo: fixed diameter for all cards - WiFAI Style */
@@ -1252,11 +1310,66 @@ button:focus:not(:focus-visible) {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-bottom: 12px !important;
+  margin-bottom: 16px !important;
   background: #f1f6fa !important;
   flex-shrink: 0 !important;
   position: relative !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
 }
+
+/* Different photo animations on hover */
+.speakers-page .speaker-card:nth-child(1):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(1):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(5deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(2):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(2):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(-5deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(3):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(3):hover .speaker-photo-wrap {
+  transform: scale(1.15) !important;
+}
+
+.speakers-page .speaker-card:nth-child(4):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(4):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(3deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(5):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(5):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(-3deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(6):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(6):hover .speaker-photo-wrap {
+  transform: scale(1.12) rotate(7deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(7):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(7):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(-7deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(8):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(8):hover .speaker-photo-wrap {
+  transform: scale(1.13) !important;
+}
+
+/* Pattern for remaining cards */
+.speakers-page .speaker-card:nth-child(odd):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(odd):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(3deg) !important;
+}
+
+.speakers-page .speaker-card:nth-child(even):hover .speaker-photo-wrap,
+.speakers-grid .speaker-card:nth-child(even):hover .speaker-photo-wrap {
+  transform: scale(1.1) rotate(-3deg) !important;
+}
+
 .speakers-page .speaker-photo,
 .speakers-grid .speaker-photo {
   width: 100% !important;
@@ -1264,12 +1377,12 @@ button:focus:not(:focus-visible) {
   object-fit: cover !important;
   display: block !important;
   border-radius: 50% !important;
-  transition: transform 300ms ease, filter 300ms ease !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease !important;
 }
+
 .speakers-page .speaker-card:hover .speaker-photo,
 .speakers-grid .speaker-card:hover .speaker-photo {
-  transform: scale(1.07) !important;
-  filter: saturate(1.05) !important;
+  filter: saturate(1.1) brightness(1.05) !important;
 }
 
 /* Speaker body - contains all text info - WiFAI Style */
@@ -1281,6 +1394,13 @@ button:focus:not(:focus-visible) {
   text-align: center !important;
   width: 100% !important;
   flex-grow: 1 !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Subtle text animation on hover */
+.speakers-page .speaker-card:hover .speaker-body,
+.speakers-grid .speaker-card:hover .speaker-body {
+  transform: translateY(-2px) !important;
 }
 
 /* Text inside card - WiFAI Style */
@@ -1313,25 +1433,38 @@ button:focus:not(:focus-visible) {
   text-overflow: ellipsis !important;
   text-align: center !important;
 }
-.speaker-link {
-  font-size: 13px;
-  color: #1976d2;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: color 0.3s ease, gap 0.3s ease;
+.speakers-page .speaker-link,
+.speakers-grid .speaker-link {
+  font-size: 13px !important;
+  color: #1976d2 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  margin-top: 8px !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  background: rgba(25, 118, 210, 0.05) !important;
 }
-.speaker-link:hover {
-  color: #1565c0;
-  gap: 8px;
+
+.speakers-page .speaker-card:hover .speaker-link,
+.speakers-grid .speaker-card:hover .speaker-link {
+  color: #1565c0 !important;
+  gap: 8px !important;
+  background: rgba(25, 118, 210, 0.1) !important;
+  transform: translateY(-2px) !important;
 }
-.speaker-link i {
-  font-size: 11px;
-  transition: transform 0.3s ease;
+
+.speakers-page .speaker-link i,
+.speakers-grid .speaker-link i {
+  font-size: 11px !important;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
-.speaker-link:hover i {
-  transform: translateX(3px);
+
+.speakers-page .speaker-card:hover .speaker-link i,
+.speakers-grid .speaker-card:hover .speaker-link i {
+  transform: translateX(4px) !important;
 }
 
 /* No results message */
