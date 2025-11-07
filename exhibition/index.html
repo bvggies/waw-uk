@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Purchase tickets for WAW London - Women in Agribusiness Week London 2026. Choose from individual sessions, day passes, week-long passes, and more.">
-    <meta name="keywords" content="Tickets, WAW London, Women in Agribusiness, Purchase Tickets, London 2026">
-    <title>Tickets - WAW London - Women in Agribusiness Week London 2026</title>
+    <meta name="description" content="Exhibition - WAW London - Women in Agribusiness Week London 2026. Showcase your brand, products or innovations throughout the week.">
+    <meta name="keywords" content="Exhibition, WAW London, Women in Agribusiness, Exhibit, Showcase, London 2026">
+    <title>Exhibition - WAW London - Women in Agribusiness Week London 2026</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Tickets Page Styles */
-        .tickets-hero-section {
+        /* Exhibition Page Styles */
+        .exhibition-hero-section {
             position: relative;
             min-height: 400px;
             display: flex;
@@ -24,7 +24,7 @@
             background: linear-gradient(135deg, #00bda1 0%, #008080 50%, #00bda1 100%);
         }
         
-        .tickets-hero-content {
+        .exhibition-hero-content {
             position: relative;
             z-index: 1;
             text-align: center;
@@ -44,7 +44,7 @@
             }
         }
         
-        .tickets-hero-title {
+        .exhibition-hero-title {
             font-size: clamp(42px, 6vw, 72px);
             font-weight: 900;
             color: #ffffff;
@@ -54,97 +54,128 @@
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
         
-        .tickets-hero-subtitle {
+        .exhibition-hero-subtitle {
             font-size: clamp(18px, 2.5vw, 24px);
             color: rgba(255, 255, 255, 0.9);
             line-height: 1.6;
             margin: 0;
         }
         
-        .tickets-content-section {
+        .exhibition-content-section {
             padding: 100px 20px;
             background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
         }
         
-        .tickets-content-wrapper {
+        .exhibition-content-wrapper {
             max-width: 1200px;
             margin: 0 auto;
         }
         
-        .tickets-table-wrapper {
-            overflow-x: auto;
-            max-width: 1000px;
-            margin: 40px auto;
+        .exhibition-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
         }
         
-        .tickets-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 16px;
-            background-color: #ffffff;
+        .exhibition-benefit-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 30px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            border-radius: 12px;
-            overflow: hidden;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
         }
         
-        .tickets-table thead {
-            background-color: #00bda1;
+        .exhibition-benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border-color: #00bda1;
+        }
+        
+        .exhibition-benefit-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00bda1, #008080);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: #ffffff;
+            font-size: 36px;
         }
         
-        .tickets-table th {
-            padding: 20px 15px;
-            text-align: left;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .exhibition-benefit-card h3 {
+            font-size: 24px;
             font-weight: 700;
-            font-size: 16px;
-        }
-        
-        .tickets-table th:nth-child(2),
-        .tickets-table th:nth-child(3),
-        .tickets-table th:nth-child(4) {
-            text-align: center;
-        }
-        
-        .tickets-table tbody tr {
-            border-bottom: 1px solid #e0e0e0;
-            transition: background-color 0.3s ease;
-        }
-        
-        .tickets-table tbody tr:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .tickets-table tbody tr:nth-child(even) {
-            background-color: #f8f9fa;
-        }
-        
-        .tickets-table tbody tr:nth-child(even):hover {
-            background-color: #f0f0f0;
-        }
-        
-        .tickets-table td {
-            padding: 20px 15px;
-            border: 1px solid #e0e0e0;
-        }
-        
-        .tickets-table td:nth-child(2),
-        .tickets-table td:nth-child(3),
-        .tickets-table td:nth-child(4) {
-            text-align: center;
-            font-weight: 600;
-            color: #00bda1;
-            font-size: 18px;
-        }
-        
-        .tickets-table td:first-child {
-            font-weight: 600;
             color: #1b203e;
+            margin: 0 0 16px 0;
         }
         
-        .purchase-button {
+        .exhibition-benefit-card p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .exhibition-options {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin: 60px 0;
+        }
+        
+        .exhibition-options h2 {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: #1b203e;
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+        
+        .exhibition-options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .exhibition-option-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 30px 24px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .exhibition-option-card:hover {
+            border-color: #00bda1;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 189, 161, 0.2);
+        }
+        
+        .exhibition-option-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1b203e;
+            margin: 0 0 12px 0;
+        }
+        
+        .exhibition-option-card p {
+            font-size: 15px;
+            color: #666;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .apply-button {
             display: inline-block;
-            padding: 16px 40px;
+            padding: 18px 50px;
             background: linear-gradient(135deg, #00bda1, #008080);
             color: #ffffff;
             text-decoration: none;
@@ -156,39 +187,23 @@
             margin-top: 40px;
         }
         
-        .purchase-button:hover {
+        .apply-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 189, 161, 0.4);
         }
         
-        .early-bird-note {
-            text-align: center;
-            color: #666;
-            font-size: 16px;
-            margin-top: 30px;
-            padding: 20px;
-            background: rgba(0, 189, 161, 0.1);
-            border-radius: 12px;
-            border-left: 4px solid #00bda1;
-        }
-        
         @media (max-width: 767px) {
-            .tickets-table {
-                font-size: 14px;
+            .exhibition-hero-section {
+                min-height: 300px;
+                padding: 60px 20px 50px;
             }
             
-            .tickets-table th,
-            .tickets-table td {
-                padding: 12px 8px;
+            .exhibition-benefits {
+                grid-template-columns: 1fr;
             }
             
-            .tickets-table th:nth-child(2),
-            .tickets-table th:nth-child(3),
-            .tickets-table th:nth-child(4),
-            .tickets-table td:nth-child(2),
-            .tickets-table td:nth-child(3),
-            .tickets-table td:nth-child(4) {
-                font-size: 14px;
+            .exhibition-options-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -268,6 +283,7 @@
                     <li><a href="/exhibition">Exhibition</a></li>
                     <li><a href="/our-sponsors">Sponsors</a></li>
                     <li><a href="/pre-register">Register</a></li>
+                    <li><a href="#" class="btn-sponsor">Sponsor</a></li>
                 </ul>
                 <button class="close-menu" aria-label="Close menu">×</button>
             </nav>
@@ -275,75 +291,77 @@
     </header>
 
     <main id="main-content">
-        <!-- Tickets Hero Section -->
-        <section class="tickets-hero-section">
-            <div class="tickets-hero-content">
-                <h1 class="tickets-hero-title">Tickets & Fees</h1>
-                <p class="tickets-hero-subtitle">Per Session Pricing – attend exactly what you need. Exhibition Pricing (all week)</p>
+        <!-- Exhibition Hero Section -->
+        <section class="exhibition-hero-section">
+            <div class="exhibition-hero-content">
+                <h1 class="exhibition-hero-title">Exhibition</h1>
+                <p class="exhibition-hero-subtitle">Showcase your brand, products or innovations throughout the week</p>
             </div>
         </section>
 
-        <!-- Tickets Content Section -->
-        <section class="tickets-content-section">
-            <div class="tickets-content-wrapper">
-                <div class="tickets-table-wrapper">
-                    <table class="tickets-table">
-                        <thead>
-                            <tr>
-                                <th>Ticket Type</th>
-                                <th>Africa & UK Price</th>
-                                <th>International Price</th>
-                                <th>Student Price</th>
-                                <th>What's Included</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Individual Session</td>
-                                <td>£20</td>
-                                <td>£30</td>
-                                <td>£10</td>
-                                <td>Access to 1 focused session</td>
-                            </tr>
-                            <tr>
-                                <td>Day Session</td>
-                                <td>£90</td>
-                                <td>£140</td>
-                                <td>£50</td>
-                                <td>Full-day access, lunch, 1 farm/factory tour, networking</td>
-                            </tr>
-                            <tr>
-                                <td>Week-long Pass</td>
-                                <td>£300</td>
-                                <td>£450</td>
-                                <td>£150</td>
-                                <td>All sessions across the week, lunch daily, multiple tours, networking events</td>
-                            </tr>
-                            <tr>
-                                <td>Awards Night</td>
-                                <td>£150</td>
-                                <td>£200</td>
-                                <td>£100</td>
-                                <td>Gala dinner, awards ceremony, networking</td>
-                            </tr>
-                            <tr>
-                                <td>VIP / Premium Week (Optional)</td>
-                                <td>£350</td>
-                                <td>£500</td>
-                                <td>£200</td>
-                                <td>All week-long benefits + VIP lounge access, priority seating, exclusive networking, special gift pack</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <!-- Exhibition Content Section -->
+        <section class="exhibition-content-section">
+            <div class="exhibition-content-wrapper">
+                <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+                    <h2 style="font-size: clamp(32px, 4vw, 48px); font-weight: 800; color: #1b203e; margin: 0 0 30px 0;">Why Exhibit?</h2>
+                    <p style="font-size: 18px; line-height: 1.8; color: #555; margin: 0 0 60px 0;">
+                        Join us at WAW London 2026 and showcase your brand, products, or innovations to a global audience of women in agribusiness, investors, policymakers, and industry leaders.
+                    </p>
                 </div>
-                
-                <div class="early-bird-note">
-                    <p style="margin: 0; font-weight: 600; color: #00bda1; margin-bottom: 8px;">Early-Bird Discounts & Group Bookings available – register early!</p>
+
+                <div class="exhibition-benefits">
+                    <div class="exhibition-benefit-card">
+                        <div class="exhibition-benefit-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Global Reach</h3>
+                        <p>Access to international buyers, investors, and media from the UK, Africa, and beyond. Connect with decision-makers and industry leaders.</p>
+                    </div>
+                    
+                    <div class="exhibition-benefit-card">
+                        <div class="exhibition-benefit-icon">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h3>Brand Visibility</h3>
+                        <p>Increase your brand visibility and market presence. Showcase your innovations to a targeted audience of agribusiness professionals.</p>
+                    </div>
+                    
+                    <div class="exhibition-benefit-card">
+                        <div class="exhibition-benefit-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Cross-Continent Connections</h3>
+                        <p>Build strategic partnerships and expand your network across continents. Create lasting business relationships.</p>
+                    </div>
                 </div>
-                
+
+                <div class="exhibition-options">
+                    <h2>Flexible Exhibition Options</h2>
+                    <p style="text-align: center; font-size: 18px; color: #666; margin: 0 0 40px 0;">
+                        We offer a range of exhibition packages to suit businesses of all sizes, from startups to large corporations.
+                    </p>
+                    
+                    <div class="exhibition-options-grid">
+                        <div class="exhibition-option-card">
+                            <h4>Small Kiosks</h4>
+                            <p>Perfect for startups and small businesses looking to showcase their products and services.</p>
+                        </div>
+                        
+                        <div class="exhibition-option-card">
+                            <h4>Standard Booths</h4>
+                            <p>Ideal for established businesses seeking to expand their market presence and network.</p>
+                        </div>
+                        
+                        <div class="exhibition-option-card">
+                            <h4>Premium Booths</h4>
+                            <p>Premium spaces for large corporations with enhanced visibility and prime location benefits.</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div style="text-align: center;">
-                    <a href="/pre-register" class="purchase-button">
-                        Purchase Tickets →
+                    <a href="/contact-us" class="apply-button">
+                        Apply to Exhibit →
                     </a>
                 </div>
             </div>
