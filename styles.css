@@ -2436,7 +2436,7 @@ button:focus:not(:focus-visible) {
 
 /* Footer */
 #footer-outer {
-    background: var(--primary-color);
+    background: #000000;
     color: var(--secondary-color);
     width: 100%;
     position: relative;
@@ -2444,7 +2444,7 @@ button:focus:not(:focus-visible) {
 
 #footer-widgets {
     padding: 60px 0 40px;
-    background: var(--primary-color);
+    background: #000000;
 }
 
 #footer-widgets .container {
