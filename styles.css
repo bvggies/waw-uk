@@ -231,7 +231,7 @@ button:focus:not(:focus-visible) {
 .logo-line-1 {
     font-size: 42px;
     font-weight: 900;
-    color: var(--secondary-color);
+    color: #ffffff !important;
     letter-spacing: 2px;
     line-height: 1;
 }
@@ -239,14 +239,14 @@ button:focus:not(:focus-visible) {
 .logo-line-2 {
     font-size: 24px;
     font-weight: 800;
-    color: var(--secondary-color);
+    color: #ffffff !important;
     letter-spacing: 2px;
 }
 
 .logo-line-3 {
     font-size: 12px;
     font-weight: 600;
-    color: var(--secondary-color);
+    color: #ffffff !important;
     letter-spacing: 1.5px;
 }
 
