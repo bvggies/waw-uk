@@ -529,8 +529,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
         
-        // Event date: September 21, 2026 at 00:00:00 UTC (start of day)
-        const eventDate = new Date('2026-09-21T00:00:00Z').getTime();
+        // Event date: September 27, 2026 at 00:00:00 UTC (start of day)
+        const eventDate = new Date('2026-09-27T00:00:00Z').getTime();
         
         function updateCountdown() {
             const now = new Date().getTime();
