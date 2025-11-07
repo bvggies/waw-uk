@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Purchase tickets for WAW London - Women in Agribusiness Week London 2026. Choose from individual sessions, day passes, week-long passes, and more.">
+    <meta name="keywords" content="Tickets, WAW London, Women in Agribusiness, Purchase Tickets, London 2026">
+    <title>Tickets - WAW London - Women in Agribusiness Week London 2026</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Tickets Page Styles */
+        .tickets-hero-section {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 80px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #00bda1 0%, #008080 50%, #00bda1 100%);
+        }
+        
+        .tickets-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .tickets-hero-title {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tickets-hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .tickets-content-section {
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .tickets-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tickets-table-wrapper {
+            overflow-x: auto;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+        
+        .tickets-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .tickets-table thead {
+            background-color: #00bda1;
+            color: #ffffff;
+        }
+        
+        .tickets-table th {
+            padding: 20px 15px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 700;
+            font-size: 16px;
+        }
+        
+        .tickets-table th:nth-child(2),
+        .tickets-table th:nth-child(3),
+        .tickets-table th:nth-child(4) {
+            text-align: center;
+        }
+        
+        .tickets-table tbody tr {
+            border-bottom: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease;
+        }
+        
+        .tickets-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .tickets-table tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .tickets-table tbody tr:nth-child(even):hover {
+            background-color: #f0f0f0;
+        }
+        
+        .tickets-table td {
+            padding: 20px 15px;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .tickets-table td:nth-child(2),
+        .tickets-table td:nth-child(3),
+        .tickets-table td:nth-child(4) {
+            text-align: center;
+            font-weight: 600;
+            color: #00bda1;
+            font-size: 18px;
+        }
+        
+        .tickets-table td:first-child {
+            font-weight: 600;
+            color: #1b203e;
+        }
+        
+        .purchase-button {
+            display: inline-block;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #00bda1, #008080);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 18px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 189, 161, 0.3);
+            margin-top: 40px;
+        }
+        
+        .purchase-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 189, 161, 0.4);
+        }
+        
+        .early-bird-note {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 189, 161, 0.1);
+            border-radius: 12px;
+            border-left: 4px solid #00bda1;
+        }
+        
+        @media (max-width: 767px) {
+            .tickets-table {
+                font-size: 14px;
+            }
+            
+            .tickets-table th,
+            .tickets-table td {
+                padding: 12px 8px;
+            }
+            
+            .tickets-table th:nth-child(2),
+            .tickets-table th:nth-child(3),
+            .tickets-table th:nth-child(4),
+            .tickets-table td:nth-child(2),
+            .tickets-table td:nth-child(3),
+            .tickets-table td:nth-child(4) {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-wrapper">
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Top Row -->
+            <div class="header-top">
+                <!-- Logo Section -->
+                <a href="/" class="logo-section" aria-label="Home - WAW London">
+                    <div class="logo-icon">
+                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FFCBA4" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <div class="logo-line-1">WAW LONDON</div>
+                        <div class="logo-line-2">Women in Agribusiness Week</div>
+                        <div class="logo-line-3">21 – 26 September 2026 • London, UK</div>
+                    </div>
+                </a>
+
+                <!-- Divider -->
+                <div class="header-divider"></div>
+
+                <!-- Date Section -->
+                <div class="date-section">
+                    <div class="event-date">21 – 26 September 2026</div>
+                    <div class="event-location">London, UK</div>
+                    <!-- Countdown Timer -->
+                    <div class="countdown-timer" id="countdown-timer">
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="days">0</span>
+                            <span class="countdown-label">Days</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="hours">0</span>
+                            <span class="countdown-label">Hours</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="minutes">0</span>
+                            <span class="countdown-label">Min</span>
+                        </div>
+                        <div class="countdown-separator">:</div>
+                        <div class="countdown-item">
+                            <span class="countdown-number" id="seconds">0</span>
+                            <span class="countdown-label">Sec</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav class="main-nav" id="main-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="/" class="nav-home">Home</a>
+                    </li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/speakers">Speakers</a></li>
+                    <li><a href="/tickets">Tickets</a></li>
+                    <li><a href="/pre-register">Register</a></li>
+                    <li><a href="#" class="btn-sponsor">Sponsor</a></li>
+                </ul>
+                <button class="close-menu" aria-label="Close menu">×</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Tickets Hero Section -->
+        <section class="tickets-hero-section">
+            <div class="tickets-hero-content">
+                <h1 class="tickets-hero-title">Tickets & Fees</h1>
+                <p class="tickets-hero-subtitle">Per Session Pricing – attend exactly what you need. Exhibition Pricing (all week)</p>
+            </div>
+        </section>
+
+        <!-- Tickets Content Section -->
+        <section class="tickets-content-section">
+            <div class="tickets-content-wrapper">
+                <div class="tickets-table-wrapper">
+                    <table class="tickets-table">
+                        <thead>
+                            <tr>
+                                <th>Ticket Type</th>
+                                <th>Africa & UK Price</th>
+                                <th>International Price</th>
+                                <th>Student Price</th>
+                                <th>What's Included</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Individual Session</td>
+                                <td>£20</td>
+                                <td>£30</td>
+                                <td>£10</td>
+                                <td>Access to 1 focused session</td>
+                            </tr>
+                            <tr>
+                                <td>Day Session</td>
+                                <td>£90</td>
+                                <td>£140</td>
+                                <td>£50</td>
+                                <td>Full-day access, lunch, 1 farm/factory tour, networking</td>
+                            </tr>
+                            <tr>
+                                <td>Week-long Pass</td>
+                                <td>£300</td>
+                                <td>£450</td>
+                                <td>£150</td>
+                                <td>All sessions across the week, lunch daily, multiple tours, networking events</td>
+                            </tr>
+                            <tr>
+                                <td>Awards Night</td>
+                                <td>£150</td>
+                                <td>£200</td>
+                                <td>£100</td>
+                                <td>Gala dinner, awards ceremony, networking</td>
+                            </tr>
+                            <tr>
+                                <td>VIP / Premium Week (Optional)</td>
+                                <td>£350</td>
+                                <td>£500</td>
+                                <td>£200</td>
+                                <td>All week-long benefits + VIP lounge access, priority seating, exclusive networking, special gift pack</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="early-bird-note">
+                    <p style="margin: 0; font-weight: 600; color: #00bda1; margin-bottom: 8px;">Early-Bird Discounts & Group Bookings available – register early!</p>
+                </div>
+                
+                <div style="text-align: center;">
+                    <a href="/pre-register" class="purchase-button">
+                        Purchase Tickets →
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer-outer" class="footer" data-cols="4" data-custom-color="true" data-disable-copyright="false" data-copyright-line="true" data-using-widget-area="true" data-link-hover="underline" role="contentinfo">
+        <div class="row" id="copyright" data-layout="centered">
+            <div class="container">
+                <div class="copyright-content">
+                    <div class="footer-links">
+                        <a href="/privacy-policy" class="footer-link">Privacy Policy</a>
+                        <a href="/terms-conditions" class="footer-link">Terms & Conditions</a>
+                    </div>
+                    <p class="copyright-text">&copy; 2025 Women In Agric Business Week - WAWUK.</p>
+                    <ul class="social">
+                        <li>
+                            <a target="_blank" rel="noopener" href="#" aria-label="Twitter">
+                                <span class="screen-reader-text">twitter</span>
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="https://www.facebook.com/UKBBSHOW" aria-label="Facebook">
+                                <span class="screen-reader-text">facebook</span>
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukbbweek/" aria-label="Instagram">
+                                <span class="screen-reader-text">instagram</span>
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
+
