@@ -1059,7 +1059,8 @@ button:focus:not(:focus-visible) {
     line-height: 1.6;
 }
 
-.speaker-card {
+/* Legacy styles - only for speakers-grid-new (homepage) */
+.speakers-grid-new .speaker-card {
     background: #ffffff;
     border-radius: 12px;
     overflow: hidden;
@@ -1070,7 +1071,7 @@ button:focus:not(:focus-visible) {
     height: 100%;
 }
 
-.speaker-card:hover {
+.speakers-grid-new .speaker-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
@@ -1115,7 +1116,8 @@ button:focus:not(:focus-visible) {
     flex-direction: column;
 }
 
-.speaker-name {
+/* Legacy speaker-name - only for speakers-grid-new */
+.speakers-grid-new .speaker-name {
     font-size: 20px;
     font-weight: 600;
     color: #1a1a1a;
