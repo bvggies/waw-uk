@@ -18,6 +18,420 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Modern Homepage Redesign - Complete Styles */
+        
+        /* Section Background Vectors */
+        .section-bg-vector {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .section-bg-vector::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(32, 178, 170, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -250px;
+            right: -250px;
+            animation: float 20s ease-in-out infinite;
+        }
+        
+        .section-bg-vector::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 203, 164, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            bottom: -200px;
+            left: -200px;
+            animation: float 25s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
+        }
+        
+        /* Modern Typography */
+        .hero-content-section,
+        .hero-content-section h2,
+        .hero-content-section h3,
+        .hero-content-section p {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            letter-spacing: -0.02em;
+            line-height: 1.6;
+        }
+        
+        .hero-content-section h2 {
+            font-weight: 800;
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .hero-content-section h3 {
+            font-weight: 600;
+            font-size: clamp(20px, 3vw, 28px);
+            margin-bottom: 16px;
+        }
+        
+        /* Modern Hero Section */
+        .hero-content-section {
+            position: relative;
+            padding: 80px 20px;
+            overflow: hidden;
+        }
+        
+        .hero-content-section .row-bg {
+            position: relative;
+        }
+        
+        /* Modern Buttons */
+        .nectar-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nectar-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+        
+        .nectar-button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+        
+        .nectar-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nectar-button span {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
+        }
+        
+        .nectar-button:hover span {
+            transform: translateX(5px);
+        }
+        
+        /* Stream Cards with Animations */
+        .stream-card {
+            position: relative;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow: hidden;
+        }
+        
+        .stream-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .stream-card:hover::before {
+            left: 100%;
+        }
+        
+        .stream-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 203, 164, 0.5);
+        }
+        
+        /* Stream Icon Animations */
+        .stream-icon {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .stream-card:hover .stream-icon {
+            transform: scale(1.15) rotate(5deg);
+            filter: drop-shadow(0 8px 16px rgba(255, 203, 164, 0.4));
+        }
+        
+        .stream-icon svg {
+            transition: all 0.4s ease;
+        }
+        
+        .stream-card:hover .stream-icon svg {
+            filter: brightness(1.2);
+        }
+        
+        /* Modern Speakers Section for Homepage */
+        .speakers-section-home {
+            position: relative;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1b203e 0%, #2d3561 50%, #1b203e 100%);
+            overflow: hidden;
+        }
+        
+        .speakers-section-home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(32, 178, 170, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 203, 164, 0.1) 0%, transparent 50%);
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .speakers-section-home .nectar-split-heading h2 {
+            color: #ffffff;
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            margin-bottom: 20px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .speakers-section-home h5 {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+        
+        /* Modern Speakers Grid for Homepage */
+        .speakers-grid-home {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .speaker-card-home {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 30px 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .speaker-card-home::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .speaker-card-home:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .speaker-card-home:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+            border-color: rgba(32, 178, 170, 0.2);
+        }
+        
+        .speaker-photo-wrap-home {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            flex-shrink: 0;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(32, 178, 170, 0.2);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 4px solid #ffffff;
+        }
+        
+        .speaker-card-home:hover .speaker-photo-wrap-home {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 35px rgba(32, 178, 170, 0.3);
+        }
+        
+        .speaker-photo-home {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 50%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .speaker-card-home:hover .speaker-photo-home {
+            filter: brightness(1.1) saturate(1.2);
+        }
+        
+        .speaker-name-home {
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: #1a1a1a;
+            font-size: 20px;
+            line-height: 1.3;
+            transition: color 0.3s ease;
+        }
+        
+        .speaker-card-home:hover .speaker-name-home {
+            color: var(--teal-color);
+        }
+        
+        .speaker-org-home {
+            color: #555;
+            font-size: 15px;
+            margin: 0;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        
+        .speaker-linkedin-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(255, 203, 164, 0.1));
+            color: var(--teal-color);
+            margin-top: 16px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+        }
+        
+        .speaker-card-home:hover .speaker-linkedin-home {
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+        
+        /* Section Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-content-section,
+        .stream-focuses-section,
+        .speakers-section-home {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* Improved Alignment */
+        .hero-text,
+        .hero-text p,
+        .hero-text ul {
+            text-align: justify;
+            text-justify: inter-word;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-text ul {
+            padding-left: 40px;
+        }
+        
+        .hero-text li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .speakers-grid-home {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+                gap: 25px;
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .hero-content-section {
+                padding: 60px 20px;
+            }
+            
+            .speakers-section-home {
+                padding: 60px 20px;
+            }
+            
+            .speakers-grid-home {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 20px;
+            }
+            
+            .speaker-photo-wrap-home {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .speakers-grid-home {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Skip to main content -->
@@ -588,32 +1002,16 @@
             </div>
         </section>
 
-        <!-- Speakers Section -->
-        <section class="speakers-section">
-            <div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false">
-                <div class="inner-wrap row-bg-layer">
-                    <div class="row-bg viewport-desktop using-bg-color" style="background-color: #2d2d2d;"></div>
+        <!-- Modern Speakers Section -->
+        <section class="speakers-section-home">
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="nectar-split-heading" data-align="default" data-m-align="inherit" data-text-effect="default" data-animation-type="line-reveal-by-space" data-animation-delay="0" data-animation-offset="" data-m-rm-animation="" data-stagger="" data-custom-font-size="false">
+                    <h2>2026 Speakers</h2>
                 </div>
-                <div class="row_col_wrap_12 col span_12 dark left">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading" data-align="default" data-m-align="inherit" data-text-effect="default" data-animation-type="line-reveal-by-space" data-animation-delay="0" data-animation-offset="" data-m-rm-animation="" data-stagger="" data-custom-font-size="false">
-                                    <h2 style="color: #ffffff;">2026 Speakers</h2>
-                                </div>
-                                <div class="speakers-note-row">
-                                    <div class="vc_col-sm-2"></div>
-                                    <div class="vc_col-sm-8">
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;"><strong>Meet our distinguished speakers joining us for WAW London 2026</strong></span></h5>
-                                    </div>
-                                    <div class="vc_col-sm-2"></div>
-                                </div>
-                                <div class="speakers-grid">
-                                    <div class="vc_col-sm-3">
-                                        <div class="team-member" data-style="meta_overlaid">
-                                            <div class="team-member-overlay"></div>
-                                            <a href="#" ></a>
-                                            <div class="team-member-image">
+                <div style="text-align: center; margin-bottom: 50px;">
+                    <h5><strong>Meet our distinguished speakers joining us for WAW London 2026</strong></h5>
+                </div>
+                <div class="speakers-grid-home">
                                                 <img src="https://drive.google.com/thumbnail?id=1CQdMqq2PQY35bEuhvDyUu1xg0yh5JVqo&sz=w800" alt="Antoinette Sallah" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('image-error');" />
                                             </div>
                                             <div class="team-meta">
