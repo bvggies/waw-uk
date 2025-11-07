@@ -1219,87 +1219,97 @@ button:focus:not(:focus-visible) {
   align-items: start;
 }
 
-/* Card styling & hover animation */
-.speaker-card {
-  background: #fff;
-  padding: 18px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(10,30,60,0.04);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: transform 240ms ease, box-shadow 240ms ease;
-  overflow: hidden;
+/* Card styling & hover animation - WiFAI Style */
+.speakers-page .speaker-card,
+.speakers-grid .speaker-card {
+  background: #fff !important;
+  padding: 18px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 4px 8px rgba(10,30,60,0.04) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  transition: transform 240ms ease, box-shadow 240ms ease !important;
+  overflow: hidden !important;
+  height: auto !important;
 }
-.speaker-card:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 12px 28px rgba(10,30,60,0.12);
-}
-
-/* Circle photo: fixed diameter for all cards */
-.speaker-photo-wrap {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 12px;
-  background: #f1f6fa;
-  flex-shrink: 0;
-  position: relative;
-}
-.speaker-photo {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border-radius: 50%;
-  transition: transform 300ms ease, filter 300ms ease;
-}
-.speaker-card:hover .speaker-photo {
-  transform: scale(1.07);
-  filter: saturate(1.05);
+.speakers-page .speaker-card:hover,
+.speakers-grid .speaker-card:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 0 12px 28px rgba(10,30,60,0.12) !important;
 }
 
-/* Speaker body - contains all text info */
-.speaker-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
-  flex-grow: 1;
+/* Circle photo: fixed diameter for all cards - WiFAI Style */
+.speakers-page .speaker-photo-wrap,
+.speakers-grid .speaker-photo-wrap {
+  width: 96px !important;
+  height: 96px !important;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 12px !important;
+  background: #f1f6fa !important;
+  flex-shrink: 0 !important;
+  position: relative !important;
+}
+.speakers-page .speaker-photo,
+.speakers-grid .speaker-photo {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  border-radius: 50% !important;
+  transition: transform 300ms ease, filter 300ms ease !important;
+}
+.speakers-page .speaker-card:hover .speaker-photo,
+.speakers-grid .speaker-card:hover .speaker-photo {
+  transform: scale(1.07) !important;
+  filter: saturate(1.05) !important;
 }
 
-/* Text inside card */
-.speaker-name {
-  font-weight: 700;
-  margin: 6px 0 2px;
-  color: #14324a;
-  font-size: 16px;
-  line-height: 1.3;
-  text-align: center;
+/* Speaker body - contains all text info - WiFAI Style */
+.speakers-page .speaker-body,
+.speakers-grid .speaker-body {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+  flex-grow: 1 !important;
 }
-.speaker-role {
-  color: #2f5870;
-  font-size: 13px;
-  margin: 0 0 8px;
-  min-height: 1.6em;
-  text-align: center;
-  line-height: 1.4;
+
+/* Text inside card - WiFAI Style */
+.speakers-page .speaker-name,
+.speakers-grid .speaker-name {
+  font-weight: 700 !important;
+  margin: 6px 0 2px !important;
+  color: #14324a !important;
+  font-size: 16px !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
 }
-.speaker-excerpt {
-  font-size: 13px;
-  color: #556b78;
-  margin-bottom: 10px;
-  line-height: 1.25;
-  max-height: 3.75em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  text-align: center;
+.speakers-page .speaker-role,
+.speakers-grid .speaker-role {
+  color: #2f5870 !important;
+  font-size: 13px !important;
+  margin: 0 0 8px !important;
+  min-height: 1.6em !important;
+  text-align: center !important;
+  line-height: 1.4 !important;
+}
+.speakers-page .speaker-excerpt,
+.speakers-grid .speaker-excerpt {
+  font-size: 13px !important;
+  color: #556b78 !important;
+  margin-bottom: 10px !important;
+  line-height: 1.25 !important;
+  max-height: 3.75em !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-align: center !important;
 }
 .speaker-link {
   font-size: 13px;
