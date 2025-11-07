@@ -7,10 +7,10 @@
 
 :root {
     /* Global Color Scheme: Teal, Peach, Burgundy */
-    --primary-color: #20B2AA; /* Teal */
+    --primary-color: #008080; /* Dark Teal */
     --secondary-color: #FFCBA4; /* Peach */
     --accent-color: #800020; /* Burgundy */
-    --teal-color: #20B2AA;
+    --teal-color: #008080; /* Dark Teal */
     --peach-color: #FFCBA4;
     --burgundy-color: #800020;
     --text-color: #333333;
@@ -20,7 +20,7 @@
     --hover-color: #1a1a1a;
     --header-bg: #800020;
     --orange-color: #FFCBA4;
-    --green-color: #20B2AA;
+    --green-color: #008080; /* Dark Teal */
 }
 
 html {
@@ -1728,7 +1728,7 @@ button:focus:not(:focus-visible) {
 }
 
 .speaker-linkedin:hover {
-    color: #20B2AA;
+    color: #008080;
 }
 
 .team-member a {
