@@ -80,7 +80,7 @@ def generate_speaker_card(speaker):
         <h3 class="speaker-name">{name}</h3>
         <p class="speaker-role">{org}</p>
         <div class="speaker-excerpt">{title}</div>
-        <a class="speaker-link" href="{linkedin}" {link_attrs}>View Profile</a>
+        <a class="speaker-link" href="{linkedin}" {link_attrs}>View Profile <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>'''
 

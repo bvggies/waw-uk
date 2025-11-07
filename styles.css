@@ -1289,6 +1289,21 @@ button:focus:not(:focus-visible) {
   font-size: 13px;
   color: #1976d2;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease, gap 0.3s ease;
+}
+.speaker-link:hover {
+  color: #1565c0;
+  gap: 8px;
+}
+.speaker-link i {
+  font-size: 11px;
+  transition: transform 0.3s ease;
+}
+.speaker-link:hover i {
+  transform: translateX(3px);
 }
 
 /* No results message */
