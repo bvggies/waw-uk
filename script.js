@@ -421,55 +421,64 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Countdown Timer for Event Date
-document.addEventListener('DOMContentLoaded', () => {
-    const countdownTimer = document.getElementById('countdown-timer');
-    if (!countdownTimer) {
-        console.log('Countdown timer element not found');
-        return;
-    }
+(function() {
+    'use strict';
     
-    const daysEl = document.getElementById('days');
-    const hoursEl = document.getElementById('hours');
-    const minutesEl = document.getElementById('minutes');
-    const secondsEl = document.getElementById('seconds');
-    
-    if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
-        console.log('Countdown elements not found');
-        return;
-    }
-    
-    // Event date: September 21, 2026 at 00:00:00 (start of day) in London time
-    // London in September uses BST (UTC+1), so midnight BST = 23:00 UTC on September 20th
-    // Using 00:00:00 UTC on September 21st = 01:00 BST on September 21st (close enough for countdown)
-    const eventDate = new Date('2026-09-21T00:00:00Z').getTime();
-    
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = eventDate - now;
-        
-        if (distance < 0) {
-            // Event has passed
-            daysEl.textContent = '00';
-            hoursEl.textContent = '00';
-            minutesEl.textContent = '00';
-            secondsEl.textContent = '00';
+    function initCountdown() {
+        const countdownTimer = document.getElementById('countdown-timer');
+        if (!countdownTimer) {
+            console.log('Countdown timer element not found');
             return;
         }
         
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
         
-        daysEl.textContent = days.toString().padStart(2, '0');
-        hoursEl.textContent = hours.toString().padStart(2, '0');
-        minutesEl.textContent = minutes.toString().padStart(2, '0');
-        secondsEl.textContent = seconds.toString().padStart(2, '0');
+        if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
+            console.log('Countdown elements not found');
+            return;
+        }
+        
+        // Event date: September 21, 2026 at 00:00:00 UTC (start of day)
+        const eventDate = new Date('2026-09-21T00:00:00Z').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+            
+            if (distance < 0) {
+                // Event has passed
+                if (daysEl) daysEl.textContent = '00';
+                if (hoursEl) hoursEl.textContent = '00';
+                if (minutesEl) minutesEl.textContent = '00';
+                if (secondsEl) secondsEl.textContent = '00';
+                return;
+            }
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            if (daysEl) daysEl.textContent = days.toString().padStart(2, '0');
+            if (hoursEl) hoursEl.textContent = hours.toString().padStart(2, '0');
+            if (minutesEl) minutesEl.textContent = minutes.toString().padStart(2, '0');
+            if (secondsEl) secondsEl.textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        // Update immediately
+        updateCountdown();
+        
+        // Update every second
+        setInterval(updateCountdown, 1000);
     }
     
-    // Update immediately
-    updateCountdown();
-    
-    // Update every second
-    setInterval(updateCountdown, 1000);
-});
+    // Initialize when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCountdown);
+    } else {
+        initCountdown();
+    }
+})();
