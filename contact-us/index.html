@@ -3,13 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Women In Agric Business Week - WAWUK. Get in touch with our team.">
-    <title>Contact Us - Women In Agric Business Week - WAWUK</title>
+    <meta name="description" content="Contact WAW London - Women in Agribusiness Week London 2026. Get in touch with our team for queries, registration, or sponsorship opportunities.">
+    <meta name="keywords" content="Contact WAW London, Women in Agribusiness, Contact, Email, Phone, London 2026">
+    <title>Contact Us - WAW London - Women in Agribusiness Week London 2026</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Modern Contact Us Page Styles */
+        .contact-hero-section {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 80px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1b203e 0%, #2d3561 50%, #1b203e 100%);
+        }
+        
+        .contact-hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .contact-hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(32, 178, 170, 0.15) 0%, 
+                rgba(255, 203, 164, 0.1) 50%, 
+                rgba(128, 0, 32, 0.15) 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .contact-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .contact-hero-title {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .contact-content-section {
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .contact-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .contact-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .contact-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(32, 178, 170, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .contact-card:hover .contact-card-icon {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 12px 35px rgba(32, 178, 170, 0.4);
+        }
+        
+        .contact-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1b203e;
+            margin: 0 0 16px 0;
+        }
+        
+        .contact-card p,
+        .contact-card a {
+            font-size: 18px;
+            color: #555;
+            margin: 0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-card a:hover {
+            color: var(--teal-color);
+        }
+        
+        .contact-form-section {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-top: 60px;
+        }
+        
+        .contact-form-section h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            color: #1b203e;
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+        
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .form-group label {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1b203e;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--teal-color);
+            box-shadow: 0 0 0 4px rgba(32, 178, 170, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        
+        .form-submit-btn {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(255, 203, 164, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--teal-color);
+            font-size: 24px;
+            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+        
+        .social-link:hover {
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            color: #ffffff;
+            transform: translateY(-5px) scale(1.1);
+            border-color: transparent;
+            box-shadow: 0 8px 25px rgba(32, 178, 170, 0.3);
+        }
+        
+        @media (max-width: 767px) {
+            .contact-hero-section {
+                min-height: 300px;
+                padding: 60px 20px 50px;
+            }
+            
+            .contact-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .contact-form-section {
+                padding: 30px 24px;
+            }
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -23,16 +307,16 @@
             </button>
             
             <div class="header-top">
-                <a href="/" class="logo-section" aria-label="Home - WAWUK">
+                <a href="/" class="logo-section" aria-label="Home - WAW London">
                     <div class="logo-icon">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FFCBA4" stroke-width="4" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <div class="logo-text">
-                        <div class="logo-line-1">WAWUK</div>
-                        <div class="logo-line-2"></div>
-                        <div class="logo-line-3">WOMEN IN AGRIC BUSINESS WEEK</div>
+                        <div class="logo-line-1">WAW LONDON</div>
+                        <div class="logo-line-2">Women in Agribusiness Week</div>
+                        <div class="logo-line-3">21 – 26 September 2026 • London, UK</div>
                     </div>
                 </a>
 
@@ -59,77 +343,19 @@
                 <div class="header-divider"></div>
 
                 <div class="date-section">
-                    <div class="event-date">12th-17th October 2026</div>
-                    <div class="event-location">London</div>
+                    <div class="event-date">21 – 26 September 2026</div>
+                    <div class="event-location">London, UK</div>
                 </div>
             </div>
 
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-menu">
-                    <li><a href="/" class="nav-home"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li class="has-dropdown">
-                        <a href="#">About <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="#">6 Practical Ways to Embed DEI</a></li>
-                            <li><a href="#">Newsletter Sign Up</a></li>
-                            <li class="has-submenu">
-                                <a href="#">Our Portfolio <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Women In Agric Business Show</a></li>
-                                    <li><a href="#">Birmingham Women In Agric Business Show</a></li>
-                                    <li><a href="#">Women In Agric Tech Achievement Awards UK</a></li>
-                                    <li><a href="#">Women In Agric Tech Achievement Awards US</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                            <li><a href="#">Partners</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Sponsorship <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Make the Case</a></li>
-                            <li><a href="#">Sponsor Success Stories</a></li>
-                            <li><a href="#">Sponsor an Event</a></li>
-                            <li><a href="/our-sponsors">Our Sponsors</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/events">Events</a></li>
-                    <li class="has-dropdown">
-                        <a href="#">Talks Programme <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Agenda</a></li>
-                            <li><a href="/speakers">Speakers</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Content Hub <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li class="has-submenu">
-                                <a href="#">25 Top Entrepreneurs Watch List <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2025</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2024</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2023</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2022</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2021</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Jobs Board</a></li>
-                            <li class="has-submenu">
-                                <a href="#">Press Releases <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">May 2025 – eBay Press Release</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-actions">
-                        <a href="#" class="btn-sponsor">Sponsor</a>
-                        <a href="/pre-register" class="btn-pre-register">Pre-Register</a>
-                    </li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/speakers">Speakers</a></li>
+                    <li><a href="/pre-register">Register</a></li>
+                    <li><a href="#" class="btn-sponsor">Sponsor</a></li>
                 </ul>
                 <button class="close-menu" aria-label="Close menu">×</button>
             </nav>
@@ -137,62 +363,114 @@
     </header>
 
     <main id="main-content">
-        <section class="page-hero">
-            <div class="row-bg-wrap" style="background-color: #1b203e; padding: 80px 0;">
-                <div class="container">
-                    <h1 style="color: #ffffff; font-size: 48px; font-weight: 900; text-align: center; margin: 0;">Contact Us</h1>
-                </div>
+        <!-- Modern Hero Section -->
+        <section class="contact-hero-section">
+            <div class="contact-hero-background">
+                <div class="contact-hero-gradient"></div>
+            </div>
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">Get In Touch</h1>
+                <p class="contact-hero-subtitle">We're here to help. Reach out to us for any queries, registration, or sponsorship opportunities.</p>
             </div>
         </section>
 
-        <section class="page-content" style="padding: 80px 0; background: #ffffff;">
-            <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 60px;">
-                        <div class="contact-card" style="padding: 30px; background: #f8f9fa; border-radius: 8px;">
-                            <i class="fa fa-envelope" style="font-size: 32px; color: #ff6716; margin-bottom: 20px;"></i>
-                            <h3 style="color: #1b203e; font-size: 24px; font-weight: 700; margin-bottom: 10px;">Email</h3>
-                            <p style="color: #666; font-size: 16px; margin: 0;">
-                                <a href="mailto:info@wawuk.com" style="color: #ff6716; text-decoration: none;">info@wawuk.com</a>
-                            </p>
+        <!-- Contact Content Section -->
+        <section class="contact-content-section">
+            <div class="contact-content-wrapper">
+                <!-- Contact Cards -->
+                <div class="contact-cards-grid">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
-                        <div class="contact-card" style="padding: 30px; background: #f8f9fa; border-radius: 8px;">
-                            <i class="fa fa-phone" style="font-size: 32px; color: #ff6716; margin-bottom: 20px;"></i>
-                            <h3 style="color: #1b203e; font-size: 24px; font-weight: 700; margin-bottom: 10px;">Phone</h3>
-                            <p style="color: #666; font-size: 16px; margin: 0;">
-                                <a href="tel:+442071234567" style="color: #ff6716; text-decoration: none;">+44 20 7123 4567</a>
-                            </p>
-                        </div>
-                        <div class="contact-card" style="padding: 30px; background: #f8f9fa; border-radius: 8px;">
-                            <i class="fa fa-map-marker-alt" style="font-size: 32px; color: #ff6716; margin-bottom: 20px;"></i>
-                            <h3 style="color: #1b203e; font-size: 24px; font-weight: 700; margin-bottom: 10px;">Location</h3>
-                            <p style="color: #666; font-size: 16px; margin: 0;">London, UK</p>
-                        </div>
+                        <h3>Email</h3>
+                        <p>
+                            <a href="mailto:info@wawlondon.org">info@wawlondon.org</a>
+                        </p>
                     </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>
+                            <a href="tel:+4420XXXXXXXX">+44 20 XXXX XXXX</a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>London, UK</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Event Dates</h3>
+                        <p>21 – 26 September 2026</p>
+                    </div>
+                </div>
 
-                    <div style="background: #f8f9fa; padding: 40px; border-radius: 8px;">
-                        <h2 style="color: #1b203e; font-size: 32px; font-weight: 700; margin-bottom: 30px;">Send Us a Message</h2>
-                        <form style="display: flex; flex-direction: column; gap: 20px;">
-                            <div>
-                                <label for="name" style="display: block; color: #1b203e; font-weight: 600; margin-bottom: 8px;">Name</label>
-                                <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 4px; font-size: 16px; font-family: inherit;">
-                            </div>
-                            <div>
-                                <label for="email" style="display: block; color: #1b203e; font-weight: 600; margin-bottom: 8px;">Email</label>
-                                <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 4px; font-size: 16px; font-family: inherit;">
-                            </div>
-                            <div>
-                                <label for="subject" style="display: block; color: #1b203e; font-weight: 600; margin-bottom: 8px;">Subject</label>
-                                <input type="text" id="subject" name="subject" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 4px; font-size: 16px; font-family: inherit;">
-                            </div>
-                            <div>
-                                <label for="message" style="display: block; color: #1b203e; font-weight: 600; margin-bottom: 8px;">Message</label>
-                                <textarea id="message" name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 4px; font-size: 16px; font-family: inherit; resize: vertical;"></textarea>
-                            </div>
-                            <button type="submit" class="nectar-button accent-color" style="align-self: flex-start; margin-top: 10px;">
-                                <span>Send Message</span>
-                            </button>
-                        </form>
+                <!-- Contact Form -->
+                <div class="contact-form-section">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="registration">Registration & Tickets</option>
+                                <option value="sponsorship">Sponsorship Opportunities</option>
+                                <option value="exhibition">Exhibition & Booth</option>
+                                <option value="speaking">Speaking Opportunities</option>
+                                <option value="media">Media & Press</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="nectar-button large regular accent-color regular-button form-submit-btn">
+                            <span>Send Message →</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Social Media Links -->
+                <div style="text-align: center; margin-top: 60px;">
+                    <h3 style="font-size: 24px; font-weight: 700; color: #1b203e; margin-bottom: 24px;">Follow Us</h3>
+                    <p style="font-size: 18px; color: #555; margin-bottom: 30px;">Stay connected with us on social media for the latest updates</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/uk-black-business-week" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.facebook.com/UKBBSHOW" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ukblackbusinessweek" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -209,17 +487,8 @@
                     <div class="col span_3">
                         <div id="block-6" class="widget widget_block widget_media_image">
                             <figure class="wp-block-image aligncenter size-full">
-                                <a href="https://www.birminghamblackbusinessshow.co.uk/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/BBBS-Footer-Logo-2025.png" alt="Birmingham Women In Agric Business Show" class="wp-image-21968" loading="lazy" />
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col span_3">
-                        <div id="block-4" class="widget widget_block widget_media_image">
-                            <figure class="wp-block-image aligncenter size-full">
                                 <a href="https://www.ukblackbusinessshow.co.uk/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/UKBBS-Footer-Logo-2025.png" alt="Women In Agric Business Show" class="wp-image-21969" loading="lazy" />
+                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/UKBBS-Footer-Logo-2025.png" alt="UK Black Business Show" class="wp-image-21969" loading="lazy" />
                                 </a>
                             </figure>
                         </div>
@@ -228,10 +497,13 @@
                         <div id="block-7" class="widget widget_block widget_media_image">
                             <figure class="wp-block-image size-full">
                                 <a href="https://btaawards.com/us/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/01/BTA-US-Footer-Logo-2026.png" alt="Women In Agric Tech Achievement Awards US" class="wp-image-22063" loading="lazy" />
+                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/01/BTA-US-Footer-Logo-2026.png" alt="BTA Awards US" class="wp-image-22063" loading="lazy" />
                                 </a>
                             </figure>
                         </div>
+                    </div>
+                    <div class="col span_3">
+                        <div class="widget"></div>
                     </div>
                 </div>
             </div>
@@ -243,8 +515,10 @@
                     <div class="footer-links">
                         <a rel="privacy-policy" href="/privacy-policy" class="footer-link">Privacy Policy</a>
                         <a href="/terms-conditions" class="footer-link">Terms & Conditions</a>
+                        <a href="#" class="footer-link">Accessibility</a>
+                        <a href="#" class="footer-link">Subscribe to Newsletter</a>
                     </div>
-                    <p class="copyright-text">&copy; 2025 Women In Agric Business Week - WAWUK.</p>
+                    <p class="copyright-text">&copy; 2026 WAW London - Women in Agribusiness Week London 2026. All rights reserved.</p>
                     <ul class="social">
                         <li>
                             <a target="_blank" rel="noopener" href="#" aria-label="Twitter">
@@ -259,7 +533,13 @@
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukbbweek/" aria-label="Instagram">
+                            <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/uk-black-business-week" aria-label="LinkedIn">
+                                <span class="screen-reader-text">linkedin</span>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukblackbusinessweek" aria-label="Instagram">
                                 <span class="screen-reader-text">instagram</span>
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
@@ -273,4 +553,3 @@
     <script src="../script.js"></script>
 </body>
 </html>
-

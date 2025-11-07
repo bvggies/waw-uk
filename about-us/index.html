@@ -3,20 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Women In Agric Business Week - WAWUK. Learn about our mission to empower women in agriculture and agribusiness.">
-    <meta name="keywords" content="About WAWUK, Women in Agriculture, Agribusiness, Business Week">
-    <title>About Us - Women In Agric Business Week - WAWUK</title>
+    <meta name="description" content="About WAW London - Women in Agribusiness Week London 2026. Learn about our mission to empower women in agriculture and agribusiness.">
+    <meta name="keywords" content="About WAW London, Women in Agriculture, Agribusiness, Business Week, London 2026">
+    <title>About Us - WAW London - Women in Agribusiness Week London 2026</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Modern About Us Page Styles */
+        .about-hero-section {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 80px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1b203e 0%, #2d3561 50%, #1b203e 100%);
+        }
+        
+        .about-hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .about-hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(32, 178, 170, 0.15) 0%, 
+                rgba(255, 203, 164, 0.1) 50%, 
+                rgba(128, 0, 32, 0.15) 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .about-hero-title {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .about-hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .about-content-section {
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .about-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .about-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .about-card:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .about-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .about-card-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #ffffff;
+            box-shadow: 0 8px 25px rgba(32, 178, 170, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .about-card:hover .about-card-icon {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 12px 35px rgba(32, 178, 170, 0.4);
+        }
+        
+        .about-card h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            color: #1b203e;
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+        
+        .about-card p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+        
+        .about-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .about-stat-card {
+            background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), rgba(255, 203, 164, 0.1));
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+        
+        .about-stat-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--teal-color);
+            box-shadow: 0 12px 30px rgba(32, 178, 170, 0.2);
+        }
+        
+        .about-stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--teal-color);
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+        
+        .about-stat-label {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .about-cta {
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 60px;
+            box-shadow: 0 8px 30px rgba(32, 178, 170, 0.3);
+        }
+        
+        .about-cta h3 {
+            font-size: 36px;
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+        
+        .about-cta p {
+            font-size: 20px;
+            margin: 0 0 30px 0;
+            opacity: 0.95;
+        }
+        
+        @media (max-width: 767px) {
+            .about-hero-section {
+                min-height: 300px;
+                padding: 60px 20px 50px;
+            }
+            
+            .about-card {
+                padding: 30px 24px;
+            }
+            
+            .about-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Skip to main content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
     <header class="header">
         <div class="header-wrapper">
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
@@ -26,16 +258,16 @@
             </button>
             
             <div class="header-top">
-                <a href="/" class="logo-section" aria-label="Home - WAWUK">
+                <a href="/" class="logo-section" aria-label="Home - WAW London">
                     <div class="logo-icon">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FFCBA4" stroke-width="4" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <div class="logo-text">
-                        <div class="logo-line-1">WAWUK</div>
-                        <div class="logo-line-2"></div>
-                        <div class="logo-line-3">WOMEN IN AGRIC BUSINESS WEEK</div>
+                        <div class="logo-line-1">WAW LONDON</div>
+                        <div class="logo-line-2">Women in Agribusiness Week</div>
+                        <div class="logo-line-3">21 – 26 September 2026 • London, UK</div>
                     </div>
                 </a>
 
@@ -62,77 +294,19 @@
                 <div class="header-divider"></div>
 
                 <div class="date-section">
-                    <div class="event-date">12th-17th October 2026</div>
-                    <div class="event-location">London</div>
+                    <div class="event-date">21 – 26 September 2026</div>
+                    <div class="event-location">London, UK</div>
                 </div>
             </div>
 
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-menu">
-                    <li><a href="/" class="nav-home"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li class="has-dropdown">
-                        <a href="#">About <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="#">6 Practical Ways to Embed DEI</a></li>
-                            <li><a href="#">Newsletter Sign Up</a></li>
-                            <li class="has-submenu">
-                                <a href="#">Our Portfolio <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Women In Agric Business Show</a></li>
-                                    <li><a href="#">Birmingham Women In Agric Business Show</a></li>
-                                    <li><a href="#">Women In Agric Tech Achievement Awards UK</a></li>
-                                    <li><a href="#">Women In Agric Tech Achievement Awards US</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                            <li><a href="#">Partners</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Sponsorship <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Make the Case</a></li>
-                            <li><a href="#">Sponsor Success Stories</a></li>
-                            <li><a href="#">Sponsor an Event</a></li>
-                            <li><a href="/our-sponsors">Our Sponsors</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/events">Events</a></li>
-                    <li class="has-dropdown">
-                        <a href="#">Talks Programme <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Agenda</a></li>
-                            <li><a href="/speakers">Speakers</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Content Hub <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li class="has-submenu">
-                                <a href="#">25 Top Entrepreneurs Watch List <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2025</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2024</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2023</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2022</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2021</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Jobs Board</a></li>
-                            <li class="has-submenu">
-                                <a href="#">Press Releases <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">May 2025 – eBay Press Release</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-actions">
-                        <a href="#" class="btn-sponsor">Sponsor</a>
-                        <a href="/pre-register" class="btn-pre-register">Pre-Register</a>
-                    </li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/speakers">Speakers</a></li>
+                    <li><a href="/pre-register">Register</a></li>
+                    <li><a href="#" class="btn-sponsor">Sponsor</a></li>
                 </ul>
                 <button class="close-menu" aria-label="Close menu">×</button>
             </nav>
@@ -140,41 +314,74 @@
     </header>
 
     <main id="main-content">
-        <section class="page-hero">
-            <div class="row-bg-wrap" style="background-color: #1b203e; padding: 80px 0;">
-                <div class="container">
-                    <h1 style="color: #ffffff; font-size: 48px; font-weight: 900; text-align: center; margin: 0;">About Us</h1>
-                </div>
+        <!-- Modern Hero Section -->
+        <section class="about-hero-section">
+            <div class="about-hero-background">
+                <div class="about-hero-gradient"></div>
+            </div>
+            <div class="about-hero-content">
+                <h1 class="about-hero-title">About WAW London</h1>
+                <p class="about-hero-subtitle">Empowering women in agribusiness across the UK, Africa, and beyond</p>
             </div>
         </section>
 
-        <section class="page-content" style="padding: 80px 0; background: #ffffff;">
-            <div class="container">
-                <div style="max-width: 900px; margin: 0 auto;">
-                    <h2 style="color: #1b203e; font-size: 36px; font-weight: 700; margin-bottom: 30px;">Our Mission</h2>
-                    <p style="color: #1b203e; font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-                        Women In Agric Business Week (WAWUK) is dedicated to empowering and supporting women in agriculture and agribusiness across the UK and Europe. We believe in creating a platform where women can connect, learn, grow, and thrive in the agricultural sector.
-                    </p>
-                    
-                    <h2 style="color: #1b203e; font-size: 36px; font-weight: 700; margin-bottom: 30px; margin-top: 50px;">What We Do</h2>
-                    <p style="color: #1b203e; font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-                        Through a series of 21 inspirational events in October, we equip attendees with business insights, routes to success, new skills and knowledge to navigate the world of work. Our events bring together 15,000 like-minded people to learn from the experiences of 200 speakers and support women-owned agribusinesses.
-                    </p>
-
-                    <h2 style="color: #1b203e; font-size: 36px; font-weight: 700; margin-bottom: 30px; margin-top: 50px;">Our Vision</h2>
-                    <p style="color: #1b203e; font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-                        To be the leading platform for women in agriculture and agribusiness, fostering a community that drives innovation, creates opportunities, and celebrates achievements in the agricultural sector.
-                    </p>
-
-                    <div style="margin-top: 60px; padding: 40px; background: #f8f9fa; border-radius: 8px;">
-                        <h3 style="color: #ff6716; font-size: 28px; font-weight: 700; margin-bottom: 20px;">Join Us</h3>
-                        <p style="color: #1b203e; font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-                            Be part of the movement. Register for Women In Agric Business Week 2026 and connect with industry leaders, entrepreneurs, and professionals.
-                        </p>
-                        <a href="/pre-register" class="nectar-button accent-color" style="display: inline-block; margin-top: 20px;">
-                            <span>Pre-Register Now</span>
-                        </a>
+        <!-- About Content Section -->
+        <section class="about-content-section">
+            <div class="about-content-wrapper">
+                <!-- Mission Card -->
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
+                    <h2>Our Mission</h2>
+                    <p>WAW London - Women in Agribusiness Week London 2026 is dedicated to empowering and supporting women in agriculture and agribusiness across the UK, Africa, and beyond. We believe in creating a platform where women can connect, learn, grow, and thrive in the agricultural sector. Our mission is to bring together the entire food & agribusiness women ecosystem, connecting innovators, investors, and leaders to drive sustainable growth and impact.</p>
+                </div>
+
+                <!-- What We Do Card -->
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h2>What We Do</h2>
+                    <p>Over six immersive days from 21-26 September 2026, we bring together the UK and Africa — and the world — to learn, connect, invest and celebrate. Through our flagship conferences, seven thematic streams, workshops, masterclasses, and networking events, we equip attendees with business insights, routes to success, new skills and knowledge to navigate the world of agribusiness. Our events feature distinguished speakers, exhibitions, and a grand Women in Agribusiness Awards & Gala Evening.</p>
+                </div>
+
+                <!-- Vision Card -->
+                <div class="about-card">
+                    <div class="about-card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h2>Our Vision</h2>
+                    <p>To be the leading platform for women in agriculture and agribusiness globally, fostering a community that drives innovation, creates opportunities, and celebrates achievements in the agricultural sector. We envision a future where women-led agribusinesses thrive, sustainable food systems flourish, and the entire ecosystem benefits from the diverse perspectives and leadership of women.</p>
+                </div>
+
+                <!-- Stats Section -->
+                <div class="about-stats">
+                    <div class="about-stat-card">
+                        <div class="about-stat-number">6</div>
+                        <div class="about-stat-label">Days</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="about-stat-number">8</div>
+                        <div class="about-stat-label">Thematic Streams</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="about-stat-number">28+</div>
+                        <div class="about-stat-label">Speakers</div>
+                    </div>
+                    <div class="about-stat-card">
+                        <div class="about-stat-number">2026</div>
+                        <div class="about-stat-label">Year</div>
+                    </div>
+                </div>
+
+                <!-- CTA Section -->
+                <div class="about-cta">
+                    <h3>Join Us</h3>
+                    <p>Be part of the movement. Register for Women in Agribusiness Week London 2026 and connect with industry leaders, entrepreneurs, and professionals.</p>
+                    <a href="/pre-register" class="nectar-button large regular accent-color regular-button" role="button" style="background: #ffffff; color: var(--teal-color);">
+                        <span>Register Now →</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -190,17 +397,8 @@
                     <div class="col span_3">
                         <div id="block-6" class="widget widget_block widget_media_image">
                             <figure class="wp-block-image aligncenter size-full">
-                                <a href="https://www.birminghamblackbusinessshow.co.uk/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/BBBS-Footer-Logo-2025.png" alt="Birmingham Women In Agric Business Show" class="wp-image-21968" loading="lazy" />
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col span_3">
-                        <div id="block-4" class="widget widget_block widget_media_image">
-                            <figure class="wp-block-image aligncenter size-full">
                                 <a href="https://www.ukblackbusinessshow.co.uk/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/UKBBS-Footer-Logo-2025.png" alt="Women In Agric Business Show" class="wp-image-21969" loading="lazy" />
+                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/UKBBS-Footer-Logo-2025.png" alt="UK Black Business Show" class="wp-image-21969" loading="lazy" />
                                 </a>
                             </figure>
                         </div>
@@ -209,10 +407,13 @@
                         <div id="block-7" class="widget widget_block widget_media_image">
                             <figure class="wp-block-image size-full">
                                 <a href="https://btaawards.com/us/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/01/BTA-US-Footer-Logo-2026.png" alt="Women In Agric Tech Achievement Awards US" class="wp-image-22063" loading="lazy" />
+                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/01/BTA-US-Footer-Logo-2026.png" alt="BTA Awards US" class="wp-image-22063" loading="lazy" />
                                 </a>
                             </figure>
                         </div>
+                    </div>
+                    <div class="col span_3">
+                        <div class="widget"></div>
                     </div>
                 </div>
             </div>
@@ -224,8 +425,10 @@
                     <div class="footer-links">
                         <a rel="privacy-policy" href="/privacy-policy" class="footer-link">Privacy Policy</a>
                         <a href="/terms-conditions" class="footer-link">Terms & Conditions</a>
+                        <a href="#" class="footer-link">Accessibility</a>
+                        <a href="#" class="footer-link">Subscribe to Newsletter</a>
                     </div>
-                    <p class="copyright-text">&copy; 2025 Women In Agric Business Week - WAWUK.</p>
+                    <p class="copyright-text">&copy; 2026 WAW London - Women in Agribusiness Week London 2026. All rights reserved.</p>
                     <ul class="social">
                         <li>
                             <a target="_blank" rel="noopener" href="#" aria-label="Twitter">
@@ -240,7 +443,13 @@
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukbbweek/" aria-label="Instagram">
+                            <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/uk-black-business-week" aria-label="LinkedIn">
+                                <span class="screen-reader-text">linkedin</span>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukblackbusinessweek" aria-label="Instagram">
                                 <span class="screen-reader-text">instagram</span>
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
@@ -254,4 +463,3 @@
     <script src="../script.js"></script>
 </body>
 </html>
-

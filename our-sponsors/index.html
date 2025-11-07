@@ -3,13 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Our Sponsors - Women In Agric Business Week - WAWUK. Meet our headline sponsors and partners.">
-    <title>Our Sponsors - Women In Agric Business Week - WAWUK</title>
+    <meta name="description" content="Our Sponsors - WAW London - Women in Agribusiness Week London 2026. Meet our headline sponsors and partners supporting women in agribusiness.">
+    <meta name="keywords" content="Sponsors, WAW London, Women in Agribusiness, Sponsorship, Partners, London 2026">
+    <title>Our Sponsors - WAW London - Women in Agribusiness Week London 2026</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Modern Sponsors Page Styles */
+        .sponsors-hero-section {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 100px 20px 80px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #1b203e 0%, #2d3561 50%, #1b203e 100%);
+        }
+        
+        .sponsors-hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+        
+        .sponsors-hero-gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, 
+                rgba(32, 178, 170, 0.15) 0%, 
+                rgba(255, 203, 164, 0.1) 50%, 
+                rgba(128, 0, 32, 0.15) 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        .sponsors-hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .sponsors-hero-title {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            color: #ffffff;
+            margin: 0 0 20px 0;
+            line-height: 1.1;
+            letter-spacing: -1px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sponsors-hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 24px);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .sponsors-content-section {
+            padding: 100px 20px;
+            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+        }
+        
+        .sponsors-content-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .sponsors-section-title {
+            font-size: clamp(32px, 4vw, 48px);
+            font-weight: 800;
+            color: #1b203e;
+            text-align: center;
+            margin: 0 0 60px 0;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        .sponsors-section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
+            border-radius: 2px;
+        }
+        
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        
+        .sponsor-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+        }
+        
+        .sponsor-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .sponsor-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .sponsor-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+            border-color: rgba(32, 178, 170, 0.2);
+        }
+        
+        .sponsor-card img {
+            max-width: 100%;
+            height: auto;
+            max-height: 120px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .sponsor-card:hover img {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+        
+        .sponsor-cta {
+            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 80px;
+            box-shadow: 0 8px 30px rgba(32, 178, 170, 0.3);
+        }
+        
+        .sponsor-cta h3 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            margin: 0 0 20px 0;
+            color: #ffffff;
+        }
+        
+        .sponsor-cta p {
+            font-size: 20px;
+            margin: 0 0 30px 0;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .sponsor-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .sponsor-benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .sponsor-benefit-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+        
+        .sponsor-benefit-card h4 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin: 0 0 12px 0;
+        }
+        
+        .sponsor-benefit-card p {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 767px) {
+            .sponsors-hero-section {
+                min-height: 300px;
+                padding: 60px 20px 50px;
+            }
+            
+            .sponsors-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .sponsor-cta {
+                padding: 40px 24px;
+            }
+            
+            .sponsor-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -23,16 +275,16 @@
             </button>
             
             <div class="header-top">
-                <a href="/" class="logo-section" aria-label="Home - WAWUK">
+                <a href="/" class="logo-section" aria-label="Home - WAW London">
                     <div class="logo-icon">
                         <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
-                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M10 10L50 10M10 20L50 20M10 30L50 30M10 40L50 40M10 50L50 50" stroke="#FFCBA4" stroke-width="4" stroke-linecap="round"/>
                         </svg>
                     </div>
                     <div class="logo-text">
-                        <div class="logo-line-1">WAWUK</div>
-                        <div class="logo-line-2"></div>
-                        <div class="logo-line-3">WOMEN IN AGRIC BUSINESS WEEK</div>
+                        <div class="logo-line-1">WAW LONDON</div>
+                        <div class="logo-line-2">Women in Agribusiness Week</div>
+                        <div class="logo-line-3">21 – 26 September 2026 • London, UK</div>
                     </div>
                 </a>
 
@@ -59,77 +311,19 @@
                 <div class="header-divider"></div>
 
                 <div class="date-section">
-                    <div class="event-date">12th-17th October 2026</div>
-                    <div class="event-location">London</div>
+                    <div class="event-date">21 – 26 September 2026</div>
+                    <div class="event-location">London, UK</div>
                 </div>
             </div>
 
             <nav class="main-nav" id="main-nav">
                 <ul class="nav-menu">
-                    <li><a href="/" class="nav-home"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" stroke="#FF6B35" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-                    <li class="has-dropdown">
-                        <a href="#">About <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="#">6 Practical Ways to Embed DEI</a></li>
-                            <li><a href="#">Newsletter Sign Up</a></li>
-                            <li class="has-submenu">
-                                <a href="#">Our Portfolio <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">Women In Agric Business Show</a></li>
-                                    <li><a href="#">Birmingham Women In Agric Business Show</a></li>
-                                    <li><a href="#">Women In Agric Tech Achievement Awards UK</a></li>
-                                    <li><a href="#">Women In Agric Tech Achievement Awards US</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                            <li><a href="#">Partners</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Sponsorship <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Make the Case</a></li>
-                            <li><a href="#">Sponsor Success Stories</a></li>
-                            <li><a href="#">Sponsor an Event</a></li>
-                            <li><a href="/our-sponsors">Our Sponsors</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="/events">Events</a></li>
-                    <li class="has-dropdown">
-                        <a href="#">Talks Programme <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Agenda</a></li>
-                            <li><a href="/speakers">Speakers</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-dropdown">
-                        <a href="#">Content Hub <span class="dropdown-arrow">▼</span></a>
-                        <ul class="dropdown-menu">
-                            <li class="has-submenu">
-                                <a href="#">25 Top Entrepreneurs Watch List <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2025</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2024</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2023</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2022</a></li>
-                                    <li><a href="#">25 Top Women In Agric Entrepreneurs to Watch in 2021</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Jobs Board</a></li>
-                            <li class="has-submenu">
-                                <a href="#">Press Releases <span class="dropdown-arrow">▶</span></a>
-                                <ul class="submenu">
-                                    <li><a href="#">May 2025 – eBay Press Release</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-actions">
-                        <a href="#" class="btn-sponsor">Sponsor</a>
-                        <a href="/pre-register" class="btn-pre-register">Pre-Register</a>
-                    </li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us">About Us</a></li>
+                    <li><a href="/contact-us">Contact Us</a></li>
+                    <li><a href="/speakers">Speakers</a></li>
+                    <li><a href="/pre-register">Register</a></li>
+                    <li><a href="#" class="btn-sponsor">Sponsor</a></li>
                 </ul>
                 <button class="close-menu" aria-label="Close menu">×</button>
             </nav>
@@ -137,55 +331,90 @@
     </header>
 
     <main id="main-content">
-        <section class="page-hero">
-            <div class="row-bg-wrap" style="background-color: #1b203e; padding: 80px 0;">
-                <div class="container">
-                    <h1 style="color: #ffffff; font-size: 48px; font-weight: 900; text-align: center; margin: 0;">Our Sponsors</h1>
-                </div>
+        <!-- Modern Hero Section -->
+        <section class="sponsors-hero-section">
+            <div class="sponsors-hero-background">
+                <div class="sponsors-hero-gradient"></div>
+            </div>
+            <div class="sponsors-hero-content">
+                <h1 class="sponsors-hero-title">Our Sponsors</h1>
+                <p class="sponsors-hero-subtitle">Thank you to our partners who make WAW London 2026 possible</p>
             </div>
         </section>
 
-        <section class="page-content" style="padding: 80px 0; background: #ffffff;">
-            <div class="container">
-                <div style="max-width: 1200px; margin: 0 auto;">
-                    <h2 style="color: #1b203e; font-size: 36px; font-weight: 700; margin-bottom: 50px; text-align: center;">Headline Sponsors</h2>
-                    <div class="sponsors-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 80px;">
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/HSBC-Headilne.jpg" alt="HSBC" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/Moodys-Headilne.jpg" alt="Moody's" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/05/eBay-Headilne.jpg" alt="eBay" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/09/JP-Headilne_2024.jpg" alt="JPMorgan Chase" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
+        <!-- Sponsors Content Section -->
+        <section class="sponsors-content-section">
+            <div class="sponsors-content-wrapper">
+                <!-- Headline Sponsors -->
+                <h2 class="sponsors-section-title">Headline Sponsors</h2>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/HSBC-Headilne.jpg" alt="HSBC UK" loading="lazy">
                     </div>
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/Moodys-Headilne.jpg" alt="Moody's" loading="lazy">
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/05/eBay-Headilne.jpg" alt="eBay" loading="lazy">
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/09/JP-Headilne_2024.jpg" alt="JPMorgan Chase" loading="lazy">
+                    </div>
+                </div>
 
-                    <h2 style="color: #1b203e; font-size: 36px; font-weight: 700; margin-bottom: 50px; text-align: center; margin-top: 80px;">Stream Sponsors</h2>
-                    <div class="sponsors-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/Citi-Gold.jpg" alt="Citi" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/bp-Stream.jpg" alt="BP" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
-                        <div class="sponsor-card" style="text-align: center;">
-                            <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/UBS-Stream.jpg" alt="UBS" style="width: 100%; max-width: 300px; height: auto; filter: grayscale(100%); transition: filter 0.3s ease;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'" />
-                        </div>
+                <!-- Stream Sponsors -->
+                <h2 class="sponsors-section-title" style="margin-top: 80px;">Stream Sponsors</h2>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/Citi-Gold.jpg" alt="Citi" loading="lazy">
                     </div>
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/bp-Stream.jpg" alt="BP" loading="lazy">
+                    </div>
+                    <div class="sponsor-card">
+                        <img src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/08/UBS-Stream.jpg" alt="UBS" loading="lazy">
+                    </div>
+                </div>
 
-                    <div style="margin-top: 80px; padding: 40px; background: #f8f9fa; border-radius: 8px; text-align: center;">
-                        <h3 style="color: #ff6716; font-size: 28px; font-weight: 700; margin-bottom: 20px;">Become a Sponsor</h3>
-                        <p style="color: #1b203e; font-size: 18px; line-height: 1.8; margin-bottom: 30px;">
-                            Join us in supporting women in agriculture and agribusiness. Partner with WAWUK and make a lasting impact.
-                        </p>
-                        <a href="/contact-us" class="nectar-button accent-color" style="display: inline-block; margin-top: 20px;">
-                            <span>Contact Us</span>
-                        </a>
+                <!-- Become a Sponsor CTA -->
+                <div class="sponsor-cta">
+                    <h3>Become a Sponsor</h3>
+                    <p>Join us in supporting women in agriculture and agribusiness. Partner with WAW London 2026 and make a lasting impact on the future of food and agribusiness.</p>
+                    
+                    <div class="sponsor-benefits">
+                        <div class="sponsor-benefit-card">
+                            <div class="sponsor-benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Brand Visibility</h4>
+                            <p>Reach thousands of industry leaders, entrepreneurs, and professionals</p>
+                        </div>
+                        <div class="sponsor-benefit-card">
+                            <div class="sponsor-benefit-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h4>Networking</h4>
+                            <p>Connect with key decision-makers and potential partners</p>
+                        </div>
+                        <div class="sponsor-benefit-card">
+                            <div class="sponsor-benefit-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h4>Marketing</h4>
+                            <p>Amplify your brand across all event channels and media</p>
+                        </div>
+                        <div class="sponsor-benefit-card">
+                            <div class="sponsor-benefit-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Impact</h4>
+                            <p>Support women-led agribusinesses and drive positive change</p>
+                        </div>
                     </div>
+                    
+                    <a href="/contact-us" class="nectar-button large regular accent-color regular-button" role="button" style="background: #ffffff; color: var(--teal-color); margin-top: 30px;">
+                        <span>Contact Us to Sponsor →</span>
+                    </a>
                 </div>
             </div>
         </section>
@@ -201,17 +430,8 @@
                     <div class="col span_3">
                         <div id="block-6" class="widget widget_block widget_media_image">
                             <figure class="wp-block-image aligncenter size-full">
-                                <a href="https://www.birminghamblackbusinessshow.co.uk/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/BBBS-Footer-Logo-2025.png" alt="Birmingham Women In Agric Business Show" class="wp-image-21968" loading="lazy" />
-                                </a>
-                            </figure>
-                        </div>
-                    </div>
-                    <div class="col span_3">
-                        <div id="block-4" class="widget widget_block widget_media_image">
-                            <figure class="wp-block-image aligncenter size-full">
                                 <a href="https://www.ukblackbusinessshow.co.uk/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/UKBBS-Footer-Logo-2025.png" alt="Women In Agric Business Show" class="wp-image-21969" loading="lazy" />
+                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2024/11/UKBBS-Footer-Logo-2025.png" alt="UK Black Business Show" class="wp-image-21969" loading="lazy" />
                                 </a>
                             </figure>
                         </div>
@@ -220,10 +440,13 @@
                         <div id="block-7" class="widget widget_block widget_media_image">
                             <figure class="wp-block-image size-full">
                                 <a href="https://btaawards.com/us/" target="_blank" rel="noopener">
-                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/01/BTA-US-Footer-Logo-2026.png" alt="Women In Agric Tech Achievement Awards US" class="wp-image-22063" loading="lazy" />
+                                    <img decoding="async" width="252" height="252" src="https://www.ukblackbusinessweek.com/wp-content/uploads/2025/01/BTA-US-Footer-Logo-2026.png" alt="BTA Awards US" class="wp-image-22063" loading="lazy" />
                                 </a>
                             </figure>
                         </div>
+                    </div>
+                    <div class="col span_3">
+                        <div class="widget"></div>
                     </div>
                 </div>
             </div>
@@ -235,8 +458,10 @@
                     <div class="footer-links">
                         <a rel="privacy-policy" href="/privacy-policy" class="footer-link">Privacy Policy</a>
                         <a href="/terms-conditions" class="footer-link">Terms & Conditions</a>
+                        <a href="#" class="footer-link">Accessibility</a>
+                        <a href="#" class="footer-link">Subscribe to Newsletter</a>
                     </div>
-                    <p class="copyright-text">&copy; 2025 Women In Agric Business Week - WAWUK.</p>
+                    <p class="copyright-text">&copy; 2026 WAW London - Women in Agribusiness Week London 2026. All rights reserved.</p>
                     <ul class="social">
                         <li>
                             <a target="_blank" rel="noopener" href="#" aria-label="Twitter">
@@ -251,7 +476,13 @@
                             </a>
                         </li>
                         <li>
-                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukbbweek/" aria-label="Instagram">
+                            <a target="_blank" rel="noopener" href="https://www.linkedin.com/company/uk-black-business-week" aria-label="LinkedIn">
+                                <span class="screen-reader-text">linkedin</span>
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" rel="noopener" href="https://www.instagram.com/ukblackbusinessweek" aria-label="Instagram">
                                 <span class="screen-reader-text">instagram</span>
                                 <i class="fa fa-instagram" aria-hidden="true"></i>
                             </a>
@@ -265,4 +496,3 @@
     <script src="../script.js"></script>
 </body>
 </html>
-
