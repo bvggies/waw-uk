@@ -81,29 +81,58 @@
     </header>
 
     <main id="main-content">
-        <section class="page-hero">
+        <!-- Modern Speakers Hero Section -->
+        <section class="speakers-hero-section">
+            <div class="speakers-hero-background">
+                <div class="speakers-hero-gradient"></div>
+                <div class="speakers-hero-pattern"></div>
+            </div>
+            <div class="speakers-hero-content">
+                <div class="speakers-hero-badge">
+                    <span class="badge-icon">🎤</span>
+                    <span>Meet Our Experts</span>
+                </div>
+                <h1 class="speakers-hero-title">Conference Speakers</h1>
+                <p class="speakers-hero-description">Discover the visionary leaders, innovators, and changemakers shaping the future of agribusiness</p>
+                <div class="speakers-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">28</span>
+                        <span class="stat-label">Speakers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Streams</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Days</span>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section class="speakers-section" style="padding: 80px 0; background-color: #eaf3fb;">
-            <div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false">
-                <div class="inner-wrap row-bg-layer">
-                    <div class="row-bg viewport-desktop using-bg-color" style="background-color: #eaf3fb;"></div>
+        <!-- Modern Speakers Content Section -->
+        <section class="speakers-content-section">
+            <div class="speakers-content-wrapper">
+                <!-- Enhanced Search Bar -->
+                <div class="speakers-search-modern">
+                    <div class="search-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input id="speakersSearch" type="search" placeholder="Search by name, organization, or expertise..." aria-label="Search speakers" class="search-input-modern">
+                        <button id="speakersClear" type="button" aria-label="Clear search" class="search-clear-btn">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="search-hint">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Type to filter speakers instantly</span>
+                    </div>
                 </div>
-                <div class="row_col_wrap_12 col span_12 dark left">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-<div class="speakers-page">
-  <div class="speakers-header">
-    <h1 class="speakers-title">CONFERENCE SPEAKERS</h1>
 
-    <div class="speakers-search">
-      <input id="speakersSearch" type="search" placeholder="Search" aria-label="Search speakers">
-      <button id="speakersClear" type="button" aria-label="Clear search">✕</button>
-    </div>
-  </div>
-
-  <div id="speakersGrid" class="speakers-grid" aria-live="polite">
+                <!-- Speakers Grid -->
+                <div id="speakersGrid" class="speakers-grid-modern" aria-live="polite">
 
 <article class="speaker-card">
       <div class="speaker-photo-wrap">
@@ -414,10 +443,16 @@
       </div>
     </article>
 
-  </div>
+                </div>
 
-  <div id="speakersNoResults" class="no-results" style="display:none;">No speakers found.</div>
-</div>
+                <!-- No Results Message -->
+                <div id="speakersNoResults" class="no-results-modern" style="display:none;">
+                    <div class="no-results-icon">🔍</div>
+                    <h3 class="no-results-title">No speakers found</h3>
+                    <p class="no-results-text">Try adjusting your search terms or browse all speakers below</p>
+                </div>
+            </div>
+        </section>
                             
                 </div>
             </div>

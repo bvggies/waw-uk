@@ -403,7 +403,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // Show clear button when there's text
     searchInput.addEventListener('input', () => {
         if (clearButton) {
-            clearButton.style.display = searchInput.value.trim() ? 'block' : 'none';
+            if (searchInput.value.trim()) {
+                clearButton.style.display = 'block';
+                clearButton.classList.add('active');
+            } else {
+                clearButton.style.display = 'none';
+                clearButton.classList.remove('active');
+            }
         }
     });
+    
+    // Initialize clear button state
+    if (clearButton && searchInput.value.trim()) {
+        clearButton.style.display = 'block';
+        clearButton.classList.add('active');
+    }
 });
