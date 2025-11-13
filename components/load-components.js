@@ -28,15 +28,43 @@
         .catch(error => console.error('Error loading header:', error));
 
     // Load footer
-    fetch(componentsPath + 'footer.html')
-        .then(response => response.text())
-        .then(html => {
-            const footerPlaceholder = document.getElementById('footer-placeholder');
-            if (footerPlaceholder) {
-                footerPlaceholder.outerHTML = html;
-            }
-        })
-        .catch(error => console.error('Error loading footer:', error));
+    function loadFooter() {
+        fetch(componentsPath + 'footer.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to load footer');
+                }
+                return response.text();
+            })
+            .then(html => {
+                const footerPlaceholder = document.getElementById('footer-placeholder');
+                if (footerPlaceholder) {
+                    footerPlaceholder.outerHTML = html;
+                    // Font Awesome 6 uses CSS, so icons should work automatically
+                    // But we can verify the icons are present
+                    const icons = footerPlaceholder.querySelectorAll('.fab');
+                    if (icons.length === 0) {
+                        // Try to find icons in the newly inserted footer
+                        const footer = document.getElementById('footer-outer');
+                        if (footer) {
+                            const footerIcons = footer.querySelectorAll('.fab');
+                            console.log('Footer icons found:', footerIcons.length);
+                        }
+                    }
+                }
+            })
+            .catch(error => console.error('Error loading footer:', error));
+    }
+
+    // Wait for Font Awesome CSS to be loaded before loading footer
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            // Small delay to ensure Font Awesome CSS is fully loaded
+            setTimeout(loadFooter, 100);
+        });
+    } else {
+        setTimeout(loadFooter, 100);
+    }
 
     // Initialize menu toggle functionality
     function initMenuToggle() {
