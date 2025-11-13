@@ -1880,6 +1880,19 @@
 
     <script src="components/load-components.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Ensure Font Awesome icons are loaded in homepage footer
+        document.addEventListener('DOMContentLoaded', function() {
+            const socialIcons = document.querySelectorAll('.homepage-footer .social-icon i');
+            socialIcons.forEach(function(icon) {
+                if (icon.classList.contains('fab')) {
+                    icon.style.fontFamily = '"Font Awesome 6 Brands"';
+                    icon.style.fontWeight = '400';
+                    icon.style.fontStyle = 'normal';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
 
