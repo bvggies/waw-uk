@@ -512,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
 (function() {
     'use strict';
     
-    function initCountdown() {
+    window.initCountdown = function() {
         const countdownTimer = document.getElementById('countdown-timer');
         if (!countdownTimer) {
             console.log('Countdown timer element not found');
@@ -561,7 +561,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Update every second
         setInterval(updateCountdown, 1000);
-    }
+    };
     
     // Initialize when DOM is ready
     if (document.readyState === 'loading') {
