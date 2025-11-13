@@ -27,6 +27,32 @@
         })
         .catch(error => console.error('Error loading header:', error));
 
+    // Check if Font Awesome CSS is loaded
+    function isFontAwesomeLoaded() {
+        // Check if Font Awesome stylesheet is loaded by testing if a FA class exists
+        const testEl = document.createElement('i');
+        testEl.className = 'fab fa-facebook';
+        testEl.style.position = 'absolute';
+        testEl.style.visibility = 'hidden';
+        document.body.appendChild(testEl);
+        const computed = window.getComputedStyle(testEl, ':before');
+        const content = computed.getPropertyValue('content');
+        document.body.removeChild(testEl);
+        return content && content !== 'none' && content !== '';
+    }
+
+    // Wait for Font Awesome to load
+    function waitForFontAwesome(callback, maxAttempts = 50) {
+        let attempts = 0;
+        const checkInterval = setInterval(function() {
+            attempts++;
+            if (isFontAwesomeLoaded() || attempts >= maxAttempts) {
+                clearInterval(checkInterval);
+                callback();
+            }
+        }, 100);
+    }
+
     // Load footer
     function loadFooter() {
         fetch(componentsPath + 'footer.html')
@@ -40,16 +66,10 @@
                 const footerPlaceholder = document.getElementById('footer-placeholder');
                 if (footerPlaceholder) {
                     footerPlaceholder.outerHTML = html;
-                    // Font Awesome 6 uses CSS, so icons should work automatically
-                    // But we can verify the icons are present
-                    const icons = footerPlaceholder.querySelectorAll('.fab');
-                    if (icons.length === 0) {
-                        // Try to find icons in the newly inserted footer
-                        const footer = document.getElementById('footer-outer');
-                        if (footer) {
-                            const footerIcons = footer.querySelectorAll('.fab');
-                            console.log('Footer icons found:', footerIcons.length);
-                        }
+                    // Force a reflow to ensure CSS is applied
+                    const footer = document.getElementById('footer-outer');
+                    if (footer) {
+                        footer.offsetHeight; // Trigger reflow
                     }
                 }
             })
@@ -59,11 +79,10 @@
     // Wait for Font Awesome CSS to be loaded before loading footer
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', function() {
-            // Small delay to ensure Font Awesome CSS is fully loaded
-            setTimeout(loadFooter, 100);
+            waitForFontAwesome(loadFooter);
         });
     } else {
-        setTimeout(loadFooter, 100);
+        waitForFontAwesome(loadFooter);
     }
 
     // Initialize menu toggle functionality
