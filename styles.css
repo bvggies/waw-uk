@@ -2263,17 +2263,17 @@ button:focus:not(:focus-visible) {
     max-width: 300px;
 }
 
-/* Women In Agric Business Show Banner Section */
-.ukbbs-banner-section {
+/* Banner Section Styles */
+.banner-section {
     position: relative;
     width: 100%;
 }
 
-.ukbbs-banner-section .row-bg-wrap {
+.banner-section .row-bg-wrap {
     position: relative;
 }
 
-.ukbbs-banner-section .row_col_wrap_12 {
+.banner-section .row_col_wrap_12 {
     width: 100%;
     padding: 0;
 }
