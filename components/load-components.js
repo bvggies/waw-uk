@@ -53,8 +53,13 @@
         }, 100);
     }
 
-    // Load footer
+    // Load footer (skip on homepage)
     function loadFooter() {
+        // Skip footer on homepage
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html' || window.location.pathname.endsWith('/')) {
+            return;
+        }
+        
         fetch(componentsPath + 'footer.html')
             .then(response => {
                 if (!response.ok) {
