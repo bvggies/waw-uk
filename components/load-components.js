@@ -19,6 +19,10 @@
                 headerPlaceholder.outerHTML = html;
                 // Re-initialize menu toggle after header is loaded
                 initMenuToggle();
+                // Initialize countdown timer if script.js is loaded
+                if (typeof initCountdown === 'function') {
+                    initCountdown();
+                }
             }
         })
         .catch(error => console.error('Error loading header:', error));
