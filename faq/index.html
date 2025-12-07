@@ -88,29 +88,67 @@
         .faq-item {
             background: #ffffff;
             border-radius: 16px;
-            padding: 32px;
+            padding: 0;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            margin-bottom: 24px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            overflow: hidden;
         }
         
         .faq-item:hover {
-            transform: translateY(-4px);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            border-color: #008080;
+        }
+        
+        .faq-item.active {
+            border-color: #008080;
         }
         
         .faq-question {
             font-size: 20px;
             font-weight: 700;
+            color: #008080 !important;
+            margin: 0;
+            padding: 24px 32px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+            user-select: none;
+        }
+        
+        .faq-question:hover {
+            background: rgba(0, 128, 128, 0.05);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 28px;
+            font-weight: 300;
             color: #008080;
-            margin: 0 0 12px 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
         }
         
         .faq-answer {
             font-size: 18px;
             line-height: 1.7;
-            color: #333;
+            color: #1b203e !important;
             margin: 0;
+            padding: 0 32px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 0 32px 24px 32px;
         }
     </style>
 </head>
@@ -124,28 +162,28 @@
 
         <section class="page-content">
             <div class="faq-item card-animate animate-on-scroll fade-in-up stagger-1">
-                <h2 class="faq-question">Who attends WiFAI events?</h2>
-                <p class="faq-answer">Founders, farmers, corporates, investors, donors, policymakers, researchers, media and agribusiness leaders.</p>
+                <h2 class="faq-question" style="color: #008080 !important;">Who attends WiFAI events?</h2>
+                <p class="faq-answer" style="color: #1b203e !important;">Founders, farmers, corporates, investors, donors, policymakers, researchers, media and agribusiness leaders.</p>
             </div>
 
             <div class="faq-item card-animate animate-on-scroll fade-in-up stagger-2">
-                <h2 class="faq-question">Do you offer visa assistance?</h2>
-                <p class="faq-answer">Yes. Invitation letters are provided after registration.</p>
+                <h2 class="faq-question" style="color: #008080 !important;">Do you offer visa assistance?</h2>
+                <p class="faq-answer" style="color: #1b203e !important;">Yes. Invitation letters are provided after registration.</p>
             </div>
 
             <div class="faq-item card-animate animate-on-scroll fade-in-up stagger-3">
-                <h2 class="faq-question">Are refunds available?</h2>
-                <p class="faq-answer">Refunds are available up to 30 days before the event.</p>
+                <h2 class="faq-question" style="color: #008080 !important;">Are refunds available?</h2>
+                <p class="faq-answer" style="color: #1b203e !important;">Refunds are available up to 30 days before the event.</p>
             </div>
 
             <div class="faq-item card-animate animate-on-scroll fade-in-up stagger-4">
-                <h2 class="faq-question">How can I speak at the summit?</h2>
-                <p class="faq-answer">Submit your topic through the speaker application form on our Speakers page.</p>
+                <h2 class="faq-question" style="color: #008080 !important;">How can I speak at the summit?</h2>
+                <p class="faq-answer" style="color: #1b203e !important;">Submit your topic through the speaker application form on our Speakers page.</p>
             </div>
 
             <div class="faq-item card-animate animate-on-scroll fade-in-up stagger-5">
-                <h2 class="faq-question">Can I exhibit my products?</h2>
-                <p class="faq-answer">Yes — apply on our Exhibit page.</p>
+                <h2 class="faq-question" style="color: #008080 !important;">Can I exhibit my products?</h2>
+                <p class="faq-answer" style="color: #1b203e !important;">Yes — apply on our Exhibit page.</p>
             </div>
         </section>
     </main>
@@ -154,6 +192,28 @@
 
     <script src="../components/load-components.js"></script>
     <script src="../script.js"></script>
+    <script>
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', function() {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
 
