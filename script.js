@@ -1,3 +1,53 @@
+// Cache-Busting System
+(function() {
+    'use strict';
+    
+    // Check if version.js is loaded
+    if (typeof window.SITE_VERSION === 'undefined') {
+        // Version not loaded yet, wait a bit and check again
+        setTimeout(function() {
+            if (typeof window.SITE_VERSION === 'undefined') {
+                console.warn('Site version not loaded. Cache may be stale.');
+            }
+        }, 100);
+    }
+    
+    // Store current version in localStorage
+    const currentVersion = window.SITE_VERSION || '1.0.0';
+    const storedVersion = localStorage.getItem('wifai_site_version');
+    
+    // If version changed, clear cache and reload
+    if (storedVersion && storedVersion !== currentVersion) {
+        console.log('Site version changed from ' + storedVersion + ' to ' + currentVersion + '. Clearing cache...');
+        
+        // Clear localStorage cache
+        localStorage.clear();
+        
+        // Clear sessionStorage
+        sessionStorage.clear();
+        
+        // Force reload with cache bypass
+        if ('caches' in window) {
+            caches.keys().then(function(names) {
+                for (let name of names) {
+                    caches.delete(name);
+                }
+            });
+        }
+        
+        // Reload page
+        window.location.reload(true);
+        return;
+    }
+    
+    // Store current version
+    localStorage.setItem('wifai_site_version', currentVersion);
+    
+    // Add timestamp to prevent stale cache
+    const pageLoadTime = Date.now();
+    sessionStorage.setItem('wifai_page_load_time', pageLoadTime.toString());
+})();
+
 // Menu Toggle
 const menuToggle = document.getElementById('menu-toggle');
 const mainNav = document.getElementById('main-nav');

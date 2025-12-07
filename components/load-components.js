@@ -10,8 +10,12 @@
     const basePath = getBasePath();
     const componentsPath = basePath === './' ? './components/' : '../components/';
 
+    // Get version for cache-busting
+    const version = window.SITE_VERSION || '1.0.0';
+    const cacheBuster = '?v=' + version + '&t=' + Date.now();
+
     // Load header
-    fetch(componentsPath + 'header.html')
+    fetch(componentsPath + 'header.html' + cacheBuster)
         .then(response => response.text())
         .then(html => {
             const headerPlaceholder = document.getElementById('header-placeholder');
@@ -60,7 +64,7 @@
             return;
         }
         
-        fetch(componentsPath + 'footer.html')
+        fetch(componentsPath + 'footer.html' + cacheBuster)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to load footer');
