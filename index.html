@@ -3,207 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WAW London - Women in Agribusiness Week London 2026. Bringing together the entire food & agribusiness women ecosystem. 21st to 27th September 2026 in London, UK.">
-    <meta name="keywords" content="Women in Agribusiness, Agribusiness Week, WAW London, UK Agriculture, Women Entrepreneurs, Food & Agribusiness">
-    <meta name="author" content="WAW London">
-    <meta property="og:title" content="WAW London - Women in Agribusiness Week London 2026">
-    <meta property="og:description" content="Connecting Women. Growing Agribusiness. 21st to 27th September 2026 in London, UK.">
+    <meta name="description" content="WiFAI - Women in Food & Agribusiness Innovation. Connecting women leaders in food and agribusiness to capital, markets, and networks across the UK-Africa corridor.">
+    <meta name="keywords" content="Women in Food, Agribusiness Innovation, WiFAI, UK-Africa, Women Entrepreneurs, Food Systems, Agritech">
+    <meta name="author" content="WiFAI">
+    <meta property="og:title" content="WiFAI - Women in Food & Agribusiness Innovation">
+    <meta property="og:description" content="Powering Women in Food & Agribusiness Innovation Across Africa and the UK">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.wawlondon.org">
+    <meta property="og:url" content="https://www.wifai.org.uk">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#800020">
-    <title>WAW London - Women in Agribusiness Week London 2026</title>
+    <meta name="theme-color" content="#008080">
+    <title>WiFAI - Women in Food & Agribusiness Innovation</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <style>
-        /* Modern Homepage Redesign - Complete Styles */
-        
-        /* Section Background Vectors */
-        .section-bg-vector {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            overflow: hidden;
-            z-index: 0;
-        }
-        
-        .section-bg-vector::before {
-            content: '';
-            position: absolute;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(0, 128, 128, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            top: -250px;
-            right: -250px;
-            animation: float 20s ease-in-out infinite;
-        }
-        
-        .section-bg-vector::after {
-            content: '';
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255, 203, 164, 0.08) 0%, transparent 70%);
-            border-radius: 50%;
-            bottom: -200px;
-            left: -200px;
-            animation: float 25s ease-in-out infinite reverse;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, -30px) scale(1.1); }
-        }
-        
-        /* Modern Typography */
-        .hero-content-section,
-        .hero-content-section h2,
-        .hero-content-section h3,
-        .hero-content-section p {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            letter-spacing: -0.02em;
-            line-height: 1.6;
-        }
-        
-        .hero-content-section h2 {
-            font-weight: 800;
-            font-size: clamp(32px, 5vw, 48px);
-            margin-bottom: 24px;
-            text-align: center;
-        }
-        
-        .hero-content-section h3 {
-            font-weight: 600;
-            font-size: clamp(20px, 3vw, 28px);
-            margin-bottom: 16px;
-        }
-        
-        /* Modern Hero Section */
-        .hero-content-section {
+        /* WiFAI Homepage Styles */
+        .hero-section {
             position: relative;
-            padding: 80px 20px;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 20px 80px;
+            background: linear-gradient(135deg, #005a52 0%, #008080 50%, #005a52 100%);
             overflow: hidden;
         }
         
-        .hero-content-section .row-bg {
-            position: relative;
-        }
-        
-        /* Modern Buttons */
-        .nectar-button {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            border-radius: 50px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .nectar-button::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-        
-        .nectar-button:hover::before {
-            width: 300px;
-            height: 300px;
-        }
-        
-        .nectar-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .nectar-button span {
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s ease;
-        }
-        
-        .nectar-button:hover span {
-            transform: translateX(5px);
-        }
-        
-        /* Stream Cards with Animations */
-        .stream-card {
-            position: relative;
-            padding: 40px 30px;
-            border-radius: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            overflow: hidden;
-        }
-        
-        .stream-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.6s ease;
-        }
-        
-        .stream-card:hover::before {
-            left: 100%;
-        }
-        
-        .stream-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 203, 164, 0.5);
-        }
-        
-        /* Stream Icon Animations */
-        .stream-icon {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-        
-        .stream-card:hover .stream-icon {
-            transform: scale(1.15) rotate(5deg);
-            filter: drop-shadow(0 8px 16px rgba(255, 203, 164, 0.4));
-        }
-        
-        .stream-icon svg {
-            transition: all 0.4s ease;
-        }
-        
-        .stream-card:hover .stream-icon svg {
-            filter: brightness(1.2);
-        }
-        
-        /* Modern Speakers Section for Homepage */
-        .speakers-section-home {
-            position: relative;
-            padding: 100px 20px;
-            background: linear-gradient(135deg, #1b203e 0%, #2d3561 50%, #1b203e 100%);
-            overflow: hidden;
-        }
-        
-        .speakers-section-home::before {
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
@@ -211,8 +39,8 @@
             width: 100%;
             height: 100%;
             background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 128, 128, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 203, 164, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 20% 30%, rgba(255, 203, 164, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(128, 0, 32, 0.1) 0%, transparent 50%);
             animation: gradientShift 15s ease infinite;
         }
         
@@ -221,1679 +49,370 @@
             50% { opacity: 0.7; }
         }
         
-        .speakers-section-home .nectar-split-heading h2 {
-            color: #ffffff;
-            font-size: clamp(36px, 5vw, 56px);
-            font-weight: 900;
-            margin-bottom: 20px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .speakers-section-home h5 {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 50px;
-        }
-        
-        /* Modern Speakers Grid for Homepage */
-        .speakers-grid-home {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1400px;
+        .hero-content {
+            max-width: 1200px;
             margin: 0 auto;
+            text-align: center;
             position: relative;
             z-index: 1;
         }
         
-        .speaker-card-home {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 30px 24px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        .speaker-card-home::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .speaker-card-home:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .speaker-card-home:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
-            border-color: rgba(0, 128, 128, 0.2);
-        }
-        
-        .speaker-photo-wrap-home {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
-            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
-            flex-shrink: 0;
-            position: relative;
-            box-shadow: 0 8px 25px rgba(0, 128, 128, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 4px solid #ffffff;
-        }
-        
-        .speaker-card-home:hover .speaker-photo-wrap-home {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 12px 35px rgba(0, 128, 128, 0.3);
-        }
-        
-        .speaker-photo-home {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 50%;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .speaker-card-home:hover .speaker-photo-home {
-            filter: brightness(1.1) saturate(1.2);
-        }
-        
-        .speaker-name-home {
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            color: #1a1a1a;
-            font-size: 20px;
-            line-height: 1.3;
-            transition: color 0.3s ease;
-        }
-        
-        .speaker-card-home:hover .speaker-name-home {
-            color: var(--teal-color);
-        }
-        
-        .speaker-org-home {
-            color: #555;
-            font-size: 15px;
-            margin: 0;
-            line-height: 1.5;
-            font-weight: 500;
-        }
-        
-        .speaker-linkedin-home {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1));
-            color: var(--teal-color);
-            margin-top: 16px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
-        }
-        
-        .speaker-card-home:hover .speaker-linkedin-home {
-            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+        .hero-title {
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 900;
             color: #ffffff;
-            transform: scale(1.1);
-        }
-        
-        /* Section Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        .search-input-modern:focus {
-            outline: none !important;
-            border-color: var(--teal-color) !important;
-            box-shadow: 0 8px 30px rgba(0, 128, 128, 0.2) !important;
-            transform: translateY(-2px);
-        }
-        
-        /* Homepage Speakers Grid Styles */
-        #homepageSpeakersGrid.speakers-grid-modern {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 0 auto;
-        }
-        
-        #homepageSpeakersGrid .speaker-card {
-            background: #ffffff;
-            border-radius: 20px;
-            padding: 30px 24px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(0, 0, 0, 0.05);
-        }
-        
-        #homepageSpeakersGrid .speaker-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        #homepageSpeakersGrid .speaker-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        #homepageSpeakersGrid .speaker-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-            border-color: rgba(0, 128, 128, 0.2);
-        }
-        
-        #homepageSpeakersGrid .speaker-photo-wrap {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 24px;
-            background: #ffffff;
-            flex-shrink: 0;
-            position: relative;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 3px solid rgba(0, 128, 128, 0.2);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
         }
         
-        #homepageSpeakersGrid .speaker-card:hover .speaker-photo-wrap {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 12px 35px rgba(0, 128, 128, 0.3);
-            border-color: var(--teal-color);
-        }
-        
-        #homepageSpeakersGrid .speaker-photo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            border-radius: 50%;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        #homepageSpeakersGrid .speaker-card:hover .speaker-photo {
-            filter: brightness(1.1) saturate(1.2);
-        }
-        
-        #homepageSpeakersGrid .speaker-body {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        #homepageSpeakersGrid .speaker-name {
-            font-weight: 700;
-            margin: 0 0 8px 0;
-            color: #1a1a1a;
-            font-size: 20px;
-            line-height: 1.3;
-            transition: color 0.3s ease;
-        }
-        
-        #homepageSpeakersGrid .speaker-card:hover .speaker-name {
-            color: var(--teal-color);
-        }
-        
-        #homepageSpeakersGrid .speaker-role {
-            color: #555;
-            font-size: 15px;
-            margin: 0 0 8px 0;
-            line-height: 1.5;
-            font-weight: 500;
-        }
-        
-        #homepageSpeakersGrid .speaker-excerpt {
-            font-size: 14px;
-            color: #777;
-            margin: 0 0 16px 0;
-            line-height: 1.4;
-            text-align: center;
-            font-weight: 400;
-            padding: 6px 12px;
-            background: rgba(0, 128, 128, 0.08);
-            border-radius: 20px;
-            display: inline-block;
-        }
-        
-        #homepageSpeakersGrid .speaker-link {
-            font-size: 14px;
-            color: var(--teal-color);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 8px;
-            padding: 10px 20px;
-            border-radius: 25px;
-            background: rgba(0, 128, 128, 0.1);
-            border: 1px solid rgba(0, 128, 128, 0.2);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        .hero-subtitle {
+            font-size: clamp(18px, 2.5vw, 28px);
             font-weight: 600;
-        }
-        
-        #homepageSpeakersGrid .speaker-card:hover .speaker-link {
-            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
-            color: #ffffff;
-            border-color: transparent;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 128, 128, 0.3);
-        }
-        
-        #homepageSpeakersGrid .speaker-link i {
-            font-size: 12px;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        #homepageSpeakersGrid .speaker-card:hover .speaker-link i {
-            transform: translateX(5px);
-        }
-        
-        @media (max-width: 1024px) {
-            #homepageSpeakersGrid.speakers-grid-modern {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 25px;
-            }
-        }
-        
-        @media (max-width: 767px) {
-            #homepageSpeakersGrid.speakers-grid-modern {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                gap: 20px;
-            }
-            
-            #homepageSpeakersGrid .speaker-photo-wrap {
-                width: 100px;
-                height: 100px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            #homepageSpeakersGrid.speakers-grid-modern {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        /* Modern Hero Heading Section Styles */
-        .modern-hero-heading-section {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        .modern-hero-heading-section > div > div > div:hover {
-            transform: translateY(-5px);
-        }
-        
-        /* Modern Hero Content Section Styles */
-        .modern-hero-content-section {
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-        
-        .modern-hero-content-section > div > div > div:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15) !important;
-            border-color: var(--teal-color) !important;
-        }
-        
-        /* Modern Welcome Section Styles */
-        .modern-welcome-section {
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-        }
-        
-        .modern-welcome-section > div > div > div:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15) !important;
-        }
-        
-        /* Ensure icons are visible */
-        .modern-hero-heading-section i,
-        .modern-hero-heading-section .fas,
-        .modern-hero-heading-section .far,
-        .modern-hero-heading-section .fab,
-        .modern-hero-content-section i,
-        .modern-hero-content-section .fas,
-        .modern-hero-content-section .far,
-        .modern-hero-content-section .fab,
-        .modern-welcome-section i,
-        .modern-welcome-section .fas,
-        .modern-welcome-section .far,
-        .modern-welcome-section .fab {
-            display: inline-block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            font-family: "Font Awesome 6 Free" !important;
-            font-weight: 900 !important;
-        }
-        
-        /* Ensure all Font Awesome icons are visible */
-        i.fas,
-        i.far,
-        i.fab,
-        .fas,
-        .far,
-        .fab {
-            display: inline-block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            font-family: "Font Awesome 6 Free" !important;
-            font-style: normal !important;
-            font-variant: normal !important;
-            text-rendering: auto !important;
-            -webkit-font-smoothing: antialiased !important;
-        }
-        
-        i.fas::before,
-        i.far::before,
-        i.fab::before {
-            display: inline-block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-        }
-        
-        /* Ensure buttons are visible */
-        .nectar-button,
-        .nectar-button span,
-        .nectar-button a {
-            color: inherit !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            display: inline-block !important;
-        }
-        
-        .hero-content-section,
-        .stream-focuses-section,
-        .speakers-section-home {
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        /* Improved Alignment */
-        .hero-text,
-        .hero-text p,
-        .hero-text ul {
-            text-align: justify;
-            text-justify: inter-word;
+            color: #FFCBA4;
+            margin-bottom: 32px;
+            line-height: 1.5;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        .hero-text ul {
-            padding-left: 40px;
-        }
-        
-        .hero-text li {
-            margin-bottom: 12px;
-            line-height: 1.8;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .speakers-grid-home {
-                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-                gap: 25px;
-            }
-        }
-        
-        @media (max-width: 767px) {
-            .hero-content-section {
-                padding: 60px 20px;
-            }
-            
-            .stream-grid {
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 20px !important;
-            }
-            
-            .stream-card {
-                padding: 25px 20px !important;
-            }
-            
-            .stream-card h5 {
-                font-size: 16px !important;
-            }
-            
-            .stream-card p {
-                font-size: 13px !important;
-            }
-            
-            .speakers-section-home {
-                padding: 60px 20px;
-            }
-            
-            .speakers-grid-home {
-                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-                gap: 20px;
-            }
-            
-            .speaker-photo-wrap-home {
-                width: 100px;
-                height: 100px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .speakers-grid-home {
-                grid-template-columns: 1fr;
-            }
-            
-            .stream-grid {
-                grid-template-columns: 1fr !important;
-                gap: 15px !important;
-                padding: 0 10px;
-            }
-            
-            .stream-card {
-                padding: 20px 15px !important;
-            }
-            
-            .stream-icon {
-                margin-bottom: 15px !important;
-            }
-            
-            .stream-icon svg {
-                width: 50px !important;
-                height: 50px !important;
-            }
-            
-            .stream-card h5 {
-                font-size: 15px !important;
-            }
-            
-            .stream-card p {
-                font-size: 12px !important;
-            }
-        }
-
-        /* Homepage Footer Styles */
-        .homepage-footer {
-            background: linear-gradient(135deg, #005a52 0%, #006b5f 50%, #005a52 100%);
-            color: #ffffff;
-            padding: 80px 20px 40px;
-            margin-top: 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .homepage-footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(0, 189, 161, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 203, 164, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .homepage-footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        .homepage-footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 50px;
-            margin-bottom: 60px;
-        }
-
-        .footer-brand {
-            max-width: 300px;
-        }
-
-        .footer-logo {
-            margin-bottom: 20px;
-        }
-
-        .footer-brand-title {
-            font-size: 28px;
-            font-weight: 800;
-            color: #ffffff;
-            margin: 0 0 16px 0;
-            letter-spacing: -0.5px;
-        }
-
-        .footer-brand-description {
-            font-size: 16px;
-            line-height: 1.6;
+        .hero-description {
+            font-size: clamp(16px, 2vw, 20px);
             color: rgba(255, 255, 255, 0.9);
-            margin: 0;
+            margin-bottom: 48px;
+            line-height: 1.7;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
-        .footer-section-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #ffffff;
-            margin: 0 0 24px 0;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 16px;
-        }
-
-        .footer-links-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links-list li {
-            margin-bottom: 12px;
-        }
-
-        .footer-links-list a {
-            color: rgba(255, 255, 255, 0.85);
-            text-decoration: none;
-            font-size: 15px;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .footer-links-list a:hover {
-            color: #ffffff;
-            transform: translateX(5px);
-            padding-left: 5px;
-        }
-
-        .footer-event-info {
+        
+        .hero-stats {
             display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .event-detail-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 15px;
-        }
-
-        .event-detail-item i {
-            color: #00bda1;
-            font-size: 18px;
-            width: 20px;
-            text-align: center;
-        }
-
-        .event-detail-item a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .event-detail-item a:hover {
-            color: #ffffff;
-        }
-
-        .footer-social {
-            max-width: 280px;
-        }
-
-        .footer-social-description {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0 0 24px 0;
-        }
-
-        .footer-social-icons {
-            display: flex;
-            gap: 12px;
-            margin-bottom: 30px;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 48px;
             flex-wrap: wrap;
         }
-
-        .social-icon {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255, 255, 255, 0.2);
+        
+        .hero-stat {
+            text-align: center;
+        }
+        
+        .hero-stat-text {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 8px;
+        }
+        
+        .hero-cta-buttons {
             display: flex;
-            align-items: center;
             justify-content: center;
-            color: #ffffff;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 20px;
+            flex-wrap: wrap;
         }
-
-        .social-icon i {
-            font-family: "Font Awesome 6 Brands" !important;
-            font-weight: 400 !important;
-            font-style: normal !important;
-            display: inline-block !important;
-            line-height: 1 !important;
-        }
-
-        .social-icon .fab {
-            font-family: "Font Awesome 6 Brands" !important;
-            font-weight: 400 !important;
-        }
-
-        .social-icon:hover {
-            background: #00bda1;
-            border-color: #00bda1;
-            transform: translateY(-3px) scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 189, 161, 0.4);
-        }
-
-        .footer-cta-button {
-            display: inline-block;
-            padding: 14px 32px;
-            background: linear-gradient(135deg, #00bda1, #008080);
-            color: #ffffff;
-            text-decoration: none;
+        
+        .btn-hero {
+            padding: 16px 32px;
             border-radius: 50px;
             font-weight: 600;
             font-size: 16px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(0, 189, 161, 0.3);
-            text-align: center;
-        }
-
-        .footer-cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 189, 161, 0.4);
-            background: linear-gradient(135deg, #008080, #00bda1);
-        }
-
-        .homepage-footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            text-align: center;
-        }
-
-        .footer-bottom-links {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .footer-bottom-links a {
-            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            display: inline-block;
+            border: 2px solid transparent;
         }
-
-        .footer-bottom-links a:hover {
+        
+        .btn-hero-primary {
+            background: #FFCBA4;
+            color: #005a52;
+        }
+        
+        .btn-hero-primary:hover {
+            background: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-hero-secondary {
+            background: transparent;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+        
+        .btn-hero-secondary:hover {
+            background: #ffffff;
+            color: #005a52;
+            transform: translateY(-2px);
+        }
+        
+        .stats-section {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .stats-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #1a1a1a;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #008080;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 18px;
+            color: #666666;
+            font-weight: 600;
+        }
+        
+        .events-section {
+            padding: 80px 20px;
+            background: #ffffff;
+        }
+        
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+        }
+        
+        .section-description {
+            font-size: 18px;
+            text-align: center;
+            color: #666666;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .event-card {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 32px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .event-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #008080;
+            margin-bottom: 12px;
+        }
+        
+        .event-date {
+            font-size: 16px;
+            color: #666666;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .event-description {
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        
+        .why-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #1b203e 0%, #2d3561 100%);
             color: #ffffff;
         }
-
-        .footer-separator {
-            color: rgba(255, 255, 255, 0.4);
+        
+        .why-container {
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        .footer-copyright {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.7);
-            margin: 0;
+        
+        .why-section .section-title {
+            color: #ffffff;
         }
-
-        @media (max-width: 1024px) {
-            .homepage-footer-content {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
-            }
+        
+        .why-section .section-description {
+            color: rgba(255, 255, 255, 0.9);
         }
-
-        @media (max-width: 767px) {
-            .homepage-footer {
-                padding: 60px 20px 30px;
+        
+        .why-content {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .why-text {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                min-height: 70vh;
+                padding: 100px 20px 60px;
             }
-
-            .homepage-footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .footer-brand {
-                max-width: 100%;
-            }
-
-            .footer-social {
-                max-width: 100%;
-            }
-
-            .footer-bottom-links {
+            
+            .hero-cta-buttons {
                 flex-direction: column;
-                gap: 8px;
+                align-items: stretch;
             }
-
-            .footer-separator {
-                display: none;
+            
+            .btn-hero {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .why-content {
+                padding: 32px 24px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Skip to main content -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Search Overlay -->
-    <div id="search-overlay" class="search-overlay">
-        <div class="search-container">
-            <button class="close-search" aria-label="Close search">×</button>
-            <input type="search" placeholder="Hit enter to search or ESC to close Search" class="search-input" id="search-input">
-        </div>
-    </div>
-
-    <!-- Header Placeholder - Loaded from components/header.html -->
     <div id="header-placeholder"></div>
 
-    <!-- Video Section -->
-    <section class="video-section">
-        <div class="row-bg-wrap" data-bg-animation="fade-in" data-bg-overlay="false">
-            <div class="inner-wrap row-bg-layer animated-in">
-                <div class="row-bg viewport-desktop" data-parallax-speed="fast"></div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Powering Women in Food & Agribusiness Innovation Across Africa and the UK</h1>
+            <p class="hero-subtitle">WiFAI connects women leaders in food and agribusiness to the capital, markets, and networks that unlock transformative growth across the UK-Africa corridor—and beyond.</p>
+            <p class="hero-description">Last event: 250+ attendees • 16 countries • 35 speakers</p>
+            
+            <div class="hero-cta-buttons">
+                <a href="/our-sponsors" class="btn-hero btn-hero-primary">Become a Sponsor</a>
+                <a href="/pre-register" class="btn-hero btn-hero-secondary">Register for the Summit</a>
+                <a href="/speakers" class="btn-hero btn-hero-secondary">Apply to Speak</a>
             </div>
         </div>
+    </section>
 
-        <div class="nectar-video-wrap row-bg-layer" data-bg-alignment="" style="opacity: 1; width: 100%; height: 100%;">
-            <div class="nectar-video-inner">
-                <video class="nectar-video-bg translate" width="1800" height="700" preload="auto" loop autoplay muted playsinline>
-                    <source src="assets/headervideo.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-
-        <div class="row_col_wrap_12 col span_12 light center">
-            <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text padding-8-percent inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="0.5" data-animation="" data-delay="0">
-                <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                        <div class="divider-wrap" data-alignment="default">
-                            <div style="height: 60px;" class="divider"></div>
-                        </div>
-                    </div>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <h2 class="stats-title">2025 Mini-Summit in Numbers</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label">Attendees at our most recent summit</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">35</div>
+                    <div class="stat-label">Expert speakers and thought leaders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">16</div>
+                    <div class="stat-label">Countries</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main id="main-content">
-        <!-- Modern Welcome Section -->
-        <section class="modern-welcome-section" style="position: relative; padding: 100px 20px; background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); overflow: hidden;">
-            <div class="section-bg-vector"></div>
-            <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 60px;">
-                    <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 8px 24px; background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1)); border-radius: 50px; border: 2px solid rgba(0, 128, 128, 0.2);">
-                        <i class="fas fa-home" style="color: var(--teal-color) !important; font-size: 18px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        <span style="color: var(--teal-color); font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Welcome to WAW London</span>
-        </div>
-                    <h2 style="font-size: clamp(36px, 5vw, 56px); font-weight: 900; color: #1b203e; margin: 0 0 30px 0; line-height: 1.2; letter-spacing: -1px;">
-                        Women in Agribusiness Week<br>
-                        <span style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">London 2026</span>
-                    </h2>
-                    <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #555; max-width: 900px; margin: 0 auto 50px; text-align: justify; text-justify: inter-word;">
-                        A week-long global gathering of women founders, agribusiness innovators, investors, policymakers, media creators and trade leaders. Over seven immersive days we bring together the UK and Africa — and the world — to learn, connect, invest and celebrate.
-                    </p>
-                    </div>
-                
-                <!-- Highlights Cards Grid -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; max-width: 1200px; margin-left: auto; margin-right: auto;">
-                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--peach-color));"></div>
-                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-microphone-alt" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
+    <!-- Upcoming Events Section -->
+    <section class="events-section">
+        <div class="events-container">
+            <h2 class="section-title">Upcoming Events</h2>
+            <p class="section-description">Explore our UK–Africa agrifood experiences throughout the year:</p>
+            
+            <div class="events-grid">
+                <div class="event-card">
+                    <h3 class="event-title">UK–Africa Women in Food & Agribusiness Summit</h3>
+                    <p class="event-date">June 2026</p>
+                    <p class="event-description">Our flagship summit bringing together innovators, farmers, investors, policymakers, researchers and founders.</p>
                 </div>
-                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Flagship Conferences</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">UK-Africa Women in Food & Agribusiness Conference alongside a Global Women in Agribusiness Conference open to all continents</p>
+                <div class="event-card">
+                    <h3 class="event-title">WAW London Gala</h3>
+                    <p class="event-date">October 2026</p>
+                    <p class="event-description">A celebration of achievements and networking opportunity for the agrifood community.</p>
+                </div>
+                <div class="event-card">
+                    <h3 class="event-title">Women in Food & Agribiz Trade Expo</h3>
+                    <p class="event-date">November 2026</p>
+                    <p class="event-description">Showcasing products, technologies, and innovations from women-led agribusinesses.</p>
+                </div>
             </div>
-                    
-                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--peach-color), var(--burgundy-color));"></div>
-                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-stream" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-        </div>
-                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Thematic Streams</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Seven thematic streams you can pick from – each session designed with measurable outcomes and real-world outputs</p>
-    </div>
-
-                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--burgundy-color), var(--teal-color));"></div>
-                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-clock" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-            </div>
-                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Flexible Sessions</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Morning and evening sessions to suit busy professionals</p>
-                    </div>
-                    
-                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--burgundy-color));"></div>
-                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-store" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                </div>
-                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Exhibition</h3>
-                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Exhibition throughout the week with flexible booth & table options</p>
-                            </div>
-                    
-                
-                <!-- CTA Buttons -->
-                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 50px;">
-                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/pre-register" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
-                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Register Now →</span>
-                    </a>
-                    <a class="nectar-button large regular extra-color-1 regular-button" role="button" href="/exhibition" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
-                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Exhibit or Sponsor →</span>
-                    </a>
-                </div>
-                    </div>
-        </section>
-
-    <!-- Modern Hero Heading Section -->
-    <section class="modern-hero-heading-section" style="position: relative; padding: 80px 20px; background: #008080 !important; overflow: hidden;">
-        <div class="section-bg-vector"></div>
-        <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
-            <div style="text-align: center; position: relative;">
-                <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 8px 24px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.2);">
-                    <i class="fas fa-seedling" style="color: var(--teal-color) !important; font-size: 20px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                    <span style="color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">21st to 27th September 2026 • London, UK</span>
-                </div>
-                <h1 style="font-size: clamp(32px, 5vw, 64px); font-weight: 900; color: #ffffff; margin: 0 0 30px 0; line-height: 1.2; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); position: relative; display: inline-block;">
-                    <span style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color), var(--burgundy-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">BRINGING TOGETHER</span>
-                    <br>
-                    <span style="color: #ffffff;">THE ENTIRE FOOD & AGRIBUSINESS</span>
-                    <br>
-                    <span style="background: linear-gradient(135deg, var(--peach-color), var(--burgundy-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">WOMEN ECOSYSTEM</span>
-                </h1>
-                <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
-                    <div style="display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, 0.9);">
-                        <i class="fas fa-users" style="color: var(--teal-color) !important; font-size: 24px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        <span style="font-size: 16px; font-weight: 600;">Global Network</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, 0.9);">
-                        <i class="fas fa-handshake" style="color: var(--teal-color) !important; font-size: 24px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        <span style="font-size: 16px; font-weight: 600;">Strategic Partnerships</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, 0.9);">
-                        <i class="fas fa-chart-line" style="color: var(--teal-color) !important; font-size: 24px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        <span style="font-size: 16px; font-weight: 600;">Sustainable Growth</span>
-                    </div>
-                </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="/events" class="btn-hero btn-hero-primary">Explore All Events</a>
             </div>
         </div>
     </section>
-        <!-- Modern Hero Content Section -->
-        <section class="modern-hero-content-section" style="position: relative; padding: 100px 20px; background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%); overflow: hidden;">
-            <!-- Background Image -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.stockcake.com/public/e/a/8/ea852c09-cac5-4098-a480-e215fde59f9a_large/corporate-meeting-discussion-stockcake.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; z-index: 0;"></div>
-            <!-- Overlay for opacity -->
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.75); z-index: 1;"></div>
-            <div class="section-bg-vector"></div>
-            <div class="container" style="position: relative; z-index: 2; max-width: 1200px; margin: 0 auto;">
-                <div style="text-align: center; margin-bottom: 60px;">
-                    <div style="display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1)); border-radius: 50px; margin-bottom: 30px; border: 2px solid rgba(0, 128, 128, 0.2);">
-                        <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin: 0; color: #1b203e !important; letter-spacing: -0.5px;">
-                            Connecting Women. Growing Agribusiness.
-                        </h2>
-                    </div>
-                    <div style="max-width: 900px; margin: 0 auto;">
-                        <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #333; margin: 0 0 24px 0; text-align: justify; text-justify: inter-word;">
-                            Women in Agribusiness Week connects the innovators shaping food and agribusiness, the investors fueling sustainable growth, and the leaders driving impact across the UK, Africa, and beyond.
-                        </p>
-                        <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #555; margin: 0; text-align: justify; text-justify: inter-word;">
-                            From cutting-edge technologies to sustainable supply chains, this is where ideas meet investment and the future of agribusiness takes root.
-                        </p>
+
+    <!-- Why WiFAI Section -->
+    <section class="why-section">
+        <div class="why-container">
+            <h2 class="section-title">Why WiFAI</h2>
+            <div class="why-content">
+                <p class="why-text">Women make up nearly half of Africa's agricultural workforce yet receive less than 10% of agrifood financing. WiFAI is closing that gap by creating access to markets, capital, data, networks and global visibility.</p>
+            </div>
+            <div style="text-align: center;">
+                <a href="/about-us" class="btn-hero btn-hero-secondary">Join Our Community</a>
             </div>
         </div>
-                
-                <!-- Feature Icons Row -->
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 60px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-                    <div style="text-align: center; padding: 30px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent;">
-                        <div style="width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-lightbulb" style="color: var(--teal-color) !important; font-size: 32px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        </div>
-                        <h4 style="font-size: 18px; font-weight: 700; color: #1b203e; margin: 0 0 8px 0;">Innovation</h4>
-                        <p style="font-size: 14px; color: #666; margin: 0;">Cutting-edge technologies</p>
-                    </div>
-                    <div style="text-align: center; padding: 30px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent;">
-                        <div style="width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-dollar-sign" style="color: var(--teal-color) !important; font-size: 32px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        </div>
-                        <h4 style="font-size: 18px; font-weight: 700; color: #1b203e; margin: 0 0 8px 0;">Investment</h4>
-                        <p style="font-size: 14px; color: #666; margin: 0;">Fueling sustainable growth</p>
-                    </div>
-                    <div style="text-align: center; padding: 30px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent;">
-                        <div style="width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-globe" style="color: var(--teal-color) !important; font-size: 32px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        </div>
-                        <h4 style="font-size: 18px; font-weight: 700; color: #1b203e; margin: 0 0 8px 0;">Global Impact</h4>
-                        <p style="font-size: 14px; color: #666; margin: 0;">UK, Africa & beyond</p>
-                    </div>
-                    <div style="text-align: center; padding: 30px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent;">
-                        <div style="width: 70px; height: 70px; margin: 0 auto 20px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
-                            <i class="fas fa-link" style="color: var(--teal-color) !important; font-size: 32px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                        </div>
-                        <h4 style="font-size: 18px; font-weight: 700; color: #1b203e; margin: 0 0 8px 0;">Supply Chains</h4>
-                        <p style="font-size: 14px; color: #666; margin: 0;">Sustainable networks</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stream Focuses Section -->
-        <section class="stream-focuses-section">
-            <div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false">
-                <div class="inner-wrap row-bg-layer">
-                    <div class="row-bg viewport-desktop using-bg-color" style="background-color: #00bda1;"></div>
-                </div>
-                <div class="row_col_wrap_12 col span_12 dark center">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading" data-align="default" data-m-align="inherit" data-text-effect="default" data-animation-type="line-reveal-by-space" data-animation-delay="0" data-animation-offset="" data-m-rm-animation="" data-stagger="" data-custom-font-size="false">
-                                    <h4 style="color: #ffffff;">Programme & Streams</h4>
-                                </div>
-                                <div class="stream-grid">
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" fill="#ffffff"/>
-                                                <path d="M12 4c-4.41 0-8 3.59-8 8s3.59 8 8 8 8-3.59 8-8-3.59-8-8-8zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z" fill="#008080"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Climate & Regenerative Agriculture</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">empowering production systems for resilience</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Investment & Finance</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">unlocking capital for women-led agribusiness</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.41 16.09V20h2.82v-1.91c-1.12-.36-2.14-1.04-2.82-1.82l-1.99 1.99-1.41-1.41 1.99-1.99c-.78-.68-1.46-1.7-1.82-2.82H4v-2.82h1.91c.36-1.12 1.04-2.14 1.82-2.82l-1.99-1.99 1.41-1.41 1.99 1.99c.68-.78 1.7-1.46 2.82-1.82V4h2.82v1.91c1.12.36 2.14 1.04 2.82 1.82l1.99-1.99 1.41 1.41-1.99 1.99c.78.68 1.46 1.7 1.82 2.82H20v2.82h-1.91c-.36 1.12-1.04 2.14-1.82 2.82l1.99 1.99-1.41 1.41-1.99-1.99c-.68.78-1.7 1.46-2.82 1.82z" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Trade, Export & Supply Chain Resilience</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">scaling markets across continents</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm11 15H4v-2h16v2zm0-5H4V8h5.08L7 10.83 8.62 12 11 8.76l1-1.36 1 1.36L15.38 12 17 10.83 14.92 8H20v6z" fill="#ffffff"/>
-                                                <circle cx="12" cy="12" r="1.5" fill="#008080"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Agritech & Innovation</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">technology driving the future of food</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Gender, Inclusion & Allyship</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">leadership, equity and male allies</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Policy & Diplomacy</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">shaping the frameworks that drive trade & growth</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" fill="#ffffff"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Media, Storytelling & Market Visibility</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">using media to tell the story and drive impact</p>
-                                    </div>
-                                    <div class="stream-card">
-                                        <div class="stream-icon">
-                                            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="#ffffff"/>
-                                                <path d="M12 2L2 12h3v8h14v-8h3L12 2zm0 2.83L18.17 11H16v6H8v-6H5.83L12 4.83z" fill="#008080"/>
-                                            </svg>
-                                        </div>
-                                        <h5 style="text-align: center;"><span style="color: #ffffff;">Blue Economy & Aquaculture</span></h5>
-                                        <p style="text-align: center; color: #ffffff; font-size: 14px; margin-top: 10px;">women leading in aquatic food value chains and sustainable blue growth</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience London Section -->
-        <section class="hero-content-section" style="background-color: #ffffff; padding: 5% 0;">
-            <div class="row-bg-wrap">
-                <div class="row_col_wrap_12 col span_12 dark center">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding inherit_tablet inherit_phone">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading">
-                                    <h2 style="color: #1b203e; margin-bottom: 30px;">Experience London</h2>
-                                            </div>
-                                <div class="hero-text" style="max-width: 900px; margin: 0 auto 40px; color: #1b203e; font-size: 18px; line-height: 1.8;">
-                                    <p>Take advantage of the city's energy with optional experiential sessions:</p>
-                                    <ul style="text-align: left; max-width: 800px; margin: 20px auto; padding-left: 40px;">
-                                        <li>Factory & Innovation Tours (Wed Morning)</li>
-                                        <li>Networking & Sightseeing Experience (Fri Afternoon)</li>
-                                        <li>London Connect Reception (Fri Evening)</li>
-                                    </ul>
-                                    <p style="margin-top: 20px; font-weight: 600;">Book early – limited spots.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="stream-focuses-section" style="background-color: #008080;">
-            <div class="row-bg-wrap">
-                <div class="row_col_wrap_12 col span_12 dark center">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding inherit_tablet inherit_phone">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading">
-                                    <h2 style="color: #ffffff; margin-bottom: 30px;">FAQ</h2>
-                                </div>
-                                <div class="hero-text" style="max-width: 900px; margin: 0 auto 40px; color: #ffffff; font-size: 18px; line-height: 1.8;">
-                                    <p>Find everything you need: ticket types, venue info, visa support, cancellation policy, accommodation options.</p>
-                                </div>
-                                <div style="margin-top: 30px;">
-                                    <a class="nectar-button large regular accent-color regular-button" role="button" href="#" style="background-color: #FFCBA4; color: #1b203e;">
-                                        <span>FAQ →</span>
-                                        </a>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="hero-content-section" style="background-color: #ffffff; padding: 5% 0;">
-            <div class="row-bg-wrap">
-                <div class="row_col_wrap_12 col span_12 dark center">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding inherit_tablet inherit_phone">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading">
-                                    <h2 style="color: #1b203e; margin-bottom: 30px;">Contact</h2>
-                                </div>
-                                <div class="hero-text" style="max-width: 900px; margin: 0 auto 40px; color: #1b203e; font-size: 18px; line-height: 1.8;">
-                                    <p>For any queries, email <a href="mailto:info@wawlondon.org" style="color: #008080; font-weight: 600;">info@wawlondon.org</a> or call +44 20 XXXX XXXX</p>
-                                    <p style="margin-top: 20px;">Follow us on Facebook, LinkedIn, Instagram and TikTok for updates.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modern Speakers Section -->
-        <section class="speakers-content-section" style="padding: 100px 20px; background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);">
-            <div class="speakers-content-wrapper" style="max-width: 1400px; margin: 0 auto;">
-                <div class="nectar-split-heading" data-align="center" data-m-align="inherit" data-text-effect="default" data-animation-type="line-reveal-by-space" data-animation-delay="0" data-animation-offset="" data-m-rm-animation="" data-stagger="" data-custom-font-size="false">
-                    <h2 style="font-size: clamp(36px, 5vw, 56px); font-weight: 800; color: #1b203e; margin-bottom: 20px; text-align: center;">2026 Speakers</h2>
-                </div>
-                <p style="text-align: center; font-size: 20px; color: #555; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">Discover our distinguished speakers joining us for WAW London 2026</p>
-                
-                <!-- Enhanced Search Bar -->
-                <div class="speakers-search-modern" style="margin-bottom: 60px; animation: fadeIn 0.8s ease-out 0.2s both;">
-                    <div class="search-wrapper" style="position: relative; max-width: 600px; margin: 0 auto 12px;">
-                        <i class="fas fa-search search-icon" style="position: absolute; left: 20px; top: 50%; transform: translateY(-50%); color: var(--teal-color); font-size: 18px; z-index: 2;"></i>
-                        <input id="homepageSpeakersSearch" type="search" placeholder="Search speakers by name, organization, or expertise..." aria-label="Search speakers" class="search-input-modern" style="width: 100%; padding: 18px 50px 18px 55px; font-size: 16px; border: 2px solid #e0e0e0; border-radius: 50px; background: #ffffff; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); font-family: inherit;">
-                        <button id="homepageSpeakersClear" type="button" aria-label="Clear search" class="search-clear-btn" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: transparent; border: none; color: #999; font-size: 18px; cursor: pointer; padding: 8px; border-radius: 50%; transition: all 0.3s ease; display: none; z-index: 2;">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="search-hint" style="display: flex; align-items: center; justify-content: center; gap: 8px; color: #666; font-size: 14px; margin-top: 12px;">
-                        <i class="fas fa-info-circle" style="color: var(--teal-color); font-size: 14px;"></i>
-                        <span>Type to search and explore all speakers on the speakers page</span>
-                    </div>
-                </div>
-                
-                <!-- Featured Speakers Grid -->
-                <div id="homepageSpeakersGrid" class="speakers-grid-modern" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; margin-bottom: 40px;">
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IG-Post_20241119_140304_0000-Tambra-Raye-Stevenson.png" alt="Tambra Raye Stevenson" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Tambra Raye Stevenson</h3>
-                            <p class="speaker-role">Women Advancing Nutrition Dietetics and Agriculture</p>
-                            <div class="speaker-excerpt">Founder</div>
-                            <a class="speaker-link" href="https://LinkedIn.com/in/tambra.html" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/20250526_184038-SAL-LOUM-scaled.jpg" alt="Antoinette Sallah" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Antoinette Sallah</h3>
-                            <p class="speaker-role">Solirag X</p>
-                            <div class="speaker-excerpt">C.E.O</div>
-                            <a class="speaker-link" href="https://www.linkedin.com/index.html#/" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Profile-Picture-L-Davies-1-scaled.jpg" alt="Layla" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Layla</h3>
-                            <p class="speaker-role">Iddyba Foundation</p>
-                            <div class="speaker-excerpt">Founder</div>
-                            <a class="speaker-link" href="https://www.linkedin.com/index.html#/" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_6435-Veronica-Annor-scaled.jpeg" alt="VERONICA ANNOR" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">VERONICA ANNOR</h3>
-                            <p class="speaker-role">CAPGEMINI</p>
-                            <div class="speaker-excerpt">Consultant</div>
-                            <a class="speaker-link" href="https://www.linkedin.com/in/thewuraola.html" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/WhatsApp-Image-2025-03-10-at-10.13.45-Miracle-Ogunbowale-1.jpeg" alt="Miracle Opeyemi Ogunbowale" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Miracle Opeyemi Ogunbowale</h3>
-                            <p class="speaker-role">El'mira Consults.</p>
-                            <div class="speaker-excerpt">Founder</div>
-                            <a class="speaker-link" href="https://www.linkedin.com/in/thewuraola.html" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/headshot-3-AYENI-WURAOLA-OGUNGBOLA-scaled.jpeg" alt="Ayeni-Wuraola Ogungbola" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Ayeni-Wuraola Ogungbola</h3>
-                            <p class="speaker-role">Nutrifield Foods</p>
-                            <div class="speaker-excerpt">C.E.O</div>
-                            <a class="speaker-link" href="http://www.linkedin.com/in/thewuraola" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Constanza_1-removebg-preview-Constanza-Robles-Fumarola.jpg" alt="Constanza I. Robles Fumarola" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Constanza I. Robles Fumarola</h3>
-                            <p class="speaker-role">Inanna</p>
-                            <div class="speaker-excerpt">Founding Member</div>
-                            <a class="speaker-link" href="https://www.linkedin.com/in/constanzarobles/" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Profile-Pic-Janet-Mulu-scaled.jpg" alt="Janet Mulu ITS" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Janet Mulu ITS</h3>
-                            <p class="speaker-role">ImpactDev Africa</p>
-                            <div class="speaker-excerpt">Trade Specialist</div>
-                            <a class="speaker-link" href="https://www.linkedin.com/in/janetmulu/" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Screenshot-2025-08-18-at-09.35.53-Samara-Dias.png" alt="Samara Dias" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Samara Dias</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/45816c9b-9a63-481c-8b43-b7b092d2d83f28-Bashira.jpeg" alt="Gloria Dalafu" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Gloria Dalafu</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/DSC05380-Omu-Obilor-Experience-Africa-scaled.jpg" alt="Omu Obilor" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Omu Obilor</h3>
-                            <p class="speaker-role">Experience Africa</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_0751-I-K.jpeg" alt="Ilona Karpanos" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Ilona Karpanos</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_0798-Abeni-Ramsey-1.jpg" alt="Abeni Ramsey" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Abeni Ramsey</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_20220508_025348_503-VIVIAN-MADUEKEH.webp" alt="Vivian Maduekeh" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Vivian Maduekeh</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_9971-Fatimah-Bamisedun.jpeg" alt="Fatimah Bamisedun" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Fatimah Bamisedun</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/WhatsApp-Image-2025-07-08-at-14.53.15_852f8d13-ZIGBE-Deretho-Francis.jpg" alt="Deretho Francis ZIGBE" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Deretho Francis ZIGBE</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Anna-002-Anna-Jones-1-scaled.jpg" alt="Anna Jones" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Anna Jones</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/53d603f9-d405-454f-8151-9b64688aa0c9-Yahmapp.jpeg" alt="D. Spence" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">D. Spence</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Untitled-design-7-Anne-Nicholls-1.png" alt="Anne Nicholls" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Anne Nicholls</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_2120-Mansour-Gaye.jpg" alt="SMG" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">SMG</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://ui-avatars.com/api/?name=Sandrine+Henton&background=008080&color=fff&size=400&bold=true" alt="Sandrine Henton" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Sandrine Henton</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/WhatsApp-Image-2025-09-06-at-22.20.12-Ozlem-Bacak.jpeg" alt="Ozlem Bacak" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Ozlem Bacak</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://ui-avatars.com/api/?name=Prama+Bhardwaj&background=008080&color=fff&size=400&bold=true" alt="Prama Bhardwaj" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Prama Bhardwaj</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/professional-pic-2021-Evelyn-Karokora-scaled.jpg" alt="Evelyn Alice Lucy Tuhairwe Karokora" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Evelyn Alice Lucy Tuhairwe Karokora</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/IMG_2917-Lucy-Antwi-Boateng-scaled.jpeg" alt="Lucy Antwi-Boateng" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Lucy Antwi-Boateng</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Portrait-Gary-2-small-Kawah-coffee-scaled.jpg" alt="Michaelle Kubwimana" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Michaelle Kubwimana</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/Dolapo-Passport-Dolapo-Enejoh.jpg" alt="Dolapo Enejoh" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Dolapo Enejoh</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                    <article class="speaker-card">
-                        <div class="speaker-photo-wrap">
-                            <img decoding="async" class="speaker-photo" src="https://wifai.org.uk/wp-content/uploads/2025/09/JB_25-Johnson-Bada-scaled.png" alt="Johnson Bada" onerror="this.src='https://via.placeholder.com/400x400?text=Speaker'">
-                        </div>
-                        <div class="speaker-body">
-                            <h3 class="speaker-name">Johnson Bada</h3>
-                            <p class="speaker-role">Speaker</p>
-                            <div class="speaker-excerpt">Speaker</div>
-                            <a class="speaker-link" href="#" target="_blank" rel="noopener">View Profile <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </article>
-                </div>
-                
-                <!-- No Results Message -->
-                <div id="homepageSpeakersNoResults" style="display: none; text-align: center; padding: 60px 20px;">
-                    <i class="fas fa-search" style="font-size: 48px; color: #ccc; margin-bottom: 20px;"></i>
-                    <h3 style="font-size: 24px; color: #666; margin: 0 0 10px 0;">No speakers found</h3>
-                    <p style="font-size: 16px; color: #999; margin: 0;">Try adjusting your search terms</p>
-                </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/speakers" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff">
-                        <span>View All Speakers →</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Anchor Events Section -->
-        <section class="anchor-events-section">
-            <div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false">
-                <div class="inner-wrap row-bg-layer">
-                    <div class="row-bg viewport-desktop using-bg-color" style="background-color: #1b203e;"></div>
-                </div>
-                <div class="row_col_wrap_12 col span_12 dark left flip-in-vertical-wrap">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <!-- Content cleared -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sponsors Section -->
-        <section class="sponsors-section">
-            <div id="fws_6909c6d21d6f7" data-column-margin="default" data-midnight="dark" data-top-percent="3%" data-bottom-percent="4%" class="wpb_row vc_row-fluid vc_row full-width-section" style="padding-top: calc(100vw * 0.03); padding-bottom: calc(100vw * 0.04);">
-                <div class="row-bg-wrap" data-bg-animation="none" data-bg-animation-delay="" data-bg-overlay="false">
-                    <div class="inner-wrap row-bg-layer">
-                        <div class="row-bg viewport-desktop" style=""></div>
-                    </div>
-                </div>
-                <div class="row_col_wrap_12 col span_12 dark center">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-animation="" data-delay="0">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading font_size_26px" data-align="center" data-m-align="inherit" data-text-effect="default" data-animation-type="line-reveal-by-space" data-animation-delay="0" data-animation-offset="" data-m-rm-animation="" data-stagger="" data-custom-font-size="true" style="font-size: 26px; line-height: 28.08px;">
-                                    <h2 style="max-width: 500px;">Sponsors</h2>
-                                </div>
-                                <div class="carousel-wrap">
-                                    <!-- Sponsor logos cleared -->
-                                </div>
-                                <a class="nectar-button large regular accent-color regular-button" role="button" style="" href="#" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff">
-                                    <span>View all Sponsors</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Homepage Footer -->
-        <footer class="homepage-footer">
-            <div class="homepage-footer-container">
-                <div class="homepage-footer-content">
-                    <!-- Logo and Description -->
-                    <div class="footer-brand">
-                        <div class="footer-logo">
-                            <img src="assets/wawlogo-peach.png" alt="WAW London Logo" style="height: 50px; width: auto;">
-                        </div>
-                        <h3 class="footer-brand-title">WAW London</h3>
-                        <p class="footer-brand-description">Connecting Women. Growing Agribusiness. Empowering the future of food and agriculture.</p>
-                    </div>
-
-                    <!-- Quick Links -->
-                    <div class="footer-links-section">
-                        <h4 class="footer-section-title">Quick Links</h4>
-                        <ul class="footer-links-list">
-                            <li><a href="/about-us">About Us</a></li>
-                            <li><a href="/speakers">Speakers</a></li>
-                            <li><a href="/tickets">Tickets</a></li>
-                            <li><a href="/exhibition">Exhibition</a></li>
-                            <li><a href="/our-sponsors">Sponsors</a></li>
-                            <li><a href="/contact-us">Contact Us</a></li>
-                        </ul>
-                    </div>
-
-                    <!-- Event Info -->
-                    <div class="footer-event-info">
-                        <h4 class="footer-section-title">Event Details</h4>
-                        <div class="event-detail-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>21st to 27th September 2026</span>
-                        </div>
-                        <div class="event-detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>London, UK</span>
-                        </div>
-                        <div class="event-detail-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:info@wawlondon.org">info@wawlondon.org</a>
-                        </div>
-                    </div>
-
-                    <!-- Social Media -->
-                    <div class="footer-social">
-                        <h4 class="footer-section-title">Follow Us</h4>
-                        <p class="footer-social-description">Stay connected with us on social media</p>
-                        <div class="footer-social-icons">
-                            <a href="https://www.facebook.com/share/17C1DLHCWb/" target="_blank" rel="noopener" aria-label="Facebook" class="social-icon">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/showcase/wawlondon/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-icon">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://www.instagram.com/waw_london?igsh=MWI5N3N1bGY3MHUzZw==" target="_blank" rel="noopener" aria-label="Instagram" class="social-icon">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="https://www.tiktok.com/@waw.london?_r=1&_t=ZN-91PmeEZeeDW" target="_blank" rel="noopener" aria-label="TikTok" class="social-icon">
-                                <i class="fab fa-tiktok"></i>
-                            </a>
-                        </div>
-                        <a href="/pre-register" class="footer-cta-button">Register Now</a>
-                    </div>
-                </div>
-
-                <!-- Footer Bottom -->
-                <div class="homepage-footer-bottom">
-                    <div class="footer-bottom-links">
-                        <a href="/privacy-policy">Privacy Policy</a>
-                        <span class="footer-separator">|</span>
-                        <a href="/terms-conditions">Terms & Conditions</a>
-                    </div>
-                    <p class="footer-copyright">&copy; 2026 WAW London - Women in Agribusiness Week London 2026. All rights reserved.</p>
-                </div>
-            </div>
-        </footer>
-
-    </main>
+    </section>
 
     <script src="components/load-components.js"></script>
     <script src="script.js"></script>
-    <script>
-        // Ensure Font Awesome icons are loaded in homepage footer
-        document.addEventListener('DOMContentLoaded', function() {
-            const socialIcons = document.querySelectorAll('.homepage-footer .social-icon i');
-            socialIcons.forEach(function(icon) {
-                if (icon.classList.contains('fab')) {
-                    icon.style.fontFamily = '"Font Awesome 6 Brands"';
-                    icon.style.fontWeight = '400';
-                    icon.style.fontStyle = 'normal';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
-
-

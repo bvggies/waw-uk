@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About WAW London - Women in Agribusiness Week London 2026. Learn about our mission to empower women in agriculture and agribusiness.">
-    <meta name="keywords" content="About WAW London, Women in Agriculture, Agribusiness, Business Week, London 2026">
-    <title>About Us - WAW London - Women in Agribusiness Week London 2026</title>
+    <meta name="description" content="About WiFAI - Women in Food & Agribusiness Innovation. Learn about our mission to empower women across the food and agribusiness value chain.">
+    <meta name="keywords" content="About WiFAI, Women in Food, Agribusiness Innovation, UK-Africa, Food Systems">
+    <title>About Us - WiFAI - Women in Food & Agribusiness Innovation</title>
     <link rel="stylesheet" href="../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* Modern About Us Page Styles */
         .about-hero-section {
             position: relative;
             min-height: 400px;
@@ -22,15 +21,6 @@
             padding: 100px 20px 80px;
             overflow: hidden;
             background: linear-gradient(135deg, #005a52 0%, #006b5f 50%, #005a52 100%);
-        }
-        
-        .about-hero-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
         }
         
         .about-hero-gradient {
@@ -57,18 +47,6 @@
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
-            animation: fadeInUp 0.8s ease-out;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         
         .about-hero-title {
@@ -77,20 +55,11 @@
             color: #ffffff;
             margin: 0 0 20px 0;
             line-height: 1.1;
-            letter-spacing: -1px;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-        }
-        
-        .about-hero-subtitle {
-            font-size: clamp(18px, 2.5vw, 24px);
-            color: rgba(255, 255, 255, 0.9);
-            line-height: 1.6;
-            margin: 0;
         }
         
         .about-content-section {
             padding: 100px 20px;
-            background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+            background: #f8f9fa;
         }
         
         .about-content-wrapper {
@@ -104,26 +73,7 @@
             padding: 50px 40px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             margin-bottom: 40px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .about-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--teal-color), var(--peach-color), var(--burgundy-color));
-            transform: scaleY(0);
-            transform-origin: top;
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .about-card:hover::before {
-            transform: scaleY(1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
         .about-card:hover {
@@ -131,133 +81,126 @@
             box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
         }
         
-        .about-card-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            font-size: 36px;
-            color: #ffffff;
-            box-shadow: 0 8px 25px rgba(0, 128, 128, 0.3);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .about-card:hover .about-card-icon {
-            transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 12px 35px rgba(0, 128, 128, 0.4);
-        }
-        
         .about-card h2 {
             font-size: clamp(28px, 4vw, 40px);
             font-weight: 800;
-            color: #1b203e !important;
+            color: #1a1a1a;
             margin: 0 0 20px 0;
-            line-height: 1.2;
         }
         
         .about-card p {
             font-size: 18px;
             line-height: 1.8;
-            color: #333 !important;
-            margin: 0;
-            text-align: justify;
-            text-justify: inter-word;
+            color: #333;
+            margin: 0 0 20px 0;
         }
         
-        .about-card-icon {
-            color: #ffffff !important;
-        }
-        
-        .about-card-icon i,
-        .about-card-icon .fas,
-        .about-card-icon .far,
-        .about-card-icon .fab {
-            color: #ffffff !important;
-            display: block !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            font-family: "Font Awesome 6 Free" !important;
-            font-weight: 900 !important;
-            font-style: normal !important;
-        }
-        
-        .about-stat-label {
-            color: #333 !important;
-        }
-        
-        .nectar-button,
-        .nectar-button span,
-        .nectar-button a {
-            color: inherit !important;
-            visibility: visible !important;
-            opacity: 1 !important;
-            display: inline-block !important;
-        }
-        
-        .about-stats {
+        .pillars-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin: 60px 0;
         }
         
-        .about-stat-card {
-            background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1));
+        .pillar-card {
+            background: #ffffff;
             border-radius: 16px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 2px solid transparent;
+            padding: 32px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #008080;
         }
         
-        .about-stat-card:hover {
+        .pillar-card:hover {
             transform: translateY(-8px);
-            border-color: var(--teal-color);
-            box-shadow: 0 12px 30px rgba(0, 128, 128, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
         }
         
-        .about-stat-number {
-            font-size: 48px;
-            font-weight: 900;
-            color: var(--teal-color);
-            line-height: 1;
-            margin-bottom: 10px;
+        .pillar-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #008080;
+            margin: 0 0 16px 0;
         }
         
-        .about-stat-label {
+        .pillar-card p {
             font-size: 16px;
-            color: #555;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+        
+        .who-we-serve {
+            background: linear-gradient(135deg, #1b203e 0%, #2d3561 100%);
+            border-radius: 20px;
+            padding: 50px 40px;
+            margin: 60px 0;
+            color: #ffffff;
+        }
+        
+        .who-we-serve h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 800;
+            color: #ffffff;
+            margin: 0 0 30px 0;
+            text-align: center;
+        }
+        
+        .serve-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .serve-list li {
+            font-size: 18px;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .serve-list li:last-child {
+            border-bottom: none;
         }
         
         .about-cta {
-            background: linear-gradient(135deg, var(--teal-color), var(--peach-color));
+            background: linear-gradient(135deg, #008080, #FFCBA4);
             border-radius: 20px;
             padding: 50px 40px;
             text-align: center;
-            color: #ffffff !important;
+            color: #ffffff;
             margin-top: 60px;
-            box-shadow: 0 8px 30px rgba(0, 128, 128, 0.3);
         }
         
         .about-cta h3 {
             font-size: 36px;
             font-weight: 800;
             margin: 0 0 20px 0;
-            color: #ffffff !important;
+            color: #ffffff;
         }
         
         .about-cta p {
             font-size: 20px;
             margin: 0 0 30px 0;
-            color: #ffffff !important;
-            opacity: 0.95;
+            color: #ffffff;
+        }
+        
+        .btn-cta {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #ffffff;
+            color: #008080;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
         
         @media (max-width: 767px) {
@@ -270,94 +213,80 @@
                 padding: 30px 24px;
             }
             
-            .about-stats {
+            .pillars-grid {
                 grid-template-columns: 1fr;
-                gap: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Header Placeholder - Loaded from components/header.html -->
     <div id="header-placeholder"></div>
 
-    <main id="main-content">
-        <!-- Modern Hero Section -->
+    <main>
         <section class="about-hero-section">
-            <div class="about-hero-background">
-                <div class="about-hero-gradient"></div>
-            </div>
+            <div class="about-hero-gradient"></div>
             <div class="about-hero-content">
-                <h1 class="about-hero-title">About WAW London</h1>
-                <p class="about-hero-subtitle">Empowering women in agribusiness across the UK, Africa, and beyond</p>
+                <h1 class="about-hero-title">Our Story</h1>
             </div>
         </section>
 
-        <!-- About Content Section -->
         <section class="about-content-section">
             <div class="about-content-wrapper">
-                <!-- Mission Card -->
                 <div class="about-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-bullseye" style="color: var(--teal-color) !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                    </div>
+                    <h2>Our Story</h2>
+                    <p>Women in Food & Agribusiness Innovation (WiFAI) exists to give voice and agency to women shaping the future of food. Founded by Nana, whose work has empowered more than 11,000 women across 31 countries, WiFAI brings together founders, farmers, researchers, investors and policymakers to accelerate innovation and economic empowerment.</p>
+                </div>
+
+                <div class="about-card">
                     <h2>Our Mission</h2>
-                    <p>WAW London - Women in Agribusiness Week London 2026 is dedicated to empowering and supporting women in agriculture and agribusiness across the UK, Africa, and beyond. We believe in creating a platform where women can connect, learn, grow, and thrive in the agricultural sector. Our mission is to bring together the entire food & agribusiness women ecosystem, connecting innovators, investors, and leaders to drive sustainable growth and impact.</p>
+                    <p>To unlock opportunities for women (and men) across the food and agribusiness value chain through collaboration, innovation, market access, investment, data, and storytelling.</p>
                 </div>
 
-                <!-- What We Do Card -->
                 <div class="about-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-handshake" style="color: var(--teal-color) !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                    </div>
-                    <h2>What We Do</h2>
-                    <p>Over seven immersive days from 21st to 27th September 2026, we bring together the UK and Africa — and the world — to learn, connect, invest and celebrate. Through our flagship conferences, seven thematic streams, workshops, masterclasses, and networking events, we equip attendees with business insights, routes to success, new skills and knowledge to navigate the world of agribusiness. Our events feature distinguished speakers, exhibitions, and a grand Women in Agribusiness Awards & Gala Evening.</p>
-                </div>
-
-                <!-- Vision Card -->
-                <div class="about-card">
-                    <div class="about-card-icon">
-                        <i class="fas fa-eye" style="color: var(--teal-color) !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                    </div>
-                    <h2>Our Vision</h2>
-                    <p>To be the leading platform for women in agriculture and agribusiness globally, fostering a community that drives innovation, creates opportunities, and celebrates achievements in the agricultural sector. We envision a future where women-led agribusinesses thrive, sustainable food systems flourish, and the entire ecosystem benefits from the diverse perspectives and leadership of women.</p>
-                </div>
-
-                <!-- Stats Section -->
-                <div class="about-stats">
-                    <div class="about-stat-card">
-                        <div class="about-stat-number">6</div>
-                        <div class="about-stat-label">Days</div>
-                    </div>
-                    <div class="about-stat-card">
-                        <div class="about-stat-number">8</div>
-                        <div class="about-stat-label">Thematic Streams</div>
-                    </div>
-                    <div class="about-stat-card">
-                        <div class="about-stat-number">28+</div>
-                        <div class="about-stat-label">Speakers</div>
-                    </div>
-                    <div class="about-stat-card">
-                        <div class="about-stat-number">2026</div>
-                        <div class="about-stat-label">Year</div>
+                    <h2>Our Core Pillars</h2>
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <h3>Voice</h3>
+                            <p>Amplifying women's expertise, achievements, and innovations</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Agency</h3>
+                            <p>Providing tools, networks and capital to influence systems</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Innovation</h3>
+                            <p>Showcasing agritech, climate solutions, processing, and food systems research</p>
+                        </div>
+                        <div class="pillar-card">
+                            <h3>Connection</h3>
+                            <p>Building continental and global networks of partners and allies</p>
+                        </div>
                     </div>
                 </div>
 
-                <!-- CTA Section -->
+                <div class="who-we-serve">
+                    <h2>Who We Serve</h2>
+                    <ul class="serve-list">
+                        <li>Women founders</li>
+                        <li>Agripreneurs</li>
+                        <li>Farmers</li>
+                        <li>Policymakers</li>
+                        <li>Corporates</li>
+                        <li>Development partners</li>
+                        <li>Researchers</li>
+                        <li>Investors</li>
+                    </ul>
+                </div>
+
                 <div class="about-cta">
-                    <h3>Join Us</h3>
-                    <p>Be part of the movement. Register for Women in Agribusiness Week London 2026 and connect with industry leaders, entrepreneurs, and professionals.</p>
-                    <a href="/pre-register" class="nectar-button large regular accent-color regular-button" role="button" style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color)) !important; color: #ffffff !important; border: none !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 128, 128, 0.3) !important; transition: all 0.3s ease !important;">
-                        <span style="color: #ffffff !important; visibility: visible !important; opacity: 1 !important;">Register Now →</span>
-                    </a>
+                    <h3>Become a Partner</h3>
+                    <p>Join us in empowering women across the food and agribusiness value chain</p>
+                    <a href="/our-sponsors" class="btn-cta">Become a Partner</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer Placeholder - Loaded from components/footer.html -->
     <div id="footer-placeholder"></div>
 
     <script src="../components/load-components.js"></script>

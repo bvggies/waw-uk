@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Press & Media - WiFAI. Access interviews, expert commentary, and press passes for WiFAI events.">
+    <title>Press & Media - WiFAI</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #005a52 0%, #006b5f 50%, #005a52 100%);
+            padding: 100px 20px 80px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            margin: 0 0 20px 0;
+        }
+        
+        .page-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .content-card h2 {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            color: #008080;
+            margin: 0 0 24px 0;
+        }
+        
+        .content-card p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0 0 20px 0;
+        }
+        
+        .offer-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        
+        .offer-list li {
+            font-size: 18px;
+            padding: 12px 0 12px 40px;
+            position: relative;
+            color: #333;
+        }
+        
+        .offer-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #008080;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn-media {
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-media-primary {
+            background: #008080;
+            color: #ffffff;
+        }
+        
+        .btn-media-primary:hover {
+            background: #005a52;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 128, 128, 0.3);
+        }
+        
+        .btn-media-secondary {
+            background: #FFCBA4;
+            color: #005a52;
+        }
+        
+        .btn-media-secondary:hover {
+            background: #ffffff;
+            border: 2px solid #FFCBA4;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 767px) {
+            .cta-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-media {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero">
+            <h1>Press & Media</h1>
+        </section>
+
+        <section class="page-content">
+            <div class="content-card">
+                <h2>What We Offer the Media</h2>
+                <ul class="offer-list">
+                    <li>Interviews with UK and African food business and agribusiness leaders</li>
+                    <li>Access to our speaker pool</li>
+                    <li>Expert commentary on food systems, gender, investment, innovation, sustainability and inclusive development</li>
+                    <li>Press passes to WiFAI signature events</li>
+                </ul>
+                
+                <div class="cta-buttons">
+                    <a href="/contact-us" class="btn-media btn-media-primary">Get Press Pass</a>
+                    <a href="/contact-us" class="btn-media btn-media-secondary">Download Press Kit</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/load-components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+

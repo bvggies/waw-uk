@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Travel Information for WiFAI London - Visa information, accommodation, and venue details.">
+    <title>Travel Info - WiFAI</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .page-hero {
+            background: linear-gradient(135deg, #005a52 0%, #006b5f 50%, #005a52 100%);
+            padding: 100px 20px 80px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .page-hero h1 {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 900;
+            margin: 0 0 20px 0;
+        }
+        
+        .page-content {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        
+        .content-card h2 {
+            font-size: clamp(28px, 4vw, 36px);
+            font-weight: 700;
+            color: #008080;
+            margin: 0 0 24px 0;
+        }
+        
+        .content-card p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin: 0 0 20px 0;
+        }
+        
+        .btn-visa {
+            display: inline-block;
+            padding: 16px 32px;
+            background: #008080;
+            color: #ffffff;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .btn-visa:hover {
+            background: #005a52;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 128, 128, 0.3);
+        }
+        
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 24px 0;
+        }
+        
+        .info-list li {
+            font-size: 18px;
+            padding: 12px 0 12px 40px;
+            position: relative;
+            color: #333;
+        }
+        
+        .info-list li::before {
+            content: "📍";
+            position: absolute;
+            left: 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero">
+            <h1>Plan Your Visit</h1>
+        </section>
+
+        <section class="page-content">
+            <div class="content-card">
+                <h2>Visa Information</h2>
+                <p>We support attendees and speakers with invitation letters and visa documentation.</p>
+                <a href="/contact-us" class="btn-visa">Request Visa Support Letter</a>
+            </div>
+
+            <div class="content-card">
+                <h2>Accommodation</h2>
+                <p>Recommended hotels with negotiated WiFAI rates.</p>
+                <p>Details coming soon. Please check back or contact us for accommodation recommendations.</p>
+            </div>
+
+            <div class="content-card">
+                <h2>Transport Links</h2>
+                <p>Everything you need to attend WiFAI London, including transport links, venue maps, and accessibility details.</p>
+                <p>Venue and transport details will be announced closer to the event date.</p>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../components/load-components.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
+
