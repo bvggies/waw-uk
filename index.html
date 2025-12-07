@@ -17,8 +17,8 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <title>WiFAI - Women in Food & Agribusiness Innovation</title>
-    <script src="version.js?v=1.0.3"></script>
-    <link rel="stylesheet" href="styles.css?v=1.0.3">
+    <script src="version.js?v=1.0.4"></script>
+    <link rel="stylesheet" href="styles.css?v=1.0.4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -100,6 +100,14 @@
             opacity: 1;
         }
         
+        /* Ensure images are always visible even in animate-on-scroll containers */
+        .animate-on-scroll .image-hover-zoom,
+        .animate-on-scroll .image-hover-zoom img,
+        .animate-on-scroll img {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
         .fade-in-up {
             transform: translateY(40px);
         }
@@ -140,10 +148,15 @@
         
         .image-hover-zoom img {
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            visibility: visible !important;
+            opacity: 1 !important;
+            display: block !important;
         }
         
         .image-hover-zoom:hover img {
             transform: scale(1.1);
+            opacity: 1 !important;
+            visibility: visible !important;
         }
         
         /* Card animations */
@@ -1279,7 +1292,7 @@
                     
                     <div class="card-animate animate-on-scroll fade-in-up stagger-2" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
                         <div class="image-hover-zoom" style="height: 220px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop&q=90" alt="Global Network" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&h=600&fit=crop&q=90" alt="Global Network" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                         </div>
                         <div style="padding: 30px; position: relative;">
                             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--peach-color), var(--burgundy-color));"></div>
@@ -1293,7 +1306,7 @@
 
                     <div class="card-animate animate-on-scroll fade-in-up stagger-3" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
                         <div class="image-hover-zoom" style="height: 220px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=90" alt="Market Access" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&h=600&fit=crop&q=90" alt="Market Access" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                         </div>
                         <div style="padding: 30px; position: relative;">
                             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--burgundy-color), var(--teal-color));"></div>
@@ -1307,7 +1320,7 @@
                     
                     <div class="card-animate animate-on-scroll fade-in-up stagger-4" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
                         <div class="image-hover-zoom" style="height: 220px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop&q=90" alt="Innovation" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=800&h=600&fit=crop&q=90" alt="Innovation" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                         </div>
                         <div style="padding: 30px; position: relative;">
                             <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--burgundy-color));"></div>
@@ -1554,7 +1567,7 @@
                                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto 40px;">
                                     <div class="card-animate animate-on-scroll fade-in-left stagger-1" style="background: #ffffff; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-left: 4px solid #008080;">
                                         <div class="image-hover-zoom" style="height: 200px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&q=90" alt="Summit" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&h=600&fit=crop&q=90" alt="Summit" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                                         </div>
                                         <div style="padding: 32px;">
                                             <h3 style="font-size: 24px; font-weight: 700; color: #008080; margin: 0 0 12px 0;">UK–Africa Women in Food & Agribusiness Summit</h3>
@@ -1564,7 +1577,7 @@
                                     </div>
                                     <div class="card-animate animate-on-scroll fade-in-up stagger-2" style="background: #ffffff; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-left: 4px solid #008080;">
                                         <div class="image-hover-zoom" style="height: 200px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop&q=90" alt="Gala" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=800&h=600&fit=crop&q=90" alt="Gala" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                                         </div>
                                         <div style="padding: 32px;">
                                             <h3 style="font-size: 24px; font-weight: 700; color: #008080; margin: 0 0 12px 0;">WAW London Gala</h3>
@@ -1574,7 +1587,7 @@
                                     </div>
                                     <div class="card-animate animate-on-scroll fade-in-right stagger-3" style="background: #ffffff; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-left: 4px solid #008080;">
                                         <div class="image-hover-zoom" style="height: 200px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&q=90" alt="Trade Expo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop&q=90" alt="Trade Expo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                                         </div>
                                         <div style="padding: 32px;">
                                             <h3 style="font-size: 24px; font-weight: 700; color: #008080; margin: 0 0 12px 0;">Women in Food & Agribiz Trade Expo</h3>
@@ -1746,8 +1759,8 @@
 
     </main>
 
-    <script src="components/load-components.js?v=1.0.3"></script>
-    <script src="script.js?v=1.0.3"></script>
+    <script src="components/load-components.js?v=1.0.4"></script>
+    <script src="script.js?v=1.0.4"></script>
     <script>
         // Ensure Font Awesome icons are loaded in homepage footer
         document.addEventListener('DOMContentLoaded', function() {

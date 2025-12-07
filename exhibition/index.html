@@ -6,8 +6,8 @@
     <meta name="description" content="Exhibit at WiFAI London - Showcase your products, technologies, services and innovations to a global audience.">
     <meta name="keywords" content="Exhibition, WiFAI, Exhibit, Showcase, London, Agribusiness">
     <title>Exhibit at WiFAI London - WiFAI</title>
-    <script src="../version.js?v=1.0.3"></script>
-    <link rel="stylesheet" href="../styles.css?v=1.0.3">
+    <script src="../version.js?v=1.0.4"></script>
+    <link rel="stylesheet" href="../styles.css?v=1.0.4">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -48,6 +48,14 @@
             opacity: 1;
         }
         
+        /* Ensure images are always visible even in animate-on-scroll containers */
+        .animate-on-scroll .image-hover-zoom,
+        .animate-on-scroll .image-hover-zoom img,
+        .animate-on-scroll img {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
         .fade-in-up {
             transform: translateY(40px);
         }
@@ -71,10 +79,15 @@
         
         .image-hover-zoom img {
             transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            visibility: visible !important;
+            opacity: 1 !important;
+            display: block !important;
         }
         
         .image-hover-zoom:hover img {
             transform: scale(1.1);
+            opacity: 1 !important;
+            visibility: visible !important;
         }
         
         @keyframes fadeInUp {
@@ -317,7 +330,7 @@
                 <div class="exhibition-benefits">
                     <div class="exhibition-benefit-card card-animate animate-on-scroll fade-in-up stagger-1" style="padding: 0; overflow: hidden;">
                         <div class="image-hover-zoom" style="height: 200px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&q=90" alt="Global Reach" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&q=90" alt="Global Reach" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                         </div>
                         <div style="padding: 30px;">
                             <div class="exhibition-benefit-icon">
@@ -330,7 +343,7 @@
                     
                     <div class="exhibition-benefit-card card-animate animate-on-scroll fade-in-up stagger-2" style="padding: 0; overflow: hidden;">
                         <div class="image-hover-zoom" style="height: 200px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop&q=90" alt="Brand Visibility" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop&q=90" alt="Brand Visibility" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                         </div>
                         <div style="padding: 30px;">
                             <div class="exhibition-benefit-icon">
@@ -343,7 +356,7 @@
                     
                     <div class="exhibition-benefit-card card-animate animate-on-scroll fade-in-up stagger-3" style="padding: 0; overflow: hidden;">
                         <div class="image-hover-zoom" style="height: 200px; overflow: hidden; position: relative; background: #f0f0f0; display: block; width: 100%;">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&q=90" alt="Connections" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; min-width: 100%; min-height: 100%;">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&q=90" alt="Connections" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; display: block !important; visibility: visible !important; opacity: 1 !important; min-width: 100%; min-height: 100%; z-index: 1;">
                         </div>
                         <div style="padding: 30px;">
                             <div class="exhibition-benefit-icon">
@@ -378,8 +391,8 @@
         <!-- Footer Placeholder - Loaded from components/footer.html -->
     <div id="footer-placeholder"></div>
 
-    <script src="../components/load-components.js?v=1.0.3"></script>
-    <script src="../script.js?v=1.0.3"></script>
+    <script src="../components/load-components.js?v=1.0.4"></script>
+    <script src="../script.js?v=1.0.4"></script>
 </body>
 </html>
 
