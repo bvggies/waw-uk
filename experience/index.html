@@ -16,12 +16,80 @@
             padding: 100px 20px 80px;
             text-align: center;
             color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1920&h=600&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
         }
         
         .page-hero h1 {
             font-size: clamp(36px, 5vw, 56px);
             font-weight: 900;
             margin: 0 0 20px 0;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+        }
+        
+        .fade-in-up {
+            transform: translateY(40px);
+        }
+        
+        .fade-in-up.animated {
+            transform: translateY(0);
+        }
+        
+        .card-animate {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-animate:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+        
+        .image-hover-zoom {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .image-hover-zoom img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .image-hover-zoom:hover img {
+            transform: scale(1.1);
         }
         
         .page-content {
@@ -125,15 +193,25 @@
                 <p style="font-size: 18px; line-height: 1.8; color: #333; margin-bottom: 40px;">Enhance your summit experience with immersive industry tours.</p>
                 
                 <div class="tours-grid">
-                    <div class="tour-card">
-                        <h3>City Experience Tour</h3>
-                        <p class="tour-price">£TBC</p>
-                        <p class="tour-description">A curated networking walking tour connecting attendees with UK food innovation spaces and social enterprises.</p>
+                    <div class="tour-card card-animate animate-on-scroll fade-in-up stagger-1" style="background: #ffffff; padding: 0; overflow: hidden;">
+                        <div class="image-hover-zoom" style="height: 200px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop&q=80" alt="City Tour" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="padding: 32px;">
+                            <h3>City Experience Tour</h3>
+                            <p class="tour-price">£TBC</p>
+                            <p class="tour-description">A curated networking walking tour connecting attendees with UK food innovation spaces and social enterprises.</p>
+                        </div>
                     </div>
-                    <div class="tour-card">
-                        <h3>Farm & Factory Tours</h3>
-                        <p class="tour-price">£TBC</p>
-                        <p class="tour-description">Behind-the-scenes visits to processing facilities and packaging plants.</p>
+                    <div class="tour-card card-animate animate-on-scroll fade-in-up stagger-2" style="background: #ffffff; padding: 0; overflow: hidden;">
+                        <div class="image-hover-zoom" style="height: 200px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&h=400&fit=crop&q=80" alt="Farm Tour" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="padding: 32px;">
+                            <h3>Farm & Factory Tours</h3>
+                            <p class="tour-price">£TBC</p>
+                            <p class="tour-description">Behind-the-scenes visits to processing facilities and packaging plants.</p>
+                        </div>
                     </div>
                 </div>
                 

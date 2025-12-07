@@ -3,177 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WiFAI - Women in Food & Agribusiness Innovation. Connecting women leaders in food and agribusiness to capital, markets, and networks across the UK-Africa corridor.">
-    <meta name="keywords" content="Women in Food, Agribusiness Innovation, WiFAI, UK-Africa, Women Entrepreneurs, Food Systems, Agritech">
-    <meta name="author" content="WiFAI">
-    <meta property="og:title" content="WiFAI - Women in Food & Agribusiness Innovation">
-    <meta property="og:description" content="Powering Women in Food & Agribusiness Innovation Across Africa and the UK">
+    <meta name="description" content="WAW London - Women in Agribusiness Week London 2026. Bringing together the entire food & agribusiness women ecosystem. 21st to 27th September 2026 in London, UK.">
+    <meta name="keywords" content="Women in Agribusiness, Agribusiness Week, WAW London, UK Agriculture, Women Entrepreneurs, Food & Agribusiness">
+    <meta name="author" content="WAW London">
+    <meta property="og:title" content="WAW London - Women in Agribusiness Week London 2026">
+    <meta property="og:description" content="Connecting Women. Growing Agribusiness. 21st to 27th September 2026 in London, UK.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.wifai.org.uk">
+    <meta property="og:url" content="https://www.wawlondon.org">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="theme-color" content="#008080">
-    <title>WiFAI - Women in Food & Agribusiness Innovation</title>
+    <meta name="theme-color" content="#800020">
+    <title>WAW London - Women in Agribusiness Week London 2026</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <style>
-        /* Enhanced Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slideInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-        
-        @keyframes shimmer {
-            0% { background-position: -1000px 0; }
-            100% { background-position: 1000px 0; }
-        }
-        
-        /* Scroll-triggered animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        
-        .animate-on-scroll.animated {
-            opacity: 1;
-        }
-        
-        .fade-in-up {
-            transform: translateY(40px);
-        }
-        
-        .fade-in-up.animated {
-            transform: translateY(0);
-        }
-        
-        .fade-in-left {
-            transform: translateX(-40px);
-        }
-        
-        .fade-in-left.animated {
-            transform: translateX(0);
-        }
-        
-        .fade-in-right {
-            transform: translateX(40px);
-        }
-        
-        .fade-in-right.animated {
-            transform: translateX(0);
-        }
-        
-        .scale-in {
-            transform: scale(0.9);
-        }
-        
-        .scale-in.animated {
-            transform: scale(1);
-        }
-        
-        /* Image hover effects */
-        .image-hover-zoom {
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        
-        .image-hover-zoom img {
-            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .image-hover-zoom:hover img {
-            transform: scale(1.1);
-        }
-        
-        /* Card animations */
-        .card-animate {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .card-animate:hover {
-            transform: translateY(-10px) scale(1.02);
-        }
-        
-        /* Stagger animation delays */
-        .stagger-1 { animation-delay: 0.1s; }
-        .stagger-2 { animation-delay: 0.2s; }
-        .stagger-3 { animation-delay: 0.3s; }
-        .stagger-4 { animation-delay: 0.4s; }
-        .stagger-5 { animation-delay: 0.5s; }
-        
-        /* Image placeholders with gradients */
-        .image-placeholder {
-            background: linear-gradient(135deg, #008080 0%, #FFCBA4 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 600;
-        }
-        
-        /* Loading shimmer effect */
-        .shimmer {
-            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-            background-size: 200% 100%;
-            animation: shimmer 2s infinite;
-        }
-    </style>
     <style>
         /* Modern Homepage Redesign - Complete Styles */
         
@@ -1233,98 +1078,66 @@
         <section class="modern-welcome-section" style="position: relative; padding: 100px 20px; background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%); overflow: hidden;">
             <div class="section-bg-vector"></div>
             <div class="container" style="position: relative; z-index: 1; max-width: 1400px; margin: 0 auto;">
-                <!-- Hero Image Section -->
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px;" class="animate-on-scroll fade-in-up">
-                    <div>
-                        <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 8px 24px; background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1)); border-radius: 50px; border: 2px solid rgba(0, 128, 128, 0.2); animation: fadeInUp 0.8s ease-out;">
-                            <i class="fas fa-home" style="color: var(--teal-color) !important; font-size: 18px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                            <span style="color: var(--teal-color); font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Welcome to WiFAI</span>
-                        </div>
-                        <h2 style="font-size: clamp(36px, 5vw, 56px); font-weight: 900; color: #1b203e; margin: 0 0 30px 0; line-height: 1.2; letter-spacing: -1px; animation: fadeInUp 0.8s ease-out 0.2s both;">
-                            Powering Women in Food & Agribusiness Innovation<br>
-                            <span style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Across Africa and the UK</span>
-                        </h2>
-                        <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #555; max-width: 900px; margin: 0 0 30px 0; text-align: justify; text-justify: inter-word; animation: fadeInUp 0.8s ease-out 0.4s both;">
-                            WiFAI connects women leaders in food and agribusiness to the capital, markets, and networks that unlock transformative growth across the UK-Africa corridor—and beyond.
-                        </p>
-                        <p style="font-size: clamp(16px, 2vw, 18px); line-height: 1.8; color: #666; max-width: 900px; margin: 0 0 30px 0; text-align: left; font-weight: 600; animation: fadeInUp 0.8s ease-out 0.6s both;">
-                            Last event: 250+ attendees • 16 countries • 35 speakers
-                        </p>
+                <div style="text-align: center; margin-bottom: 60px;">
+                    <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 8px 24px; background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1)); border-radius: 50px; border: 2px solid rgba(0, 128, 128, 0.2);">
+                        <i class="fas fa-home" style="color: var(--teal-color) !important; font-size: 18px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
+                        <span style="color: var(--teal-color); font-size: 14px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;">Welcome to WAW London</span>
+        </div>
+                    <h2 style="font-size: clamp(36px, 5vw, 56px); font-weight: 900; color: #1b203e; margin: 0 0 30px 0; line-height: 1.2; letter-spacing: -1px;">
+                        Women in Agribusiness Week<br>
+                        <span style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">London 2026</span>
+                    </h2>
+                    <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #555; max-width: 900px; margin: 0 auto 50px; text-align: justify; text-justify: inter-word;">
+                        A week-long global gathering of women founders, agribusiness innovators, investors, policymakers, media creators and trade leaders. Over seven immersive days we bring together the UK and Africa — and the world — to learn, connect, invest and celebrate.
+                    </p>
                     </div>
-                    <div class="image-hover-zoom" style="animation: fadeInUp 0.8s ease-out 0.3s both;">
-                        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&h=600&fit=crop&q=80" alt="Women in agriculture" style="width: 100%; height: 500px; object-fit: cover; border-radius: 20px; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);">
-                    </div>
-                </div>
                 
                 <!-- Highlights Cards Grid -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 60px; max-width: 1200px; margin-left: auto; margin-right: auto;">
-                    <div class="card-animate animate-on-scroll fade-in-up stagger-1" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div class="image-hover-zoom" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&q=80" alt="Summit" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div style="padding: 30px;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--peach-color));"></div>
-                            <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-color), var(--peach-color)); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 128, 128, 0.3); animation: pulse 2s ease-in-out infinite;">
-                                <i class="fas fa-microphone-alt" style="color: #ffffff !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                            </div>
-                            <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">UK–Africa Summit</h3>
-                            <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">UK–Africa Women in Food & Agribusiness Summit bringing together innovators, farmers, investors, policymakers, researchers and founders</p>
-                        </div>
+                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--peach-color));"></div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
+                            <i class="fas fa-microphone-alt" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
+                </div>
+                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Flagship Conferences</h3>
+                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">UK-Africa Women in Food & Agribusiness Conference alongside a Global Women in Agribusiness Conference open to all continents</p>
             </div>
                     
-                    <div class="card-animate animate-on-scroll fade-in-up stagger-2" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div class="image-hover-zoom" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600&h=400&fit=crop&q=80" alt="Global Network" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div style="padding: 30px;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--peach-color), var(--burgundy-color));"></div>
-                            <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, var(--peach-color), var(--burgundy-color)); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(255, 203, 164, 0.3); animation: pulse 2s ease-in-out infinite 0.2s;">
-                                <i class="fas fa-stream" style="color: #ffffff !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                            </div>
-                            <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Global Network</h3>
-                            <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Access to a network of 7,000+ women across 31 countries, connecting innovators, investors, and leaders</p>
-                        </div>
+                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--peach-color), var(--burgundy-color));"></div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
+                            <i class="fas fa-stream" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
+        </div>
+                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Thematic Streams</h3>
+                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Seven thematic streams you can pick from – each session designed with measurable outcomes and real-world outputs</p>
     </div>
 
-                    <div class="card-animate animate-on-scroll fade-in-up stagger-3" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div class="image-hover-zoom" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&h=400&fit=crop&q=80" alt="Market Access" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div style="padding: 30px;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--burgundy-color), var(--teal-color));"></div>
-                            <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, var(--burgundy-color), var(--teal-color)); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(128, 0, 32, 0.3); animation: pulse 2s ease-in-out infinite 0.4s;">
-                                <i class="fas fa-handshake" style="color: #ffffff !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                            </div>
-                            <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Market Access</h3>
-                            <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Creating access to markets, capital, data, networks and global visibility for women in agribusiness</p>
-                        </div>
+                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--burgundy-color), var(--teal-color));"></div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
+                            <i class="fas fa-clock" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
+            </div>
+                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Flexible Sessions</h3>
+                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Morning and evening sessions to suit busy professionals</p>
                     </div>
                     
-                    <div class="card-animate animate-on-scroll fade-in-up stagger-4" style="background: #ffffff; border-radius: 20px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
-                        <div class="image-hover-zoom" style="height: 200px; overflow: hidden;">
-                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&h=400&fit=crop&q=80" alt="Innovation" style="width: 100%; height: 100%; object-fit: cover;">
-                        </div>
-                        <div style="padding: 30px;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--burgundy-color));"></div>
-                            <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: linear-gradient(135deg, var(--teal-color), var(--peach-color)); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 128, 128, 0.3); animation: pulse 2s ease-in-out infinite 0.6s;">
-                                <i class="fas fa-lightbulb" style="color: #ffffff !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                            </div>
-                            <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Innovation Showcase</h3>
-                            <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Showcasing agritech, climate solutions, processing, and food systems research</p>
-                        </div>
+                    <div style="background: #ffffff; border-radius: 20px; padding: 40px 30px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; border: 2px solid transparent;">
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--burgundy-color));"></div>
+                        <div style="width: 60px; height: 60px; margin: 0 auto 24px; border-radius: 50%; background: #ffffff; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid rgba(0, 128, 128, 0.2);">
+                            <i class="fas fa-store" style="color: var(--teal-color) !important; font-size: 28px !important; display: block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
+                </div>
+                        <h3 style="font-size: 20px; font-weight: 700; color: #1b203e; margin: 0 0 12px 0; text-align: center;">Exhibition</h3>
+                        <p style="font-size: 15px; line-height: 1.6; color: #666; margin: 0; text-align: center;">Exhibition throughout the week with flexible booth & table options</p>
                             </div>
                     
                 
                 <!-- CTA Buttons -->
                 <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 50px;">
-                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/our-sponsors" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
-                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Become a Sponsor →</span>
+                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/pre-register" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
+                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Register Now →</span>
                     </a>
-                    <a class="nectar-button large regular extra-color-1 regular-button" role="button" href="/pre-register" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
-                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Register for the Summit →</span>
-                    </a>
-                    <a class="nectar-button large regular extra-color-1 regular-button" role="button" href="/speakers" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
-                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Apply to Speak →</span>
+                    <a class="nectar-button large regular extra-color-1 regular-button" role="button" href="/exhibition" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff" style="background: #ffffff !important; color: var(--teal-color) !important; border: 2px solid var(--teal-color) !important; padding: 16px 32px !important; border-radius: 50px !important; text-decoration: none !important; display: inline-block !important; font-weight: 600 !important; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important; transition: all 0.3s ease !important;">
+                        <span style="color: var(--teal-color) !important; visibility: visible !important; opacity: 1 !important;">Exhibit or Sponsor →</span>
                     </a>
                 </div>
                     </div>
@@ -1337,14 +1150,14 @@
             <div style="text-align: center; position: relative;">
                 <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 24px; padding: 8px 24px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border-radius: 50px; border: 1px solid rgba(255, 255, 255, 0.2);">
                     <i class="fas fa-seedling" style="color: var(--teal-color) !important; font-size: 20px !important; display: inline-block !important; visibility: visible !important; opacity: 1 !important; font-family: 'Font Awesome 6 Free' !important; font-weight: 900 !important;"></i>
-                    <span style="color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">June 2026 • London, UK</span>
+                    <span style="color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;">21st to 27th September 2026 • London, UK</span>
                 </div>
                 <h1 style="font-size: clamp(32px, 5vw, 64px); font-weight: 900; color: #ffffff; margin: 0 0 30px 0; line-height: 1.2; letter-spacing: -1px; text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); position: relative; display: inline-block;">
-                    <span style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color), var(--burgundy-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">POWERING WOMEN</span>
+                    <span style="background: linear-gradient(135deg, var(--teal-color), var(--peach-color), var(--burgundy-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">BRINGING TOGETHER</span>
                     <br>
-                    <span style="color: #ffffff;">IN FOOD & AGRIBUSINESS</span>
+                    <span style="color: #ffffff;">THE ENTIRE FOOD & AGRIBUSINESS</span>
                     <br>
-                    <span style="background: linear-gradient(135deg, var(--peach-color), var(--burgundy-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">INNOVATION</span>
+                    <span style="background: linear-gradient(135deg, var(--peach-color), var(--burgundy-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">WOMEN ECOSYSTEM</span>
                 </h1>
                 <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
                     <div style="display: flex; align-items: center; gap: 10px; color: rgba(255, 255, 255, 0.9);">
@@ -1374,26 +1187,16 @@
                 <div style="text-align: center; margin-bottom: 60px;">
                     <div style="display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, rgba(0, 128, 128, 0.1), rgba(255, 203, 164, 0.1)); border-radius: 50px; margin-bottom: 30px; border: 2px solid rgba(0, 128, 128, 0.2);">
                         <h2 style="font-size: clamp(28px, 4vw, 42px); font-weight: 800; margin: 0; color: #1b203e !important; letter-spacing: -0.5px;">
-                            2025 Mini-Summit in Numbers
+                            Connecting Women. Growing Agribusiness.
                         </h2>
                     </div>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 60px; max-width: 1000px; margin-left: auto; margin-right: auto;">
-                        <div class="card-animate animate-on-scroll scale-in stagger-1" style="text-align: center; padding: 40px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--teal-color), var(--peach-color));"></div>
-                            <div style="font-size: 48px; font-weight: 900; color: #008080; margin-bottom: 12px; line-height: 1; animation: pulse 2s ease-in-out infinite;">250+</div>
-                            <div style="font-size: 18px; color: #666666; font-weight: 600;">Attendees at our most recent summit</div>
-                        </div>
-                        <div class="card-animate animate-on-scroll scale-in stagger-2" style="text-align: center; padding: 40px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--peach-color), var(--burgundy-color));"></div>
-                            <div style="font-size: 48px; font-weight: 900; color: #008080; margin-bottom: 12px; line-height: 1; animation: pulse 2s ease-in-out infinite 0.2s;">35</div>
-                            <div style="font-size: 18px; color: #666666; font-weight: 600;">Expert speakers and thought leaders</div>
-                        </div>
-                        <div class="card-animate animate-on-scroll scale-in stagger-3" style="text-align: center; padding: 40px 20px; background: #ffffff; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--burgundy-color), var(--teal-color));"></div>
-                            <div style="font-size: 48px; font-weight: 900; color: #008080; margin-bottom: 12px; line-height: 1; animation: pulse 2s ease-in-out infinite 0.4s;">16</div>
-                            <div style="font-size: 18px; color: #666666; font-weight: 600;">Countries</div>
-                        </div>
-                    </div>
+                    <div style="max-width: 900px; margin: 0 auto;">
+                        <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #333; margin: 0 0 24px 0; text-align: justify; text-justify: inter-word;">
+                            Women in Agribusiness Week connects the innovators shaping food and agribusiness, the investors fueling sustainable growth, and the leaders driving impact across the UK, Africa, and beyond.
+                        </p>
+                        <p style="font-size: clamp(18px, 2.5vw, 22px); line-height: 1.8; color: #555; margin: 0; text-align: justify; text-justify: inter-word;">
+                            From cutting-edge technologies to sustainable supply chains, this is where ideas meet investment and the future of agribusiness takes root.
+                        </p>
             </div>
         </div>
                 
@@ -1528,7 +1331,7 @@
             </div>
         </section>
 
-        <!-- Upcoming Events Section -->
+        <!-- Experience London Section -->
         <section class="hero-content-section" style="background-color: #ffffff; padding: 5% 0;">
             <div class="row-bg-wrap">
                 <div class="row_col_wrap_12 col span_12 dark center">
@@ -1536,74 +1339,20 @@
                         <div class="vc_column-inner">
                             <div class="wpb_wrapper">
                                 <div class="nectar-split-heading">
-                                    <h2 style="color: #1b203e; margin-bottom: 20px;">Upcoming Events</h2>
-                                </div>
-                                <p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 40px; max-width: 700px; margin-left: auto; margin-right: auto;">Explore our UK–Africa agrifood experiences throughout the year:</p>
-                                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto 40px;">
-                                    <div class="card-animate animate-on-scroll fade-in-left stagger-1" style="background: #ffffff; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-left: 4px solid #008080;">
-                                        <div class="image-hover-zoom" style="height: 180px; overflow: hidden;">
-                                            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?w=600&h=400&fit=crop&q=80" alt="Summit" style="width: 100%; height: 100%; object-fit: cover;">
-                                        </div>
-                                        <div style="padding: 32px;">
-                                            <h3 style="font-size: 24px; font-weight: 700; color: #008080; margin: 0 0 12px 0;">UK–Africa Women in Food & Agribusiness Summit</h3>
-                                            <p style="font-size: 16px; color: #666; margin: 0 0 16px 0; font-weight: 600;">June 2026</p>
-                                            <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 0;">Our flagship summit bringing together innovators, farmers, investors, policymakers, researchers and founders.</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-animate animate-on-scroll fade-in-up stagger-2" style="background: #ffffff; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-left: 4px solid #008080;">
-                                        <div class="image-hover-zoom" style="height: 180px; overflow: hidden;">
-                                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&q=80" alt="Gala" style="width: 100%; height: 100%; object-fit: cover;">
-                                        </div>
-                                        <div style="padding: 32px;">
-                                            <h3 style="font-size: 24px; font-weight: 700; color: #008080; margin: 0 0 12px 0;">WAW London Gala</h3>
-                                            <p style="font-size: 16px; color: #666; margin: 0 0 16px 0; font-weight: 600;">October 2026</p>
-                                            <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 0;">A celebration of achievements and networking opportunity for the agrifood community.</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-animate animate-on-scroll fade-in-right stagger-3" style="background: #ffffff; border-radius: 16px; padding: 0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); overflow: hidden; border-left: 4px solid #008080;">
-                                        <div class="image-hover-zoom" style="height: 180px; overflow: hidden;">
-                                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=600&h=400&fit=crop&q=80" alt="Trade Expo" style="width: 100%; height: 100%; object-fit: cover;">
-                                        </div>
-                                        <div style="padding: 32px;">
-                                            <h3 style="font-size: 24px; font-weight: 700; color: #008080; margin: 0 0 12px 0;">Women in Food & Agribiz Trade Expo</h3>
-                                            <p style="font-size: 16px; color: #666; margin: 0 0 16px 0; font-weight: 600;">November 2026</p>
-                                            <p style="font-size: 16px; color: #333; line-height: 1.6; margin: 0;">Showcasing products, technologies, and innovations from women-led agribusinesses.</p>
+                                    <h2 style="color: #1b203e; margin-bottom: 30px;">Experience London</h2>
+                                            </div>
+                                <div class="hero-text" style="max-width: 900px; margin: 0 auto 40px; color: #1b203e; font-size: 18px; line-height: 1.8;">
+                                    <p>Take advantage of the city's energy with optional experiential sessions:</p>
+                                    <ul style="text-align: left; max-width: 800px; margin: 20px auto; padding-left: 40px;">
+                                        <li>Factory & Innovation Tours (Wed Morning)</li>
+                                        <li>Networking & Sightseeing Experience (Fri Afternoon)</li>
+                                        <li>London Connect Reception (Fri Evening)</li>
+                                    </ul>
+                                    <p style="margin-top: 20px; font-weight: 600;">Book early – limited spots.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div style="text-align: center; margin-top: 30px;">
-                                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/events" style="background-color: #008080; color: #ffffff;">
-                                        <span>Explore All Events →</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why WiFAI Section -->
-        <section class="stream-focuses-section" style="background-color: #1b203e;">
-            <div class="row-bg-wrap">
-                <div class="row_col_wrap_12 col span_12 dark center">
-                    <div class="vc_col-sm-12 wpb_column column_container vc_column_container col centered-text no-extra-padding inherit_tablet inherit_phone">
-                        <div class="vc_column-inner">
-                            <div class="wpb_wrapper">
-                                <div class="nectar-split-heading">
-                                    <h2 style="color: #ffffff; margin-bottom: 30px;">Why WiFAI</h2>
-                                </div>
-                                <div class="hero-text" style="max-width: 900px; margin: 0 auto 40px; color: #ffffff; font-size: 18px; line-height: 1.8;">
-                                    <p>Women make up nearly half of Africa's agricultural workforce yet receive less than 10% of agrifood financing. WiFAI is closing that gap by creating access to markets, capital, data, networks and global visibility.</p>
-                                </div>
-                                <div style="margin-top: 30px;">
-                                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/about-us" style="background-color: #FFCBA4; color: #005a52;">
-                                        <span>Join Our Community →</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                                    </div>
                 </div>
             </div>
         </section>
@@ -1622,7 +1371,7 @@
                                     <p>Find everything you need: ticket types, venue info, visa support, cancellation policy, accommodation options.</p>
                                 </div>
                                 <div style="margin-top: 30px;">
-                                    <a class="nectar-button large regular accent-color regular-button" role="button" href="/faq" style="background-color: #FFCBA4; color: #1b203e;">
+                                    <a class="nectar-button large regular accent-color regular-button" role="button" href="#" style="background-color: #FFCBA4; color: #1b203e;">
                                         <span>FAQ →</span>
                                         </a>
                                     </div>
@@ -1644,7 +1393,7 @@
                                     <h2 style="color: #1b203e; margin-bottom: 30px;">Contact</h2>
                                 </div>
                                 <div class="hero-text" style="max-width: 900px; margin: 0 auto 40px; color: #1b203e; font-size: 18px; line-height: 1.8;">
-                                    <p>For any queries, email <a href="mailto:info@wifai.org.uk" style="color: #008080; font-weight: 600;">info@wifai.org.uk</a></p>
+                                    <p>For any queries, email <a href="mailto:info@wawlondon.org" style="color: #008080; font-weight: 600;">info@wawlondon.org</a> or call +44 20 XXXX XXXX</p>
                                     <p style="margin-top: 20px;">Follow us on Facebook, LinkedIn, Instagram and TikTok for updates.</p>
                                 </div>
                             </div>

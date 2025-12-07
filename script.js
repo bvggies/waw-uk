@@ -570,3 +570,57 @@ document.addEventListener('DOMContentLoaded', () => {
         initCountdown();
     }
 })();
+
+// Scroll-triggered animations
+(function() {
+    'use strict';
+    
+    const animateOnScroll = () => {
+        const elements = document.querySelectorAll('.animate-on-scroll');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+        
+        elements.forEach(el => {
+            observer.observe(el);
+        });
+    };
+    
+    // Initialize on DOM ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+    } else {
+        animateOnScroll();
+    }
+})();
+
+// Add parallax effect to images
+(function() {
+    'use strict';
+    
+    const parallaxImages = document.querySelectorAll('.image-hover-zoom img');
+    
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        
+        parallaxImages.forEach((img, index) => {
+            const rect = img.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            
+            if (isVisible) {
+                const speed = 0.1 + (index % 3) * 0.05;
+                const yPos = -(scrolled * speed);
+                img.style.transform = `translateY(${yPos}px) scale(1.05)`;
+            }
+        });
+    });
+})();

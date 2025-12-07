@@ -24,6 +24,69 @@
             background: linear-gradient(135deg, #00bda1 0%, #008080 50%, #00bda1 100%);
         }
         
+        .exhibition-hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&h=600&fit=crop&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+        }
+        
+        .fade-in-up {
+            transform: translateY(40px);
+        }
+        
+        .fade-in-up.animated {
+            transform: translateY(0);
+        }
+        
+        .card-animate {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-animate:hover {
+            transform: translateY(-5px);
+        }
+        
+        .image-hover-zoom {
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .image-hover-zoom img {
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .image-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         .exhibition-hero-content {
             position: relative;
             z-index: 1;
@@ -251,28 +314,43 @@
                 </div>
 
                 <div class="exhibition-benefits">
-                    <div class="exhibition-benefit-card">
-                        <div class="exhibition-benefit-icon">
-                            <i class="fas fa-users"></i>
+                    <div class="exhibition-benefit-card card-animate animate-on-scroll fade-in-up stagger-1" style="padding: 0; overflow: hidden;">
+                        <div class="image-hover-zoom" style="height: 150px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&h=300&fit=crop&q=80" alt="Global Reach" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <h3>Global Reach</h3>
-                        <p>Access to international buyers, investors, and media from the UK, Africa, and beyond. Connect with decision-makers and industry leaders.</p>
+                        <div style="padding: 30px;">
+                            <div class="exhibition-benefit-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Global Reach</h3>
+                            <p>Access to international buyers, investors, and media from the UK, Africa, and beyond. Connect with decision-makers and industry leaders.</p>
+                        </div>
                     </div>
                     
-                    <div class="exhibition-benefit-card">
-                        <div class="exhibition-benefit-icon">
-                            <i class="fas fa-bullhorn"></i>
+                    <div class="exhibition-benefit-card card-animate animate-on-scroll fade-in-up stagger-2" style="padding: 0; overflow: hidden;">
+                        <div class="image-hover-zoom" style="height: 150px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=400&h=300&fit=crop&q=80" alt="Brand Visibility" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <h3>Brand Visibility</h3>
-                        <p>Increase your brand visibility and market presence. Showcase your innovations to a targeted audience of agribusiness professionals.</p>
+                        <div style="padding: 30px;">
+                            <div class="exhibition-benefit-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3>Brand Visibility</h3>
+                            <p>Increase your brand visibility and market presence. Showcase your innovations to a targeted audience of agribusiness professionals.</p>
+                        </div>
                     </div>
                     
-                    <div class="exhibition-benefit-card">
-                        <div class="exhibition-benefit-icon">
-                            <i class="fas fa-handshake"></i>
+                    <div class="exhibition-benefit-card card-animate animate-on-scroll fade-in-up stagger-3" style="padding: 0; overflow: hidden;">
+                        <div class="image-hover-zoom" style="height: 150px; overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=400&h=300&fit=crop&q=80" alt="Connections" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
-                        <h3>Cross-Continent Connections</h3>
-                        <p>Build strategic partnerships and expand your network across continents. Create lasting business relationships.</p>
+                        <div style="padding: 30px;">
+                            <div class="exhibition-benefit-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3>Cross-Continent Connections</h3>
+                            <p>Build strategic partnerships and expand your network across continents. Create lasting business relationships.</p>
+                        </div>
                     </div>
                 </div>
 
