@@ -7,10 +7,10 @@
 
 :root {
     /* Global Color Scheme: Teal, Peach, Burgundy */
-    --primary-color: #008080; /* Dark Teal */
+    --primary-color: #05535f; /* Dark Teal */
     --secondary-color: #FFCBA4; /* Peach */
     --accent-color: #800020; /* Burgundy */
-    --teal-color: #008080; /* Dark Teal */
+    --teal-color: #05535f; /* Dark Teal */
     --peach-color: #FFCBA4;
     --burgundy-color: #800020;
     --text-color: #333333;
@@ -18,9 +18,9 @@
     --bg-light: #f8f9fa;
     --border-color: #e0e0e0;
     --hover-color: #1a1a1a;
-    --header-bg: #00bda1; /* Teal header background */
+    --header-bg: #05535f; /* Teal header background */
     --orange-color: #FFCBA4;
-    --green-color: #008080; /* Dark Teal */
+    --green-color: #05535f; /* Dark Teal */
 }
 
 html {
@@ -133,8 +133,8 @@ button:focus:not(:focus-visible) {
 
 /* Header */
 .header {
-    background: #00bda1 !important;
-    background-color: #00bda1 !important;
+    background: #05535f !important;
+    background-color: #05535f !important;
     position: relative !important;
     z-index: 100;
     width: 100%;
@@ -1729,7 +1729,7 @@ button:focus:not(:focus-visible) {
 }
 
 .speaker-linkedin:hover {
-    color: #008080;
+    color: #05535f;
 }
 
 .team-member a {
@@ -3669,7 +3669,7 @@ img[loading="lazy"].loaded {
         font-size: 16px !important;
         line-height: 1.5 !important;
         touch-action: manipulation;
-        -webkit-tap-highlight-color: rgba(0, 128, 128, 0.2);
+        -webkit-tap-highlight-color: rgba(5, 83, 95, 0.2);
     }
     
     /* Links */
@@ -3677,7 +3677,7 @@ img[loading="lazy"].loaded {
         min-height: 44px;
         display: inline-flex;
         align-items: center;
-        -webkit-tap-highlight-color: rgba(0, 128, 128, 0.2);
+        -webkit-tap-highlight-color: rgba(5, 83, 95, 0.2);
     }
     
     /* Images */
@@ -3945,8 +3945,8 @@ img[loading="lazy"].loaded {
     /* Better tap highlight */
     a,
     button {
-        -webkit-tap-highlight-color: rgba(0, 128, 128, 0.3);
-        tap-highlight-color: rgba(0, 128, 128, 0.3);
+        -webkit-tap-highlight-color: rgba(5, 83, 95, 0.3);
+        tap-highlight-color: rgba(5, 83, 95, 0.3);
     }
 }
 
